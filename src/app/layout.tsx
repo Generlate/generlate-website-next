@@ -14,3 +14,12 @@ export default function RootLayout({
     </html>
   )
 }
+
+// TODO: add pages from original generlate
+// TODO: add css from original generlate
+// TODO: add header and footer
+// TODO: consider layout, template, intercepting routes (for pics) and parallel routes structure and if i shoud add any
+// TODO: plan what is a server-side component and a client-side component (server side is the default)
+// TODO: maybe add a loading.tsx for a loading spinner
+// TODO: maybe add error.tsx for error handling
+// TODO: go over folders and see which should be grouped together. To do so, make a parent folder whose name is wrapped in parenthesis. this will stop the parent from appearing in the url. i.e. /(auth)/login.tsx
