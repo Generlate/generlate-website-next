@@ -1,5 +1,8 @@
 export default function Api() {
   return (
-      <h1>Api page</h1>
+    <main className="api">
+        <section>how to set up the api</section>
+        <section>what does it let you do?</section>
+    </main>
   );
 }
