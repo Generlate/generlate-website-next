@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { BiUserCircle } from "react-icons/bi";
 import { VscColorMode } from "react-icons/vsc";
 import { ImExit } from "react-icons/im";
@@ -7,17 +8,22 @@ import { RiUserFollowFill } from "react-icons/ri";
 
 export default function Header() {
   return (
-    <div>
-      <Image src="/generlate-light.webp" width={299} height={56} alt="picture of cubes"/>
-      <BiUserCircle size={34} title="user options" />
+    <header>
+      <Link href="/about">
+        <Image src="/generlate-light.webp" width={299} height={56} alt="picture of cubes"/>
+      </Link>
       <div>
-        <RiUserFollowFill size={20} />
-        <TiUserAdd size={23} />
-        <ImExit size={19} />
+        <button>
+          <BiUserCircle size={34} title="user options" />
+          <RiUserFollowFill size={20} />
+          <TiUserAdd size={23} />
+          <ImExit size={19} />
+        </button>
+        <form>
+          <div></div>
+          <div></div>
+        </form>
       </div>
-
-
-
-    </div>
+    </header>
   );
 }
