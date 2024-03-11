@@ -9,6 +9,15 @@ export default function Header() {
   return (
     <div>
       <Image src="/generlate-light.webp" width={299} height={56} alt="picture of cubes"/>
+      <BiUserCircle size={34} title="user options" />
+      <div>
+        <RiUserFollowFill size={20} />
+        <TiUserAdd size={23} />
+        <ImExit size={19} />
+      </div>
+
+
+
     </div>
   );
 }

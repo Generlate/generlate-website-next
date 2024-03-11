@@ -1,8 +1,16 @@
 import Link from 'next/link';
+import { TbVector } from "react-icons/tb";
+import { TiDocumentText } from "react-icons/ti";
+import { IoBusinessOutline } from "react-icons/io5";
+import { BsPeople } from "react-icons/bs";
 
 export default function Footer() {
   return (
     <div>
+      <TbVector />
+      <TiDocumentText />
+      <IoBusinessOutline />
+      <BsPeople />
       <div>
         <Link href="/news">News</Link>
         <Link href="/pricing">Pricing</Link>
