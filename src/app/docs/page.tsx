@@ -1,5 +1,9 @@
 export default function Docs() {
   return (
-      <h1>Docs page</h1>
+    <main className="docs">
+      <section>research</section>
+      <section>debugging</section>
+      <section>how text to 3d works (tips for better generations) </section>
+    </main>
   );
 }

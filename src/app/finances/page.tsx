@@ -1,5 +1,7 @@
 export default function Finances() {
   return (
-      <h1>Finances page</h1>
+    <main className="finances">
+      <section>Earnings reports</section>
+    </main>
   );
 }
