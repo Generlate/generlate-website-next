@@ -1,6 +1,8 @@
+import styles from "../../styles/page.module.css"
+
 export default function News() {
   return (
-    <main className="news">
+    <main className={styles.news}>
       <section>
         <h2>The back end is up!</h2>
         <p>02/04/2024</p>

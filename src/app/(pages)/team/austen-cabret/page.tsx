@@ -1,8 +1,9 @@
 import Image from "next/image";
+import styles from "@/app/styles/page.module.css"
 
 export default function AustenCabret() {
   return (
-    <main className="austencabret">
+    <main className={styles.austencabret}>
       <section>
         <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width="250" height="250"></Image>
         <h2>Austen Cabret</h2>

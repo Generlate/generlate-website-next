@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from "../../styles/page.module.css"
 
 export default function Team() {
   return (
-    <main className="team">
+    <main className={styles.team}>
       <section>
         <u>Team Profiles</u>
       </section>

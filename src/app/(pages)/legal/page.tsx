@@ -1,6 +1,8 @@
+import styles from "../../styles/page.module.css"
+
 export default function Legal() {
   return (
-    <main className="legal">
+    <main className={styles.legal}>
       <p>Last Updated: 01/09/2024</p>
 
       <section>

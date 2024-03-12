@@ -1,6 +1,8 @@
+import styles from "../../styles/page.module.css"
+
 export default function Pricing() {
   return (
-    <main className="pricing">
+    <main className={styles.pricing}>
       <section>pricing</section>
       <section>free!</section>
       <section>explain the business model</section>
