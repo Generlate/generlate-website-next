@@ -12,6 +12,28 @@
     background-color: var(--color-one);
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(16, 16, 16, 0);
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    gap: 1rem;
+}
+
+.footer {
+    padding: 15px;
+    font-weight: 300;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-between;
+    box-shadow: var(--footer-box-shadow);
+    background-color: var(--color-one);
+}
+
 @media (orientation: landscape) {
 }
 
