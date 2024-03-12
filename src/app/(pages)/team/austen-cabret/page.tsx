@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "@/app/styles/page.module.css"
+import transition from '@/app/components/transition'
 
 export default function AustenCabret() {
   return (

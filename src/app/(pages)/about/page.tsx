@@ -6,6 +6,8 @@ import { BiDollar } from "react-icons/bi";
 import { SlTrophy } from "react-icons/sl";
 import { FiMessageSquare } from "react-icons/fi";
 import styles from "../../styles/page.module.css"
+// import ThreeCanvas from '@/app/components/ThreeCanvas'
+import transition from '@/app/components/transition'
 
 export default function About() {
   return (

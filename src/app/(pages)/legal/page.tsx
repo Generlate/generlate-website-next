@@ -1,4 +1,5 @@
 import styles from "../../styles/page.module.css"
+import transition from '@/app/components/transition'
 
 export default function Legal() {
   return (

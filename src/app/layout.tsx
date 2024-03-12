@@ -23,10 +23,8 @@ export default function RootLayout({
   )
 }
 
-// TODO: add pages from original generlate
+// TODO: consider layout, template, intercepting routes (for pics) and parallel routes structure and if i should add any
 // TODO: add css from original generlate
-// TODO: add header and footer
-// TODO: consider layout, template, intercepting routes (for pics) and parallel routes structure and if i shoud add any
 // TODO: plan what is a server-side component and a client-side component (server side is the default)
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
