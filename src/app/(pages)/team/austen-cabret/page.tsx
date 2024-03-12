@@ -1,11 +1,11 @@
 import Image from "next/image";
-import styles from "@/app/styles/page.module.css"
+import styles from "@/app/styles/austen-cabret.module.css"
 import transition from '@/app/components/transition'
 
 export default function AustenCabret() {
   return (
     <main className={styles.austencabret}>
-      <section>
+      <section className={styles.section}>
         <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width="250" height="250"></Image>
         <h2>Austen Cabret</h2>
         <h4>Founder</h4>

@@ -5,7 +5,7 @@ import { TbStretching } from "react-icons/tb";
 import { BiDollar } from "react-icons/bi";
 import { SlTrophy } from "react-icons/sl";
 import { FiMessageSquare } from "react-icons/fi";
-import styles from "../../styles/page.module.css"
+import styles from "@/app/styles/about.module.css"
 // import ThreeCanvas from '@/app/components/ThreeCanvas'
 import transition from '@/app/components/transition'
 
@@ -22,11 +22,11 @@ export default function About() {
       <div>
         <Link href="/">Text -&gt; 3D!</Link>
       </div>
-      <section className="hidden">
+      <section className={styles['about-section-one']}>
         Meet Generlate, <br />a text to object generator. Your words - our
         magic.
       </section>
-      <section className="hidden">
+      <section className={styles['about-section-two']}>
         <ul>
           <li>
             <p>
@@ -81,7 +81,7 @@ export default function About() {
         </ul>
       </section>
       <section>
-        <div className="hiddenbottom">
+        <div className={styles['about-section-two']}>
           <div>
             {/* <ThreeCanvas modelPath="/box_1.obj" theme={theme} /> */}
           </div>
@@ -102,7 +102,7 @@ export default function About() {
           <p>A thin cube</p>
         </div>
       </section>
-      <section id="about" className="hiddenbottom">
+      <section id="about" className={styles['about-section-two']}>
         <div>
           <div>
             <h3>Editable:</h3>

@@ -65,5 +65,21 @@ a {
     text-decoration: none;
 }
 
+.section {
+    margin-top: 16px;
+    background-color: var(--color-one);
+    border-radius: var(--border-radius);
+    padding: 16px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+}
+
 @media (orientation: landscape) {
 }

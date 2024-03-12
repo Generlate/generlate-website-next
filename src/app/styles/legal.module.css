@@ -1,0 +1,9 @@
+.legal {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    background-color: var(--color-two);
+}

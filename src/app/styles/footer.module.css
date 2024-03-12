@@ -1,0 +1,9 @@
+.footer {
+    padding: 15px;
+    font-weight: 300;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-between;
+    box-shadow: var(--footer-box-shadow);
+    background-color: var(--color-one);
+}

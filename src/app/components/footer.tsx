@@ -3,7 +3,7 @@ import { TbVector } from "react-icons/tb";
 import { TiDocumentText } from "react-icons/ti";
 import { IoBusinessOutline } from "react-icons/io5";
 import { BsPeople } from "react-icons/bs";
-import styles from "@/app/styles/page.module.css"
+import styles from "@/app/styles/footer.module.css"
 
 export default function Footer() {
   return (

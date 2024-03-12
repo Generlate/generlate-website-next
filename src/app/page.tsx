@@ -10,7 +10,7 @@ export default function Home(){
     <main className={styles.home}>
       <div>
         <p>?</p>
-        <section>
+        <section className={styles.section}>
           {/* {showDownloadButton && (
             <>
               <button onClick={handleDownloadClick}>Download</button>
