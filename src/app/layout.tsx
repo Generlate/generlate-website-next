@@ -1,5 +1,6 @@
-import Footer from '@/components/footer'
-import Header from '@/components/header'
+import Footer from '@/app/components/footer'
+import Header from '@/app/components/header'
+import "./styles/globals.css"
 
 export const metadata = {
   title: 'Next.js',
@@ -30,3 +31,5 @@ export default function RootLayout({
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
 // TODO: go over folders and see which should be grouped together. To do so, make a parent folder whose name is wrapped in parenthesis. this will stop the parent from appearing in the url. i.e. /(auth)/login.tsx
+// TODO: try radial-gradient in css
+// TODO: consider using @media {prefers-color-scheme: dark}

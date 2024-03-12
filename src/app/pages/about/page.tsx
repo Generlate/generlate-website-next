@@ -5,10 +5,11 @@ import { TbStretching } from "react-icons/tb";
 import { BiDollar } from "react-icons/bi";
 import { SlTrophy } from "react-icons/sl";
 import { FiMessageSquare } from "react-icons/fi";
+import styles from "../../styles/page.module.css"
 
 export default function About() {
   return (
-    <main className="about">
+    <main className={styles.main}>
       <video width="1920" height="1080" autoPlay playsInline muted loop>
         <source src="/advertisement.mp4" type="video/mp4" />
         Your browser does not support the video tag.

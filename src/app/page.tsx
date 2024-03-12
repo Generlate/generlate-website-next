@@ -1,9 +1,10 @@
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 import { TbMessage2Up } from "react-icons/tb";
+import styles from "./styles/page.module.css"
 
 export default function Home(){
   return (
-    <main className="home">
+    <main className={styles.main}>
       <div>
         <p>?</p>
         <section>
