@@ -15,6 +15,7 @@ export default function Header() {
       <div>
         <button>
           <BiUserCircle size={34} title="user options" />
+          <VscColorMode />
           <RiUserFollowFill size={20} />
           <TiUserAdd size={23} />
           <ImExit size={19} />
