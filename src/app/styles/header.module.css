@@ -9,3 +9,14 @@
     z-index: 1;
     gap: 1rem;
 }
+
+.img {
+    display: flex;
+    transition: ease 0.3s;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.img-hover:hover {
+    filter: brightness(115%) saturate(90%);
+}

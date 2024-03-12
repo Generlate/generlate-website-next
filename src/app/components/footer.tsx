@@ -8,34 +8,34 @@ import styles from "@/app/styles/footer.module.css"
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div>
-        <button>
+      <div className={`${styles.div} ${styles['div-hover']}`}>
+        <button className={styles.link} data-dropdown-button>
         <TbVector />
         <p>Product</p>
         </button>
-        <div>
+        <div className={`${styles["dropdown-menu"]}`}>
           <Link href="/news">News</Link>
           <Link href="/pricing">Pricing</Link>
         </div>
       </div>
 
-      <div>
-        <button>
+      <div >
+        <button className={styles.link} data-dropdown-button>
           <TiDocumentText />
           <p>Resources</p>
         </button>
-        <div>
+        <div className={`${styles["dropdown-menu"]}`}>
           <Link href="/docs">Docs</Link>
           <Link href="/api">API</Link>
         </div>
       </div>
 
       <div>
-        <button>
+        <button className={styles.link} data-dropdown-button>
           <IoBusinessOutline />
           <p>Company</p>
         </button>
-        <div>
+        <div className={`${styles["dropdown-menu"]}`}>
           <Link href="/team">Team</Link>
           <Link href="/finances">Finances</Link>
           <Link href="/legal">Legal</Link>
@@ -43,11 +43,11 @@ export default function Footer() {
       </div>
 
       <div>
-        <button>
+        <button className={styles.link}data-dropdown-button>
           <BsPeople />
           <p>Social</p>
         </button>
-        <div>
+        <div className={`${styles["dropdown-menu"]}`}>
           <Link href="https://github.com/Generlate">Github</Link>,
           <Link href="https://www.youtube.com/@generlate">Youtube</Link>,
           <Link href="https://twitter.com/Generlate">Twitter</Link>,

@@ -11,7 +11,7 @@ import transition from '@/app/components/transition'
 
 export default function About() {
   return (
-    <main className={styles.about}>
+    <main>
       <video width="1920" height="1080" autoPlay playsInline muted loop>
         <source src="/advertisement.mp4" type="video/mp4" />
         Your browser does not support the video tag.

@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/about">
-        <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes"/>
+        <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes" className={`${styles['img']} ${styles['img-hover']}`}/>
       </Link>
       <div>
         <button>
