@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,9 +11,44 @@ import { RiUserFollowFill } from "react-icons/ri";
 import styles from "@/app/styles/header.module.css"
 
 export default function Header() {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleDropdown = (dropdownId: any) => {
+    setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
+  };
+
+  const handleMouseEnter = (dropdownId: any) => {
+    if (activeDropdown !== dropdownId) {
+      toggleDropdown(dropdownId);
+    }
+  };
+
+  const handleClickOutside = (event: any) => {
+    if (!event.target.closest(".dropdown")) {
+      setActiveDropdown(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const [profilePicture, setProfilePicture] = useState<string | null>(null);
+  const [profilePictureFile, setProfilePictureFile] = useState<File | null>(
+    null
+  );
+
   let profile: React.ReactNode =  (
     <BiUserCircle size={34} title="user options" />
   );
+
+  if (profilePicture) {
+    profile = <Image src={profilePicture} alt="profile" title="profile" />;
+  }
 
   let menu;
 
@@ -31,14 +68,14 @@ export default function Header() {
   } else {
     menu = (
       <ul>
-        <button className={styles.link}>
+        <button className={styles.link} title="colors">
           <VscColorMode />
           <p>theme</p>
         </button>
 
         <div>
           <BiUserCircle size={19} />
-          <input />
+          <input type="file" accept=".jpg, .jpeg, .png, .gif"/>
         </div>
 
         <li>
@@ -63,9 +100,9 @@ export default function Header() {
           <TiUserAdd size={23} />
           <ImExit size={19} />
         </button>
-        <form className={`${styles["dropdown-menu"]}`}>
+        <form className={styles["dropdown-menu"]}>
           <div></div>
-          <div></div>
+          <div>{menu}</div>
         </form>
       </div>
     </header>
