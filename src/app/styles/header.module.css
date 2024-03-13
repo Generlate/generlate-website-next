@@ -41,7 +41,6 @@
 
 .img2 {
     border-radius: 50%;
-    width: 35px;
     margin-top: 9px;
 }
 
@@ -98,7 +97,7 @@
     white-space: nowrap;
 }
 
-.p {
+.dropdown-menu > .p {
     color: var(--color-five);
     text-decoration: underline;
     margin: 0px;
@@ -148,4 +147,15 @@
 
 .link3:hover {
     text-decoration: underline;
+}
+
+.dropdown.active > .link,
+.link:hover {
+    color: var(--color-four);
+}
+
+.dropdown.active .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
 }

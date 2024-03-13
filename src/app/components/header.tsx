@@ -47,7 +47,7 @@ export default function Header() {
   );
 
   if (profilePicture) {
-    profile = <Image src={profilePicture} alt="profile" title="profile" />;
+    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} className={`${styles.img2} ${styles['img2:hover']}`}/>;
   }
 
   let menu;
@@ -56,12 +56,12 @@ export default function Header() {
     menu = (
       <ul>
         <li>
-          <RiUserFollowFill size={20} />
-          <Link href="/components/login">Sign in</Link>
+          <RiUserFollowFill size={20} className={styles.svg2}/>
+          <Link href="/components/login" className={styles.link3}>Sign in</Link>
         </li>
         <li>
-          <TiUserAdd size={23} />
-          <Link href="/components/signup">Sign up</Link>
+          <TiUserAdd size={23} className={styles.svg2}/>
+          <Link href="/components/signup" className={styles.link3}>Sign up</Link>
         </li>
       </ul>
     );
@@ -69,18 +69,18 @@ export default function Header() {
     menu = (
       <ul>
         <button className={styles.link} title="colors">
-          <VscColorMode />
+          <VscColorMode className={styles.svg2}/>
           <p>theme</p>
         </button>
 
         <div>
-          <BiUserCircle size={19} />
-          <input type="file" accept=".jpg, .jpeg, .png, .gif"/>
+          <BiUserCircle size={19} className={styles.svg2}/>
+          <input type="file" accept=".jpg, .jpeg, .png, .gif" className={`${styles.input2} ${styles['input2:focus']} ${styles['input2:placeholder']}`}/>
         </div>
 
         <li>
-          <ImExit size={19} />
-          <Link href="/components/login">Log out</Link>
+          <ImExit size={19} className={styles.svg2}/>
+          <Link href="/components/login" className={styles.link3}>Log out</Link>
         </li>
       </ul>
     );
@@ -92,13 +92,10 @@ export default function Header() {
       <Link href="/about">
         <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes" className={`${styles['img']} ${styles['img:hover']}`}/>
       </Link>
-      <div className={styles.dropdown}>
-        <button className={styles.link} data-dropdown-button>
-          <BiUserCircle size={34} title="user options" />
-          <VscColorMode />
-          <RiUserFollowFill size={20} />
-          <TiUserAdd size={23} />
-          <ImExit size={19} />
+      <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
+        onMouseEnter={() => handleMouseEnter("profile")}>
+        <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("profile")}>
+          {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
           <div></div>
