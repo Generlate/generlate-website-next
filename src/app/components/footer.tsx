@@ -42,48 +42,48 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`${styles.div} ${styles['div:hover']} ${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("product")}>
-          <TbVector />
+          <TbVector className={styles.svg}/>
           <p>Product</p>
         </button>
-        <div className={styles["dropdown-menu"]}>
-          <Link href="/news">News</Link>
-          <Link href="/pricing">Pricing</Link>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-one"]}`}>
+          <Link href="/news" className={styles.a}>News</Link>
+          <Link href="/pricing" className={styles.a}>Pricing</Link>
         </div>
       </div>
 
-      <div className={`${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")}>
+      <div className={`${styles.div} ${styles['div:hover']} ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("resources")}>
-          <TiDocumentText />
+          <TiDocumentText className={styles.svg}/>
           <p>Resources</p>
         </button>
-        <div className={styles["dropdown-menu"]}>
-          <Link href="/docs">Docs</Link>
-          <Link href="/api">API</Link>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-two"]}`}>
+          <Link href="/docs" className={`${styles.a} ${styles['a:hover']}`}>Docs</Link>
+          <Link href="/api" className={`${styles.a} ${styles['a:hover']}`}>API</Link>
         </div>
       </div>
 
-      <div className={`${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")}>
+      <div className={`${styles.div} ${styles['div:hover']} ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("company")}>
-          <IoBusinessOutline />
+          <IoBusinessOutline className={styles.svg}/>
           <p>Company</p>
         </button>
-        <div className={styles["dropdown-menu"]}>
-          <Link href="/team">Team</Link>
-          <Link href="/finances">Finances</Link>
-          <Link href="/legal">Legal</Link>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-three"]}`}>
+          <Link href="/team" className={`${styles.a} ${styles['a:hover']}`}>Team</Link>
+          <Link href="/finances" className={`${styles.a} ${styles['a:hover']}`}>Finances</Link>
+          <Link href="/legal" className={`${styles.a} ${styles['a:hover']}`}>Legal</Link>
         </div>
       </div>
 
-      <div className={`${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")}>
+      <div className={`${styles.div} ${styles['div:hover']} ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("social")}>
-          <BsPeople />
+          <BsPeople className={styles.svg}/>
           <p>Social</p>
         </button>
-        <div className={styles["dropdown-menu"]}>
-          <Link href="https://github.com/Generlate">Github</Link>
-          <Link href="https://www.youtube.com/@generlate">Youtube</Link>
-          <Link href="https://twitter.com/Generlate">Twitter</Link>
-          <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/">LinkedIn</Link>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-four"]}`}>
+          <Link href="https://github.com/Generlate" className={`${styles.a} ${styles['a:hover']}`}>Github</Link>
+          <Link href="https://www.youtube.com/@generlate" className={`${styles.a} ${styles['a:hover']}`}>Youtube</Link>
+          <Link href="https://twitter.com/Generlate" className={`${styles.a} ${styles['a:hover']}`}>Twitter</Link>
+          <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={`${styles.a} ${styles['a:hover']}`}>LinkedIn</Link>
         </div>
       </div>
 

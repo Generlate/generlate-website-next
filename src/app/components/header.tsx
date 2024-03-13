@@ -57,11 +57,11 @@ export default function Header() {
       <ul>
         <li>
           <RiUserFollowFill size={20} className={styles.svg2}/>
-          <Link href="/components/login" className={styles.link3}>Sign in</Link>
+          <Link href="/components/login" className={`${styles.link3} ${styles['link3:hover']}`}>Sign in</Link>
         </li>
         <li>
           <TiUserAdd size={23} className={styles.svg2}/>
-          <Link href="/components/signup" className={styles.link3}>Sign up</Link>
+          <Link href="/components/signup" className={`${styles.link3} ${styles['link3:hover']}`}>Sign up</Link>
         </li>
       </ul>
     );
@@ -80,7 +80,7 @@ export default function Header() {
 
         <li>
           <ImExit size={19} className={styles.svg2}/>
-          <Link href="/components/login" className={styles.link3}>Log out</Link>
+          <Link href="/components/login" className={`${styles.link3} ${styles['link3:hover']}`}>Log out</Link>
         </li>
       </ul>
     );

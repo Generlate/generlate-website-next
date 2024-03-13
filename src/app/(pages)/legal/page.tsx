@@ -6,7 +6,7 @@ export default function Legal() {
     <main className={styles.legal}>
       <p>Last Updated: 01/09/2024</p>
 
-      <section className={styles.section}>
+      <section>
         <h2>Privacy Policy</h2>
         <p>
           Generlate is committed to protecting your privacy. We collect both
@@ -40,7 +40,7 @@ export default function Legal() {
         </ul>
       </section>
 
-      <section className={styles.section}>
+      <section>
         <h2>Intellectual Property Rights</h2>
         <p>
           All content on Generlate&apos;s website, such as text, graphics,
@@ -55,7 +55,7 @@ export default function Legal() {
         </ul>
       </section>
 
-      <section className={styles.section}>
+      <section>
         <h2>Terms of Use</h2>
         <p>
           By using the Generlate website (https://generlate.com), you agree to
@@ -87,7 +87,7 @@ export default function Legal() {
           </li>
         </ul>
       </section>
-      <section className={styles.section}>
+      <section>
         <h2>Governing Law</h2>
         <p>
           All legal matters related to Generlate are governed by the laws of
@@ -108,7 +108,7 @@ export default function Legal() {
         </ul>
       </section>
 
-      <section className={styles.section}>
+      <section>
         <h2>Changes and Updates Notice</h2>
         <p>
           We continuously update and improve Generlate, which may lead to
@@ -126,7 +126,7 @@ export default function Legal() {
           </li>
         </ul>
       </section>
-      <section className={styles.section}>
+      <section>
         <h2>Contact Us</h2>
         <p>
           If you have any questions, concerns, or inquiries regarding our
