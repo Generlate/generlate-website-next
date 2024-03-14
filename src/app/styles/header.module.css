@@ -123,7 +123,7 @@
     text-decoration: underline;
 }
 
-.link3 {
+.link2 {
     border: none;
     color: var(--color-five);
     font-size: var(--font-size-two);
@@ -145,7 +145,7 @@
     padding-left: 8px;
 }
 
-.link3:hover {
+.link2:hover {
     text-decoration: underline;
 }
 

@@ -3,7 +3,7 @@
     background-color: var(--color-one);
 }
 
-.home > .div {
+.div {
     height: calc(100vh - 66px);
     padding-top: 50px;
     padding-bottom: 16px;
@@ -14,7 +14,7 @@
     gap: 16px;
 }
 
-.div > .p {
+.p {
     position: absolute;
     left: 13rem;
     top: 3.5rem;
@@ -23,7 +23,7 @@
     display: none;
 }
 
-.div > .p::before {
+.p::before {
     content: "\2B8B";
     transform: rotate(180deg);
     font-size: 3rem;
@@ -34,7 +34,7 @@
     transition: transform 0.3s ease;
 }
 
-.div > .p:hover::before {
+.p:hover::before {
     content: "\2B8B";
     transform: rotate(180deg);
     font-size: 3rem;
@@ -45,7 +45,7 @@
     transition: transform 0.3s ease;
 }
 
-.section:first-of-type {
+.section1 {
     flex: 4;
     color: var(--color-five);
     background-color: var(--color-one);
@@ -73,7 +73,7 @@
     color: var(--color-two);
 }
 
-.section:nth-of-type(2) {
+.section2 {
     flex: 2;
     background-color: var(--color-one);
     border-top-left-radius: var(--border-radius);
@@ -86,9 +86,10 @@
     margin-left: 16px;
     margin-right: 16px;
     border: 1px solid var(--color-six);
+    padding: 0px;
 }
 
-.div:first-of-type {
+.div1 {
     flex-grow: 1;
     flex-basis: 0;
     padding: 16px;
@@ -100,13 +101,13 @@
     flex-direction: column;
 }
 
-.p {
+.p2 {
     color: var(--color-five);
     margin: 0px;
     scroll-snap-align: end;
 }
 
-.div:nth-of-type(2) {
+.div2 {
     display: flex;
     border-top-left-radius: 0;
     border-bottom-left-radius: var(--border-radius);
@@ -117,7 +118,7 @@
     border-top: 1px solid var(--color-six);
 }
 
-.button:first-of-type {
+.button1 {
     padding-left: 16px;
     padding-right: 12px;
     padding-top: 11px;
@@ -159,7 +160,7 @@
     outline: none;
 }
 
-.button:nth-of-type(2) {
+.button2 {
     padding: 8px;
     border-bottom-right-radius: var(--border-radius);
     background-color: var(--color-six);
@@ -169,7 +170,7 @@
     transition: ease 0.2s;
 }
 
-.button:nth-of-type(2):active {
+.button2:active {
     background-color: var(--color-three);
     color: var(--color-two);
 }

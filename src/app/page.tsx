@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
-// import ThreeCanvas from "@app/components/ThreeCanvas";
+// import ThreeCanvas from "./components/ThreeCanvas";
 import styles from "./styles/page.module.css"
 import transition from '@/app/components/transition'
 import { TbMessage2Up } from "react-icons/tb";
@@ -22,31 +22,32 @@ export default function Home(){
 
   return (
     <main className={styles.home}>
-      <div>
-        <p>?</p>
-        <section className={styles.section}>
+      <div className={styles.div}>
+        <p className={styles.p}>?</p>
+        <section className={styles.section1}>
           {showDownloadButton && (
             <>
-              <button onClick={handleDownloadClick}>Download</button>
+              <button onClick={handleDownloadClick} className={styles.button}>Download</button>
               {/* <ThreeCanvas modelPath={model} theme={props.theme} /> */}
             </>
           )}
         </section>
 
-        <section>
-          <div></div>
+        <section className={styles.section2}>
+          <div className={styles.div1}></div>
 
-          <div>
-            <button title="voice input">
-              <BiSolidMicrophoneAlt />
+          <div className={styles.div2}>
+            <button title="voice input" className={styles.button1}>
+              <BiSolidMicrophoneAlt className={styles.svg}/>
             </button>
             <input
               type="text"
               placeholder="Prompt here..."
               id="generationbar"
               // onKeyDown={enterKey}
+              className={styles.input}
             />
-            <button /* onClick={handleInputClick} */ title="text input">
+            <button /* onClick={handleInputClick} */ title="text input" className={styles.button2}>
               <TbMessage2Up />
             </button>
           </div>

@@ -47,7 +47,7 @@ export default function Header() {
   );
 
   if (profilePicture) {
-    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} className={`${styles.img2} ${styles['img2:hover']}`}/>;
+    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} className={`${styles.img2}`}/>;
   }
 
   let menu;
@@ -57,11 +57,11 @@ export default function Header() {
       <ul>
         <li>
           <RiUserFollowFill size={20} className={styles.svg2}/>
-          <Link href="/components/login" className={`${styles.link3} ${styles['link3:hover']}`}>Sign in</Link>
+          <Link href="/components/login" className={styles.link2}>Sign in</Link>
         </li>
         <li>
           <TiUserAdd size={23} className={styles.svg2}/>
-          <Link href="/components/signup" className={`${styles.link3} ${styles['link3:hover']}`}>Sign up</Link>
+          <Link href="/components/signup" className={styles.link2}>Sign up</Link>
         </li>
       </ul>
     );
@@ -75,12 +75,12 @@ export default function Header() {
 
         <div>
           <BiUserCircle size={19} className={styles.svg2}/>
-          <input type="file" accept=".jpg, .jpeg, .png, .gif" className={`${styles.input2} ${styles['input2:focus']} ${styles['input2:placeholder']}`}/>
+          <input type="file" accept=".jpg, .jpeg, .png, .gif" className={styles.input2}/>
         </div>
 
         <li>
           <ImExit size={19} className={styles.svg2}/>
-          <Link href="/components/login" className={`${styles.link3} ${styles['link3:hover']}`}>Log out</Link>
+          <Link href="/components/login" className={styles.link2}>Log out</Link>
         </li>
       </ul>
     );
@@ -90,7 +90,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/about">
-        <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes" className={`${styles['img']} ${styles['img:hover']}`}/>
+        <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes" className={styles.img}/>
       </Link>
       <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
         onMouseEnter={() => handleMouseEnter("profile")}>
