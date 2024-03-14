@@ -10,8 +10,8 @@ export default function Team() {
         <u>Team Profiles</u>
       </section>
       <section className={styles.section}>
-        <Link href="/team/austen-cabret" title="more info">
-          <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width={250} height={250}/>
+        <Link href="/team/austen-cabret" title="more info" className={styles.a}>
+          <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width={150} height={150} className={styles.img}/>
           <h2>Austen Cabret</h2>
           <h4>Founder</h4>
         </Link>

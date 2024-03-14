@@ -65,6 +65,10 @@ a {
     text-decoration: none;
 }
 
+Link {
+    text-decoration: none;
+}
+
 section {
     margin-top: 16px;
     background-color: var(--color-one);

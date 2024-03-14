@@ -54,12 +54,12 @@ export default function Header() {
 
   if (0) {
     menu = (
-      <ul>
-        <li>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
           <RiUserFollowFill size={20} className={styles.svg2}/>
           <Link href="/components/login" className={styles.link2}>Sign in</Link>
         </li>
-        <li>
+        <li className={styles.li}>
           <TiUserAdd size={23} className={styles.svg2}/>
           <Link href="/components/signup" className={styles.link2}>Sign up</Link>
         </li>
@@ -67,18 +67,18 @@ export default function Header() {
     );
   } else {
     menu = (
-      <ul>
-        <button className={styles.link} title="colors">
+      <ul className={styles.ul}>
+        <button className={styles.link2} title="colors">
           <VscColorMode className={styles.svg2}/>
-          <p>theme</p>
+          <p className={styles.p2}>theme</p>
         </button>
 
-        <div>
+        <div className={styles.div}>
           <BiUserCircle size={19} className={styles.svg2}/>
           <input type="file" accept=".jpg, .jpeg, .png, .gif" className={styles.input2}/>
         </div>
 
-        <li>
+        <li className={styles.li}>
           <ImExit size={19} className={styles.svg2}/>
           <Link href="/components/login" className={styles.link2}>Log out</Link>
         </li>

@@ -6,7 +6,7 @@ export default function AustenCabret() {
   return (
     <main className={styles.austencabret}>
       <section className={styles.section}>
-        <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width="250" height="250"></Image>
+        <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width="150" height="150"></Image>
         <h2>Austen Cabret</h2>
         <h4>Founder</h4>
 

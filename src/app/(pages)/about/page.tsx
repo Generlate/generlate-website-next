@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsClockHistory } from "react-icons/bs";
@@ -6,7 +8,7 @@ import { BiDollar } from "react-icons/bi";
 import { SlTrophy } from "react-icons/sl";
 import { FiMessageSquare } from "react-icons/fi";
 import styles from "@/app/styles/about.module.css"
-// import ThreeCanvas from '@/app/components/ThreeCanvas'
+import ThreeCanvas from '@/app/components/ThreeCanvas'
 import transition from '@/app/components/transition'
 
 export default function About() {
@@ -81,46 +83,46 @@ export default function About() {
         </ul>
       </section>
       <section className={styles.section3}>
-        <div className={styles.div2}>
+        <div className={`${styles.hiddenbottom} ${styles.div2}`}>
           <div className={styles.div3}>
-            {/* <ThreeCanvas modelPath="/box_1.obj" theme={theme} className={styles.canvas}/> */}
+            {/* <ThreeCanvas modelPath="/box_1.obj" className={styles.canvas} theme={theme} /> */}
           </div>
           <p className={styles.p3}>A tall cube</p>
         </div>
 
-        <div className={`${styles.hiddenbottom} ${styles.div2}`}>
+        <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
           <div className={styles.div3}>
-            {/* <ThreeCanvas modelPath="/box_2.obj" theme={theme} className={styles.canvas}/> */}
+            {/* <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} /> */}
           </div>
           <p className={styles.p3}>A cube</p>
         </div>
 
-        <div className={`${styles.hiddenbottom} ${styles.div2}`}>
+        <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
           <div className={styles.div3}>
-            {/* <ThreeCanvas modelPath="/box_3.obj" theme={theme} className={styles.canvas}/> */}
+            {/* <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} /> */}
           </div>
           <p className={styles.p3}>A thin cube</p>
         </div>
       </section>
       <section id="about" className={styles.section4}>
-        <div className={styles.div5}>
-          <div className={styles.div6}>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
             <h3 className={styles.h32}>Editable:</h3>
             <p className={styles.p4}>reduce polygons, change texture or increase resolution</p>
           </div>
           <Image src="/cubes.webp" alt="cubes" width={960} height={270} className={styles.image}></Image>
         </div>
 
-        <div className={styles.div5}>
-          <div className={styles.div6}>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
             <h3 className={styles.h32}>Multimodal:</h3>
             <p className={styles.p4}>generate models or textures</p>
           </div>
           <Image src="/textures.webp" alt="textures" width={960} height={270} className={styles.image}></Image>
         </div>
 
-        <div className={styles.div5}>
-          <div className={styles.div6}>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
             <h3 className={styles.h32}>History:</h3>
             <p className={styles.p4}>models and prompts are recorded</p>
           </div>
