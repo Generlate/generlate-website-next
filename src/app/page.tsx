@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 // import ThreeCanvas from "./components/ThreeCanvas";
-import styles from "./styles/page.module.css"
+import styles from "./styles/home.module.css"
 import transition from '@/app/components/transition'
 import { TbMessage2Up } from "react-icons/tb";
 

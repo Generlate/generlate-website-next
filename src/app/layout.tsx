@@ -1,8 +1,9 @@
 import React, { useEffect, useState, createContext } from "react";
 import Footer from '@/app/components/footer'
 import Header from '@/app/components/header'
-import "./styles/globals.css"
+import "@/app/styles/globals.css"
 import { AnimatePresence } from "framer-motion";
+import { inter } from '@/app/components/fonts';
 
 export const metadata = {
   title: 'Next.js',
@@ -99,7 +100,17 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <head>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Generates 3d models" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>Generlate</title>
+      </head>
+      <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
         <Footer />
@@ -110,11 +121,10 @@ export default function RootLayout({
 
 // TODO: consider layout, template, intercepting routes (for pics) and parallel routes structure and if i should add any
 // TODO: add framer-motion transitions
-// TODO: add css from original generlate
 // TODO: plan what is a server-side component and a client-side component (server side is the default)
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
-// TODO: go over folders and see which should be grouped together. To do so, make a parent folder whose name is wrapped in parenthesis. this will stop the parent from appearing in the url. i.e. /(auth)/login.tsx
+// TODO: go over folders and see which should be grouped together. To do so, make a parent folder whose name is wrapped in parentheses. this will stop the parent from appearing in the url. i.e. /(auth)/login.tsx
 // TODO: try radial-gradient in css
 // TODO: consider using @media {prefers-color-scheme: dark}
 
