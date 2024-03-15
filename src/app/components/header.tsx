@@ -47,7 +47,7 @@ export default function Header() {
   );
 
   if (profilePicture) {
-    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} className={`${styles.img2}`}/>;
+    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} height={35} className={`${styles.img2}`}/>;
   }
 
   let menu;

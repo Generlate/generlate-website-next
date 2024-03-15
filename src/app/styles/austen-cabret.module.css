@@ -8,3 +8,8 @@
     padding-bottom: 16px;
     background-color: var(--color-two);
 }
+
+.img {
+    width: 150px;
+    height: auto;
+}

@@ -110,7 +110,7 @@ export default function About() {
             <h3 className={styles.h32}>Editable:</h3>
             <p className={styles.p4}>reduce polygons, change texture or increase resolution</p>
           </div>
-          <Image src="/cubes.webp" alt="cubes" width={960} height={270} className={styles.image}></Image>
+          <Image src="/cubes.webp" alt="cubes" width={1920} height={540} className={styles.image}></Image>
         </div>
 
         <div className={styles.div4}>
@@ -118,7 +118,7 @@ export default function About() {
             <h3 className={styles.h32}>Multimodal:</h3>
             <p className={styles.p4}>generate models or textures</p>
           </div>
-          <Image src="/textures.webp" alt="textures" width={960} height={270} className={styles.image}></Image>
+          <Image src="/textures.webp" alt="textures" width={1920} height={540} className={styles.image}></Image>
         </div>
 
         <div className={styles.div4}>

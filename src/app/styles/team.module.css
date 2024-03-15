@@ -18,3 +18,8 @@
 .a {
     color: var(--color-four);
 }
+
+.img {
+    width: 150px;
+    height: auto;
+}
