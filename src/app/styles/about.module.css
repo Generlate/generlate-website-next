@@ -18,6 +18,10 @@
     transition-delay: 0.4s;
 }
 
+.div6 {
+    position: relative;
+}
+
 .video {
     width: 100%;
     height: auto;
@@ -45,7 +49,11 @@
     border-radius: var(--border-radius);
     transform: rotate(0deg);
     width: 12.5rem;
-    margin-top: -6.75vh;
+    /* margin-top: -6.75vh; */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
 }
 
 .a2 {
@@ -125,8 +133,8 @@
 }
 
 .section1 {
-    margin-top: 20px;
-    padding: 15px 35px 5px 35px;
+    margin-top: 0px;
+    padding: 15px 20px 0px 35px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -188,7 +196,7 @@
 .section3 {
     display: grid;
     padding: 0px 20px;
-    height: 12vh;
+    /* height: 12vh; */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     background-color: rgba(0, 0, 0, 0);
@@ -204,7 +212,7 @@
     height: calc(100% - 16px);
     min-width: 0;
     box-shadow: 0px 0px 10px 0px rgba(121, 161, 176, 0.15);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-radius: var(--border-radius);
 }
 
 .div3 {
@@ -213,7 +221,7 @@
     background-color: var(--color-one);
 }
 
-.canvas {
+.taco {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     width: 100%;
     height: 100%;
@@ -228,6 +236,7 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     padding-bottom: 10px;
     /* border: 3px solid var(--color-two); */
+    margin-top: -4px;
 }
 
 .section4 {

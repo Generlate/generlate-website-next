@@ -75,14 +75,17 @@ section {
     padding: 16px;
 }
 
-/* .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-} */
+canvas {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
 
 @media (orientation: landscape) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 6rem;
+        min-height: 100vh;
+    }
 }

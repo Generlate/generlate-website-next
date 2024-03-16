@@ -115,22 +115,23 @@ export default function RootLayout({
   )
 }
 
-// TODO: consider layout, template, intercepting routes (for pics) and parallel routes structure and if i should add any
+
+// TODO: add css for desktop and other media queries
+// TODO: try radial-gradient in css
 // TODO: add framer-motion transitions
-// TODO: plan what is a server-side component and a client-side component (server side is the default)
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
-// TODO: go over folders and see which should be grouped together. To do so, make a parent folder whose name is wrapped in parentheses. this will stop the parent from appearing in the url. i.e. /(auth)/login.tsx
-// TODO: try radial-gradient in css
 // TODO: consider using @media {prefers-color-scheme: dark}
+
 
 
 
 //TODO: add styleX
 //TODO: add Next.js
+//TODO: move change color functions to a separate file
 //TODO: fix box shadow not interacting with canvas js correctly.
 //TODO: make footer dropdown menu 2 and 3 centered on footer word
-//TODO: put the footer into the header as one but dont show the footer elements on the home page
+//TODO: put the footer into the header as one but don't show the footer elements on the home page
 //TODO: better background gradient
 //TODO: fix dropdown menu width on mobile
 //TODO: change UI so that text input is on top of canvas and canvas is the entire page.
@@ -146,4 +147,5 @@ export default function RootLayout({
 //TODO: make the 'text to 3d' button have that glossy blurred look
 //TODO: better icons? (maybe not worth the time. try 'https://feathericons.com/', 'https://heroicons.dev/')
 //TODO: refine sub pages
-//TODO: add Auth0 and/or SSO and/or faceid
+//TODO: add Auth0 and/or SSO and/or face-id
+//TODO: go over font sizes and do better ones, look at reference websites

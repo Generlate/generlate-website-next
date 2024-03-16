@@ -6,17 +6,16 @@ import "@/app/styles/globals.css"
 import { AnimatePresence } from "framer-motion";
 
 
-export default function PageLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  
 
-  return (
+export default function PageLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return (
     <div>
         {children}
         <Footer />
     </div>
-  )
+    )
 }
