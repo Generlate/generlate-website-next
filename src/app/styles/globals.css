@@ -82,7 +82,12 @@ canvas {
     height: 100%; */
 }
 
-@media (orientation: landscape) {
+/* ipad */
+@media (min-width: 600px) and (max-width: 1024px) {
+}
+
+/* laptop */
+@media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
     main {
         display: flex;
         flex-direction: column;
@@ -91,4 +96,8 @@ canvas {
         padding: 0rem 6rem;
         min-height: 100vh;
     }
+}
+
+/* big screen */
+@media only screen and (min-width: 2500px) {
 }

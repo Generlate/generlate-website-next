@@ -158,3 +158,15 @@
     transform: translateY(0px);
     pointer-events: auto;
 }
+
+/* ipad */
+@media (min-width: 600px) and (max-width: 1024px) {
+}
+
+/* laptop */
+@media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+}
+
+/* big screen */
+@media only screen and (min-width: 2500px) {
+}

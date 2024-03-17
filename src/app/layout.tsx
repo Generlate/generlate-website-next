@@ -127,7 +127,6 @@ export default function RootLayout({
 
 
 //TODO: add styleX
-//TODO: add Next.js
 //TODO: move change color functions to a separate file
 //TODO: fix box shadow not interacting with canvas js correctly.
 //TODO: make footer dropdown menu 2 and 3 centered on footer word
