@@ -85,13 +85,6 @@ canvas {
 /* ipad */
 @media (min-width: 600px) and (max-width: 1024px) {
     html {
-        background: linear-gradient(
-            90deg,
-            var(--color-one),
-            var(--color-two),
-            var(--color-two),
-            var(--color-one)
-        );
     }
 }
 
