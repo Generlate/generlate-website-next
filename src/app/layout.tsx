@@ -115,10 +115,10 @@ export default function RootLayout({
   )
 }
 
+// TODO: Fix tsx and props that aren't working
+// TODO: add framer-motion transitions
 // TODO: fix question mark icons' tsx
 // TODO: add css for desktop and other media queries
-// TODO: try radial-gradient in css
-// TODO: add framer-motion transitions
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
 // TODO: consider using @media {prefers-color-scheme: dark}

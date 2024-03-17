@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useEffect, useRef } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsClockHistory } from "react-icons/bs";
@@ -11,7 +12,55 @@ import styles from "@/app/styles/about.module.css"
 import ThreeCanvas from '@/app/components/ThreeCanvas'
 import transition from '@/app/components/transition'
 
+interface ThemeProps {
+  theme: string;
+}
+
 export default function About() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden, .hiddenbottom");
+    if (hiddenElements.length === 0) {
+      console.log("No elements to observe");
+    }
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    const container = containerRef.current;
+    const numberOfSections = container
+      ? (container as HTMLElement).children.length
+      : 0;
+
+    let sectionIndex = 0;
+
+    const interval = setInterval(() => {
+      if (container) {
+        const scrollPosition =
+          sectionIndex * (container as HTMLElement).clientWidth;
+        (container as HTMLElement).scrollLeft = scrollPosition;
+
+        sectionIndex = (sectionIndex + 1) % numberOfSections;
+      }
+    }, 3000); // Change every 3000 milliseconds (3 seconds)
+
+    return () => {
+      clearInterval(interval);
+      hiddenElements.forEach((el) => observer.unobserve(el));
+      observer.disconnect();
+    };
+  }, []);
+
+  
+
   return (
     <div>
       <div>
@@ -102,7 +151,7 @@ export default function About() {
             <p className={styles.p3}>A thin cube</p>
           </div>
         </section>
-        <section id="about" className={styles.section4}>
+        <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
           <div className={styles.div4}>
             <div className={styles.div5}>
               <h3 className={styles.h32}>Editable:</h3>

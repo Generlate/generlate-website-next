@@ -387,6 +387,9 @@
 
     .div4 {
         padding: 0px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
     }
 
     .div5 {
@@ -401,12 +404,6 @@
         scroll-snap-align: center;
         gap: 34px;
         margin-top: 10px;
-    }
-
-    .div6 {
-        width: 100%;
-        display: inline-block;
-        vertical-align: top;
     }
 }
 
