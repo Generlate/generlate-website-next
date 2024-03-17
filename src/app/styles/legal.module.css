@@ -14,6 +14,10 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .legal {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 }
 
 /* big screen */

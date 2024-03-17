@@ -185,6 +185,24 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .p {
+        display: inline-block;
+    }
+
+    .div {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .section1 {
+        border-radius: var(--border-radius);
+        margin: 0px 16px;
+    }
+
+    .button {
+        top: 6%;
+        left: 27%;
+    }
 }
 
 /* big screen */

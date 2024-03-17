@@ -115,7 +115,7 @@ export default function RootLayout({
   )
 }
 
-
+// TODO: fix question mark icons
 // TODO: add css for desktop and other media queries
 // TODO: try radial-gradient in css
 // TODO: add framer-motion transitions

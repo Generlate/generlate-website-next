@@ -107,6 +107,18 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .footer {
+        padding: 10px;
+    }
+
+    .svg {
+        display: none;
+    }
+
+    .p {
+        display: block;
+        color: var(--color-four);
+    }
 }
 
 /* big screen */

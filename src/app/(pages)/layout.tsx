@@ -13,8 +13,10 @@ export default function PageLayout({
     children: React.ReactNode
 }) {
     return (
-    <div>
-        {children}
+    <div >
+        <div>
+            {children}
+        </div>
         <Footer />
     </div>
     )

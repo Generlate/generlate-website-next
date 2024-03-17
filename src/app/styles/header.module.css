@@ -165,6 +165,9 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .input /* or input2? */ {
+        width: 150px;
+    }
 }
 
 /* big screen */
