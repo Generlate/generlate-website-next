@@ -1,9 +1,6 @@
-'use client'
-
 import React, { SyntheticEvent, useState } from "react";
 import { useRouter } from 'next/router';
-import styles from "@/app/styles/login.module.css"
-
+import styles from "@/app/styles/login.module.css";
 
 const Login = (props: { setName: (name: string) => void }) => {
   const [email, setEmail] = useState("");
@@ -25,17 +22,14 @@ const Login = (props: { setName: (name: string) => void }) => {
 
     const content = await response.json();
 
-    router.push('/');
-    if (props.setName) {
+    // Ensure that props.setName is a function before calling it
+    if (typeof props.setName === 'function') {
       props.setName(content.name);
     }
 
-
+    // Redirect to home page after successful login
+    router.push('/');
   };
-
-  // if (router) {
-    // return <Navigate to="/" />;
-  // }
 
   return (
     <form onSubmit={submit} className={styles.login}>
@@ -43,6 +37,7 @@ const Login = (props: { setName: (name: string) => void }) => {
         type="email"
         placeholder="Email address"
         required
+        value={email} // Use value prop to control input value
         onChange={(e) => setEmail(e.target.value)}
       />
 
@@ -50,6 +45,7 @@ const Login = (props: { setName: (name: string) => void }) => {
         type="password"
         placeholder="Password"
         required
+        value={password} // Use value prop to control input value
         onChange={(e) => setPassword(e.target.value)}
       />
 
@@ -59,4 +55,3 @@ const Login = (props: { setName: (name: string) => void }) => {
 };
 
 export default Login;
-
