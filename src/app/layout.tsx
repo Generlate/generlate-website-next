@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useEffect, useState, createContext } from "react";
 import Header from '@/app/components/header'
 import "@/app/styles/globals.css"
@@ -11,169 +9,169 @@ import { inter } from '@/app/components/fonts';
 //   description: 'Generates 3d models',
 // }
 
-export const ThemeContext = createContext({});
+// export const ThemeContext = createContext({});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("https://api.generlate.com/api/user", {
-        headers: { "Content-Type": "application/json" },
-        credentials: "include"
-      });
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await fetch("https://api.generlate.com/api/user", {
+  //       headers: { "Content-Type": "application/json" },
+  //       credentials: "include"
+  //     });
 
-      const content = await response.json();
+  //     const content = await response.json();
 
-      setName(content.name);
-    })();
-  });
+  //     setName(content.name);
+  //   })();
+  // });
 
   // eslint-disable-next-line prefer-const
-  let [theme, setTheme] = useState("light");
-  const useTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  // let [theme, setTheme] = useState("light");
+  // const useTheme = () => {
+  //   setTheme((curr) => (curr === "light" ? "dark" : "light"));
 
-    if (theme === "dark") {
-      changeColorsToDark();
-    } else {
-      changeColorsToLight();
-    }
+  //   if (theme === "dark") {
+  //     changeColorsToDark();
+  //   } else {
+  //     changeColorsToLight();
+  //   }
 
-    return { theme, useTheme };
-  };
+  //   return { theme, useTheme };
+  // };
   
-  function changeColorsToLight() {
-    document.documentElement.style.setProperty(
-      "--color-one",
-      "rgb(250, 250, 250)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-two",
-      "rgb(237, 246, 252)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-three",
-      "rgb(168, 210, 216)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-four",
-      "rgb(121, 161, 176)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-five",
-      "rgb(88, 149, 166)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-six",
-      "rgb(47, 95, 110)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-header-dropdown",
-      "rgba(250, 250, 250, 0.1)"
-    );
-    document.documentElement.style.setProperty(
-      "--footer-box-shadow",
-      "0px -10px 10px 0px rgba(121, 161, 176, 0.1)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-drop-down-box-shadow",
-      "rgba(25, 25, 25, 0.2)"
-    );
+  // function changeColorsToLight() {
+  //   document.documentElement.style.setProperty(
+  //     "--color-one",
+  //     "rgb(250, 250, 250)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-two",
+  //     "rgb(237, 246, 252)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-three",
+  //     "rgb(168, 210, 216)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-four",
+  //     "rgb(121, 161, 176)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-five",
+  //     "rgb(88, 149, 166)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-six",
+  //     "rgb(47, 95, 110)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-header-dropdown",
+  //     "rgba(250, 250, 250, 0.1)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--footer-box-shadow",
+  //     "0px -10px 10px 0px rgba(121, 161, 176, 0.1)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-drop-down-box-shadow",
+  //     "rgba(25, 25, 25, 0.2)"
+  //   );
 
-    const videoElement = document.querySelector(
-      ".about > video"
-    ) as HTMLVideoElement | null;
-    if (videoElement) {
-      videoElement.style.filter = "saturate(20%)";
-    }
-  }
+  //   const videoElement = document.querySelector(
+  //     ".about > video"
+  //   ) as HTMLVideoElement | null;
+  //   if (videoElement) {
+  //     videoElement.style.filter = "saturate(20%)";
+  //   }
+  // }
 
-  function changeColorsToDark() {
-    document.documentElement.style.setProperty("--color-one", "rgb(5, 5, 4)");
-    document.documentElement.style.setProperty(
-      "--color-two",
-      "rgb(16, 16, 16)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-three",
-      "rgb(77, 75, 67)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-four",
-      "rgb(173, 158, 131)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-five",
-      "rgb(204, 196, 174)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-six",
-      "rgb(255, 232, 117)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-header-dropdown",
-      "rgba(16, 16, 16, 0.1)"
-    );
-    document.documentElement.style.setProperty(
-      "--footer-box-shadow",
-      "0px -10px 10px 0px rgba(77, 75, 67, 0.05)"
-    );
-    document.documentElement.style.setProperty(
-      "--color-drop-down-box-shadow",
-      "rgba(230, 230, 230, 0.2)"
-    );
-  }
+  // function changeColorsToDark() {
+  //   document.documentElement.style.setProperty("--color-one", "rgb(5, 5, 4)");
+  //   document.documentElement.style.setProperty(
+  //     "--color-two",
+  //     "rgb(16, 16, 16)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-three",
+  //     "rgb(77, 75, 67)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-four",
+  //     "rgb(173, 158, 131)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-five",
+  //     "rgb(204, 196, 174)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-six",
+  //     "rgb(255, 232, 117)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-header-dropdown",
+  //     "rgba(16, 16, 16, 0.1)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--footer-box-shadow",
+  //     "0px -10px 10px 0px rgba(77, 75, 67, 0.05)"
+  //   );
+  //   document.documentElement.style.setProperty(
+  //     "--color-drop-down-box-shadow",
+  //     "rgba(230, 230, 230, 0.2)"
+  //   );
+  // }
 
-  if (theme) {
-    fetch("https://api.generlate.com/api/user-data", {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const userColorTheme = data.user_color_theme || "light";
+  // if (theme) {
+  //   fetch("https://api.generlate.com/api/user-data", {
+  //     method: "GET",
+  //     credentials: "include",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     }
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const userColorTheme = data.user_color_theme || "light";
 
-        setTheme(userColorTheme);
-        if (userColorTheme === "dark") {
-          changeColorsToDark();
-        } else {
-          changeColorsToLight();
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching user information:", error);
-        theme = "light";
-      });
-  }
+  //       setTheme(userColorTheme);
+  //       if (userColorTheme === "dark") {
+  //         changeColorsToDark();
+  //       } else {
+  //         changeColorsToLight();
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching user information:", error);
+  //       theme = "light";
+  //     });
+  // }
 
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <ThemeContext.Provider value={{theme, useTheme}}>
+        {/* <ThemeContext.Provider value={{theme, useTheme}}> */}
           <Header 
-            useTheme={useTheme}
-            theme={theme}
-            name={name}
-            setName={setName}
+            // useTheme={useTheme}
+            // theme={theme}
+            // name={name}
+            // setName={setName}
             />
           {children}
-        </ThemeContext.Provider>
+        {/* </ThemeContext.Provider> */}
       </body>
     </html>
   )
