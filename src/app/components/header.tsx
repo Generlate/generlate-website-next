@@ -42,6 +42,17 @@ export default function Header() {
     null
   );
 
+
+
+  const changePicture = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    const file = event.target.files?.[0];
+    if (file) {
+      setProfilePictureFile(file);
+      setProfilePicture(URL.createObjectURL(file));
+    }
+  };
+
   let profile: React.ReactNode =  (
     <BiUserCircle size={34} title="user options" />
   );
@@ -57,11 +68,11 @@ export default function Header() {
       <ul className={styles.ul}>
         <li className={styles.li}>
           <RiUserFollowFill size={20} className={styles.svg2}/>
-          <Link href="/components/login" className={styles.link2}>Sign in</Link>
+          <Link href="/Login" className={styles.link2}>Sign in</Link>
         </li>
         <li className={styles.li}>
           <TiUserAdd size={23} className={styles.svg2}/>
-          <Link href="/components/signup" className={styles.link2}>Sign up</Link>
+          <Link href="/Signup" className={styles.link2}>Sign up</Link>
         </li>
       </ul>
     );
@@ -80,7 +91,7 @@ export default function Header() {
 
         <li className={styles.li}>
           <ImExit size={19} className={styles.svg2}/>
-          <Link href="/components/login" className={styles.link2}>Log out</Link>
+          <Link href="/Login" className={styles.link2}>Log out</Link>
         </li>
       </ul>
     );
@@ -98,7 +109,7 @@ export default function Header() {
           {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
-          <div></div>
+          <div> {"Hi "}</div>
           <div>{menu}</div>
         </form>
       </div>
