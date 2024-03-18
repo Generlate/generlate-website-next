@@ -8,7 +8,7 @@ import styles from "@/app/styles/login.module.css"
 const Login = (props: { setName: (name: string) => void }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [navigate, setNavigate] = useState(false);
+  const router = useRouter();
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const Login = (props: { setName: (name: string) => void }) => {
 
     const content = await response.json();
 
-    // setNavigate(true);
+    router.push('/');
     if (props.setName) {
       props.setName(content.name);
     }
@@ -33,9 +33,9 @@ const Login = (props: { setName: (name: string) => void }) => {
 
   };
 
-  if (0/*navigate*/) {
+  // if (router) {
     // return <Navigate to="/" />;
-   }
+  // }
 
   return (
     <form onSubmit={submit} className={styles.login}>
