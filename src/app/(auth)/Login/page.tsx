@@ -4,6 +4,7 @@ import React, { SyntheticEvent, useState } from "react";
 import { useRouter } from 'next/router';
 import styles from "@/app/styles/login.module.css"
 
+
 const Login = (props: { setName: (name: string) => void }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,25 +13,25 @@ const Login = (props: { setName: (name: string) => void }) => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    // const response = await fetch("https://api.generlate.com/api/login", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   credentials: "include",
-    //   body: JSON.stringify({
-    //     email,
-    //     password
-    //   })
-    // });
+    const response = await fetch("https://api.generlate.com/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
 
-    // const content = await response.json();
+    const content = await response.json();
 
     // setNavigate(true);
-//     props.setName(content.name);
-//     props.setName("");
-//   };
+    props.setName(content.name);
+    props.setName("");
+  };
 
-//   if (navigate) {
-//     return <Navigate to="/" />;
+  if (0/*navigate*/) {
+    // return <Navigate to="/" />;
    }
 
   return (

@@ -1,19 +1,51 @@
+'use client'
+
 import React, { useEffect, useState, createContext } from "react";
 import Header from '@/app/components/header'
 import "@/app/styles/globals.css"
 import { AnimatePresence } from "framer-motion";
 import { inter } from '@/app/components/fonts';
 
-export const metadata = {
-  title: 'Generlate',
-  description: 'Generates 3d models',
-}
+// export const metadata = {
+//   title: 'Generlate',
+//   description: 'Generates 3d models',
+// }
+
+export const ThemeContext = createContext({});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("https://api.generlate.com/api/user", {
+        headers: { "Content-Type": "application/json" },
+        credentials: "include"
+      });
+
+      const content = await response.json();
+
+      setName(content.name);
+    })();
+  });
+
+  // eslint-disable-next-line prefer-const
+  let [theme, setTheme] = useState("light");
+  const useTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+
+    if (theme === "dark") {
+      changeColorsToDark();
+    } else {
+      changeColorsToLight();
+    }
+
+    return { theme, useTheme };
+  };
   
   function changeColorsToLight() {
     document.documentElement.style.setProperty(
@@ -97,6 +129,31 @@ export default function RootLayout({
     );
   }
 
+  if (theme) {
+    fetch("https://api.generlate.com/api/user-data", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const userColorTheme = data.user_color_theme || "light";
+
+        setTheme(userColorTheme);
+        if (userColorTheme === "dark") {
+          changeColorsToDark();
+        } else {
+          changeColorsToLight();
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user information:", error);
+        theme = "light";
+      });
+  }
+
   return (
     <html lang="en">
       <head>
@@ -108,8 +165,15 @@ export default function RootLayout({
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <Header />
-        {children}
+        <ThemeContext.Provider value={{theme, useTheme}}>
+          <Header 
+            useTheme={useTheme}
+            theme={theme}
+            name={name}
+            setName={setName}
+            />
+          {children}
+        </ThemeContext.Provider>
       </body>
     </html>
   )
