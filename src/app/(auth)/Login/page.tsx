@@ -4,7 +4,9 @@ import React, { SyntheticEvent, useState } from "react";
 import { useRouter } from 'next/router';
 import styles from "@/app/styles/login.module.css"
 
-export default function Login(props: { setName: (name: string) => void }) {const [email, setEmail] = useState("");
+
+const Login = (/*props: { setName: (name: string) => void }*/) => {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [navigate, setNavigate] = useState(false);
 
@@ -24,8 +26,8 @@ export default function Login(props: { setName: (name: string) => void }) {const
     const content = await response.json();
 
     // setNavigate(true);
-    props.setName(content.name);
-    props.setName(``);
+    // props.setName(content.name);
+    // props.setName(``);
   };
 
   // if (navigate) {
@@ -51,4 +53,7 @@ export default function Login(props: { setName: (name: string) => void }) {const
       <button type="submit">Sign in</button>
     </form>
   );
-}
+};
+
+export default Login;
+
