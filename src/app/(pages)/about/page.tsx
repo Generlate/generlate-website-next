@@ -59,18 +59,7 @@ export default function About({theme}: ThemeProps) {
     };
   }, []);
 
-  useEffect(() => {
-    const videoElement = document.querySelector(
-      ".about > video"
-    ) as HTMLVideoElement | null;
-    if (videoElement) {
-      if (theme === "dark") {
-        videoElement.style.filter = "hue-rotate(217deg) saturate(20%)";
-      } else {
-        videoElement.style.filter = "saturate(20%)";
-      }
-    }
-  }, [theme]);
+
 
   
 
@@ -90,121 +79,121 @@ export default function About({theme}: ThemeProps) {
       </div>
         
       
-        <section className={styles.section1}>
-          Meet Generlate, a text to object generator. <br /> Your words - our
-          magic.
-        </section>
-        <section className={styles.section2}>
-          <ul className={styles.ul}>
-            <li className={styles.li}>
-              <p className={styles.p1}>
-                Say goodbye to the grind. Type. don&apos;t model. Effortlessly
-                create objects from your text, at the speed of sound.
-              </p>
-              <h3 className={styles.h3}>
-                Insanely
-                <br />
-                Fast
-              </h3>
-              <p className={styles.p2}>
-                <BsClockHistory />
-              </p>
-            </li>
-            <li className={styles.li}>
-              <p className={styles.p1}>
-                Perfect for games, architecture, marketing - flexibility like
-                never before.
-              </p>
-              <h3 className={styles.h3}>
-                Highly
-                <br />
-                Versatile
-              </h3>
-              <p className={styles.p2}>
-                <TbStretching />
-              </p>
-            </li>
-            <li className={styles.li}>
-              <p className={styles.p1}>Turbocharge your productivity. Slash costs.</p>
-              <h3 className={styles.h3}>
-                Greater
-                <br />
-                Efficiency
-              </h3>
-              <p className={styles.p2}>
-                <BiDollar />
-              </p>
-            </li>
-            <li className={styles.li}>
-              <p className={styles.p1}>Compete at the top with stunning AI-powered 3D models.</p>
-              <h3 className={styles.h3}>
-                Stay
-                <br />
-                Ahead
-              </h3>
-              <p className={styles.p2}>
-                <SlTrophy />
-              </p>
-            </li>
-          </ul>
-        </section>
-        <section className={styles.section3}>
-          <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-              <ThreeCanvas modelPath="/box_1.obj" className={styles.taco} theme={theme} />
-            <p className={styles.p3}>A tall cube</p>
-          </div>
+      <section className={styles.section1}>
+        Meet Generlate, a text to object generator. <br /> Your words - our
+        magic.
+      </section>
+      <section className={styles.section2}>
+        <ul className={styles.ul}>
+          <li className={styles.li}>
+            <p className={styles.p1}>
+              Say goodbye to the grind. Type. don&apos;t model. Effortlessly
+              create objects from your text, at the speed of sound.
+            </p>
+            <h3 className={styles.h3}>
+              Insanely
+              <br />
+              Fast
+            </h3>
+            <p className={styles.p2}>
+              <BsClockHistory />
+            </p>
+          </li>
+          <li className={styles.li}>
+            <p className={styles.p1}>
+              Perfect for games, architecture, marketing - flexibility like
+              never before.
+            </p>
+            <h3 className={styles.h3}>
+              Highly
+              <br />
+              Versatile
+            </h3>
+            <p className={styles.p2}>
+              <TbStretching />
+            </p>
+          </li>
+          <li className={styles.li}>
+            <p className={styles.p1}>Turbocharge your productivity. Slash costs.</p>
+            <h3 className={styles.h3}>
+              Greater
+              <br />
+              Efficiency
+            </h3>
+            <p className={styles.p2}>
+              <BiDollar />
+            </p>
+          </li>
+          <li className={styles.li}>
+            <p className={styles.p1}>Compete at the top with stunning AI-powered 3D models.</p>
+            <h3 className={styles.h3}>
+              Stay
+              <br />
+              Ahead
+            </h3>
+            <p className={styles.p2}>
+              <SlTrophy />
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section className={styles.section3}>
+        <div className={`${styles.hiddenbottom} ${styles.div2}`}>
+            <ThreeCanvas modelPath="/box_1.obj" className={styles.taco} theme={theme} />
+          <p className={styles.p3}>A tall cube</p>
+        </div>
 
-          <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} />
-            <p className={styles.p3}>A cube</p>
-          </div>
+        <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
+          <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} />
+          <p className={styles.p3}>A cube</p>
+        </div>
 
-          <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} />
-            <p className={styles.p3}>A thin cube</p>
+        <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
+          <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} />
+          <p className={styles.p3}>A thin cube</p>
+        </div>
+      </section>
+      <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
+            <h3 className={styles.h32}>Editable:</h3>
+            <p className={styles.p4}>reduce polygons, change texture or increase resolution</p>
           </div>
-        </section>
-        <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
-          <div className={styles.div4}>
-            <div className={styles.div5}>
-              <h3 className={styles.h32}>Editable:</h3>
-              <p className={styles.p4}>reduce polygons, change texture or increase resolution</p>
-            </div>
-            <Image src="/cubes.webp" alt="cubes" width={1920} height={540} className={styles.image}></Image>
-          </div>
+          <Image src="/cubes.webp" alt="cubes" width={1920} height={540} className={styles.image}></Image>
+        </div>
 
-          <div className={styles.div4}>
-            <div className={styles.div5}>
-              <h3 className={styles.h32}>Multimodal:</h3>
-              <p className={styles.p4}>generate models or textures</p>
-            </div>
-            <Image src="/textures.webp" alt="textures" width={1920} height={540} className={styles.image}></Image>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
+            <h3 className={styles.h32}>Multimodal:</h3>
+            <p className={styles.p4}>generate models or textures</p>
           </div>
+          <Image src="/textures.webp" alt="textures" width={1920} height={540} className={styles.image}></Image>
+        </div>
 
-          <div className={styles.div4}>
-            <div className={styles.div5}>
-              <h3 className={styles.h32}>History:</h3>
-              <p className={styles.p4}>models and prompts are recorded</p>
-            </div>
-            <ol className={styles.ol}>
-              <li>
-                <FiMessageSquare /> &nbsp;&nbsp;&nbsp;past generations
-              </li>
-              <li>
-                <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A tall cube
-              </li>
-              <li>
-                <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A cube
-              </li>
-              <li>
-                <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A thin cube
-              </li>
-              <li>
-                <FiMessageSquare /> &nbsp;&nbsp;&nbsp;etc.
-              </li>
-            </ol>
+        <div className={styles.div4}>
+          <div className={styles.div5}>
+            <h3 className={styles.h32}>History:</h3>
+            <p className={styles.p4}>models and prompts are recorded</p>
           </div>
-        </section>
+          <ol className={styles.ol}>
+            <li>
+              <FiMessageSquare /> &nbsp;&nbsp;&nbsp;past generations
+            </li>
+            <li>
+              <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A tall cube
+            </li>
+            <li>
+              <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A cube
+            </li>
+            <li>
+              <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A thin cube
+            </li>
+            <li>
+              <FiMessageSquare /> &nbsp;&nbsp;&nbsp;etc.
+            </li>
+          </ol>
+        </div>
+      </section>
     
     </main>
 

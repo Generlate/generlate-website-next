@@ -110,6 +110,19 @@ export default function PageLayout({
         );
     }
 
+    useEffect(() => {
+    const videoElement = document.querySelector(
+        "video"
+    ) as HTMLVideoElement | null;
+    if (videoElement) {
+        if (theme === "dark") {
+            videoElement.style.filter = "hue-rotate(217deg) saturate(20%)";
+        } else {
+            videoElement.style.filter = "saturate(20%)";
+        }
+    }
+    }, [theme]);
+
 
     return (
     <div>

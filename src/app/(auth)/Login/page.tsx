@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import styles from "@/app/styles/login.module.css"
 
 
-const Login = (props: { setName: (name: string) => void }) => {
+const Login = (/*props: { setName: (name: string) => void }*/) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [navigate, setNavigate] = useState(false);
@@ -26,8 +26,8 @@ const Login = (props: { setName: (name: string) => void }) => {
     const content = await response.json();
 
     // setNavigate(true);
-    props.setName(content.name);
-    props.setName(``);
+    // props.setName(content.name);
+    // props.setName(``);
   };
 
   // if (navigate) {
