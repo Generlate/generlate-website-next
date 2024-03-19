@@ -12,11 +12,11 @@ import styles from "@/app/styles/about.module.css"
 import ThreeCanvas from '@/app/components/ThreeCanvas'
 import transition from '@/app/components/transition'
 
-interface ThemeProps {
-  theme: string;
-}
+// interface ThemeProps {
+//   theme: string;
+// }
 
-export default function About({theme}: ThemeProps) {
+export default function About(/*{ theme }: ThemeProps*/) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -139,17 +139,17 @@ export default function About({theme}: ThemeProps) {
       </section>
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_1.obj" className={styles.taco} theme={theme} />
+            <ThreeCanvas modelPath="/box_1.obj" className={styles.canvas} /*theme={theme}*/ />
           <p className={styles.p3}>A tall cube</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} /*theme={theme}*/ />
           <p className={styles.p3}>A cube</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} /*theme={theme}*/ />
           <p className={styles.p3}>A thin cube</p>
         </div>
       </section>
