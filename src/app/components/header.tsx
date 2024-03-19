@@ -11,13 +11,12 @@ import { TiUserAdd } from "react-icons/ti";
 import { RiUserFollowFill } from "react-icons/ri";
 
 export default function Header(props: {
-  // useTheme: (arg: string) => void;
-  // theme: string;
-  // name: string;
-  // setName: (name: string) => void;
+  useTheme: (arg: string) => void;
+  theme: string;
 }) {
-  // const logoImageSrc =
-  //   props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp";
+
+  const logoImageSrc =
+    props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp";
 
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -76,61 +75,17 @@ export default function Header(props: {
     }
   };
 
-  // const switchTheme = () => {
-  //   const newTheme = props.theme === "light" ? "dark" : "light";
-
-  //   const formData = new FormData();
-  //   formData.append("user_color_theme", newTheme);
-
-  //   fetch("https://api.generlate.com/api/update-user-color-theme", {
-  //     method: "PUT",
-  //     body: formData,
-  //     credentials: "include"
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       props.useTheme(newTheme);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error updating color theme:", error);
-  //     });
-  // };
-
-  // const logout = async () => {
-  //   await fetch("https://api.generlate.com/api/logout", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     credentials: "include"
-  //   });
-
-  //   props.setName("");
-  //   setProfilePicture(null);
-  // };
 
   let profile: React.ReactNode =  (
     <BiUserCircle size={34} title="user options" />
   );
-  // if (props.name) {
-  //   fetch("https://api.generlate.com/api/user-data", {
-  //     method: "GET",
-  //     credentials: "include",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     }
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       const userImage = data.user_image || "";
 
-  //       const profilePictureUrl = "https://api.generlate.com" + userImage;
+  const switchTheme = () => {
+    const newTheme = props.theme === "light" ? "dark" : "light";
 
-  //       setProfilePicture(profilePictureUrl);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching user information:", error);
-  //       profile = <BiUserCircle title="user options" />;
-  //     });
-  // }
+    props.useTheme(props.theme);
+  };
+
 
   if (profilePicture) {
     profile = <Image src={profilePicture} alt="profile" title="profile" width={35} height={35} className={`${styles.img2}`}/>;
@@ -158,7 +113,7 @@ export default function Header(props: {
           className={styles.link2} 
           onClick={(e) => {
             e.preventDefault();
-            // switchTheme();
+            switchTheme();
           }} 
           title="colors"
         >
@@ -190,7 +145,7 @@ export default function Header(props: {
   return (
     <header className={styles.header}>
       <Link href="/about">
-        <Image src="/generlate-light.webp" width={250} height={47} alt="picture of cubes" className={styles.img}/>
+        <Image src={logoImageSrc} width={250} height={47} alt="picture of cubes" className={styles.img}/>
       </Link>
       <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
         onMouseEnter={() => handleMouseEnter("profile")}
@@ -203,7 +158,7 @@ export default function Header(props: {
           {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
-          <div> {/*props.name ? */ "Hi " /*+ props.name : ""*/}</div>
+          <div> {/*props.name ?*/  "Hi " /*+ props.name : ""*/}</div>
           <div>{menu}</div>
         </form>
       </div>

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -5,11 +7,11 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 
 interface ThreeCanvasProps {
   modelPath: string;
-  /* theme: string; */
+  theme: string; 
   className: string;
 }
 
-const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath /*, theme */ }) => {
+const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null!);
   const objRef = useRef<THREE.Mesh | null>(null);
 
@@ -35,7 +37,7 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath /*, theme */ }) => 
     });
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    renderer.setClearColor(/*theme === "light" ? */ 0xfafafa /*:  0x050504*/);
+    renderer.setClearColor(theme === "light" ?  0xfafafa :  0x050504);
 
     const onResize = () => {
       if (parent) {
@@ -73,7 +75,7 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath /*, theme */ }) => 
       window.removeEventListener("resize", onResize);
       controls.dispose();
     };
-  }, [modelPath, /*theme*/]);
+  }, [modelPath, theme]);
 
   return <canvas ref={canvasRef} />;
 };

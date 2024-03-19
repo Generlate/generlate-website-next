@@ -16,7 +16,7 @@ interface ThemeProps {
   theme: string;
 }
 
-export default function About() {
+export default function About({theme}: ThemeProps) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -59,16 +59,29 @@ export default function About() {
     };
   }, []);
 
+  useEffect(() => {
+    const videoElement = document.querySelector(
+      ".about > video"
+    ) as HTMLVideoElement | null;
+    if (videoElement) {
+      if (theme === "dark") {
+        videoElement.style.filter = "hue-rotate(217deg) saturate(20%)";
+      } else {
+        videoElement.style.filter = "saturate(20%)";
+      }
+    }
+  }, [theme]);
+
   
 
   return (
-    <div>
+    <main>
       <div>
         <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
           <source src="/advertisement.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <a href="#about" title="about" className={styles.a}>
+        <a href="/about" title="about" className={styles.a}>
           ?
         </a>
         <div className={styles.div}>
@@ -76,7 +89,7 @@ export default function About() {
         </div>
       </div>
         
-      <main>
+      
         <section className={styles.section1}>
           Meet Generlate, a text to object generator. <br /> Your words - our
           magic.
@@ -137,17 +150,17 @@ export default function About() {
         </section>
         <section className={styles.section3}>
           <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-              <ThreeCanvas modelPath="/box_1.obj" className={styles.taco} /*theme={theme}*/ />
+              <ThreeCanvas modelPath="/box_1.obj" className={styles.taco} theme={theme} />
             <p className={styles.p3}>A tall cube</p>
           </div>
 
           <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} /*theme={theme}*/ />
+            <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} />
             <p className={styles.p3}>A cube</p>
           </div>
 
           <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} /*theme={theme}*/ />
+            <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} />
             <p className={styles.p3}>A thin cube</p>
           </div>
         </section>
@@ -192,8 +205,8 @@ export default function About() {
             </ol>
           </div>
         </section>
-      </main>
-    </div>
+    
+    </main>
 
   );
 }
