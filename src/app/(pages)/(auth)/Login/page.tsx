@@ -10,8 +10,8 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [navigate, setNavigate] = useState(false);
-
   const { name, setName } = useContext(AuthContext);
+
   // useEffect(() => {
   //       setName('Austen');
   //       console.log('name is ', name);
@@ -37,8 +37,8 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
     const content = await response.json();
 
     // setNavigate(true);
-    // props.setName(content.name);
-    // props.setName(``);
+    setName(content.name);
+    // setName(``);
   };
 
   // if (navigate) {
