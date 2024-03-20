@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, use } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/app/styles/header.module.css";
@@ -103,7 +103,7 @@ export default function Header(props: {
 
   let menu;
 
-  if (!0/*!props.name*/) {
+  if (!name) {
     menu = (
       <ul className={styles.ul}>
         <li className={styles.li}>

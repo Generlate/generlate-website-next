@@ -141,30 +141,30 @@ export default function PageLayout({ children }: {
         );
     }
 
-    // if (theme) {
-    //     fetch("https://api.generlate.com/api/user-data", {
-    //     method: "GET",
-    //     credentials: "include",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     }
-    //     })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         const userColorTheme = data.user_color_theme || "light";
+    if (theme) {
+        fetch("https://api.generlate.com/api/user-data", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+            "Content-Type": "application/json"
+        }
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            const userColorTheme = data.user_color_theme || "light";
 
-    //         setTheme(userColorTheme);
-    //         if (userColorTheme === "dark") {
-    //         changeColorsToDark();
-    //         } else {
-    //         changeColorsToLight();
-    //         }
-    //     })
-    //     .catch((error) => {
-    //         console.error("Error fetching user information:", error);
-    //         theme = "light";
-    //     });
-    // }
+            setTheme(userColorTheme);
+            if (userColorTheme === "dark") {
+            changeColorsToDark();
+            } else {
+            changeColorsToLight();
+            }
+        })
+        .catch((error) => {
+            console.error("Error fetching user information:", error);
+            theme = "light";
+        });
+    }
     
 
 
