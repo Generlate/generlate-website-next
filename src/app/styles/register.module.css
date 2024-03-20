@@ -1,12 +1,15 @@
 .register {
+    text-align: center;
     display: flex;
     flex-direction: column;
+    width: calc(400px + 5vw);
+}
+
+.relative {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    height: 100%;
-    padding-top: 40vh;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    align-items: center;
+    height: calc(100vh - 45px);
 }
 
 /* ipad */

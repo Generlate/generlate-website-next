@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/app/styles/header.module.css";
@@ -9,11 +9,21 @@ import { VscColorMode } from "react-icons/vsc";
 import { ImExit } from "react-icons/im";
 import { TiUserAdd } from "react-icons/ti";
 import { RiUserFollowFill } from "react-icons/ri";
+import {AuthContext} from "@/app/(pages)/layout";
+
 
 export default function Header(props: {
   useTheme: (arg: string) => void;
   theme: string;
+  name: string;
+  setName: (name: string) => void;
 }) {
+
+  const { name, setName } = useContext(AuthContext);
+
+  // useEffect(() => {
+  //       setName('Austen');
+  //   });
 
   const logoImageSrc =
     props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp";
@@ -83,7 +93,7 @@ export default function Header(props: {
   const switchTheme = () => {
     const newTheme = props.theme === "light" ? "dark" : "light";
 
-    props.useTheme(props.theme);
+    props.useTheme(newTheme);
   };
 
 
@@ -93,7 +103,7 @@ export default function Header(props: {
 
   let menu;
 
-  if (0/*!props.name*/) {
+  if (!0/*!props.name*/) {
     menu = (
       <ul className={styles.ul}>
         <li className={styles.li}>
@@ -102,7 +112,7 @@ export default function Header(props: {
         </li>
         <li className={styles.li}>
           <TiUserAdd size={35} className={styles.svg2}/>
-          <Link href="/Signup" className={styles.link2}>Sign up</Link>
+          <Link href="/Register" className={styles.link2}>Sign up</Link>
         </li>
       </ul>
     );
@@ -158,7 +168,7 @@ export default function Header(props: {
           {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
-          <div> {/*props.name ?*/  "Hi " /*+ props.name : ""*/}</div>
+          <div> {name ?  "Hi " + name : ""}</div>
           <div>{menu}</div>
         </form>
       </div>

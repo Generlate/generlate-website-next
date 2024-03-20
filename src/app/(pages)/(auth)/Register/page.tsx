@@ -31,29 +31,31 @@ const Register = () => {
 //   }
 
   return (
-    <form onSubmit={submit} className={styles.register}>
-      <input
-        placeholder="Name"
-        required
-        onChange={(e) => setName(e.target.value)}
-      />
+    <div className={styles.relative}>
+      <form onSubmit={submit} className={styles.register}>
+        <input
+          placeholder="Name"
+          required
+          onChange={(e) => setName(e.target.value)}
+        />
 
-      <input
-        type="email"
-        placeholder="Email address"
-        required
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <input
+          type="email"
+          placeholder="Email address"
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <input
-        type="password"
-        placeholder="Password"
-        required
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <button type="submit">Sign up</button>
-    </form>
+        <button type="submit">Sign up</button>
+      </form>
+    </div>
   );
 };
 

@@ -17,9 +17,22 @@ export const ThemeContext = createContext<ThemeContextType>({
   useTheme: () => {},
 });
 
+interface AuthContextType {
+  name: string;
+  setName: (name: string) => void;
+}
+
+export const AuthContext = createContext<AuthContextType>({
+  name: "",
+  setName: () => {},
+});
+
+
 export default function PageLayout({ children }: {
     children: React.ReactNode
 }) {
+    let [name, setName] = useState("");
+
     let [theme, setTheme] = useState("light");
     const useTheme = () => {
         setTheme((curr) => (curr === "light" ? "dark" : "light"));
@@ -115,27 +128,41 @@ export default function PageLayout({ children }: {
         );
     }
 
-    useEffect(() => {
-    const videoElement = document.querySelector(
-        "video"
-    ) as HTMLVideoElement | null;
-    if (videoElement) {
-        if (theme === "dark") {
-            videoElement.style.filter = "hue-rotate(217deg) saturate(20%)";
-        } else {
-            videoElement.style.filter = "saturate(20%)";
-        }
-    }
-    }, [theme]);
+    // if (theme) {
+    //     fetch("https://api.generlate.com/api/user-data", {
+    //     method: "GET",
+    //     credentials: "include",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     }
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         const userColorTheme = data.user_color_theme || "light";
+
+    //         setTheme(userColorTheme);
+    //         if (userColorTheme === "dark") {
+    //         changeColorsToDark();
+    //         } else {
+    //         changeColorsToLight();
+    //         }
+    //     })
+    //     .catch((error) => {
+    //         console.error("Error fetching user information:", error);
+    //         theme = "light";
+    //     });
+    // }
+    
 
 
     return (
         <ThemeContext.Provider value={{ theme, useTheme }}>
-            <div>
-                <Header useTheme={useTheme} theme={theme} />
-                    {children}
-                <Footer />
-            </div>
+            <AuthContext.Provider value={{ name, setName}}>
+                    <Header useTheme={useTheme} theme={theme} name={name}
+                            setName={setName}/>
+                        {children}
+                    <Footer />
+            </AuthContext.Provider>
         </ThemeContext.Provider>
     )
 }
