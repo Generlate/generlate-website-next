@@ -33,6 +33,19 @@ export default function PageLayout({ children }: {
 }) {
     let [name, setName] = useState("");
 
+    useEffect(() => {
+        (async () => {
+        const response = await fetch("https://api.generlate.com/api/user", {
+            headers: { "Content-Type": "application/json" },
+            credentials: "include"
+        });
+
+        const content = await response.json();
+
+        setName(content.name);
+        })();
+    });
+
     let [theme, setTheme] = useState("light");
     const useTheme = () => {
         setTheme((curr) => (curr === "light" ? "dark" : "light"));

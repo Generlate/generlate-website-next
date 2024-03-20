@@ -18,7 +18,6 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
 
   //   });
 
-  console.log('name is ', name);
 
 
   const submit = async (e: SyntheticEvent) => {
