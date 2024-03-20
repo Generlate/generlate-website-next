@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsClockHistory } from "react-icons/bs";
@@ -11,13 +11,13 @@ import { FiMessageSquare } from "react-icons/fi";
 import styles from "@/app/styles/about.module.css"
 import ThreeCanvas from '@/app/components/ThreeCanvas'
 import transition from '@/app/components/transition'
+import { ThemeContext } from "@/app/(pages)/layout";
 
-// interface ThemeProps {
-//   theme: string;
-// }
 
-export default function About(/*{ theme }: ThemeProps*/) {
+export default function About() {
   const containerRef = useRef(null);
+  const { theme } = useContext(ThemeContext);
+  console.log("theme is ", theme)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -61,11 +61,12 @@ export default function About(/*{ theme }: ThemeProps*/) {
 
 
 
+
   
 
   return (
     <main>
-      <div>
+      <div className={styles.relative}>
         <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
           <source src="/advertisement.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -139,17 +140,17 @@ export default function About(/*{ theme }: ThemeProps*/) {
       </section>
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-            <ThreeCanvas modelPath="/box_1.obj" className={styles.canvas} /*theme={theme}*/ />
+            <ThreeCanvas modelPath="/box_1.obj" className={styles.canvas} theme={theme} />
           <p className={styles.p3}>A tall cube</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} /*theme={theme}*/ />
+          <ThreeCanvas modelPath="/box_2.obj" className={styles.canvas} theme={theme} />
           <p className={styles.p3}>A cube</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} /*theme={theme}*/ />
+          <ThreeCanvas modelPath="/box_3.obj" className={styles.canvas} theme={theme} />
           <p className={styles.p3}>A thin cube</p>
         </div>
       </section>

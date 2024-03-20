@@ -7,12 +7,17 @@ import { AnimatePresence } from "framer-motion";
 import Header from '@/app/components/header'
 
 
+interface ThemeContextType {
+  theme: string;
+  useTheme: () => void;
+}
 
-export const ThemeContext = createContext({});
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: "light",
+  useTheme: () => {},
+});
 
-export default function PageLayout({
-    children,
-}: {
+export default function PageLayout({ children }: {
     children: React.ReactNode
 }) {
     let [theme, setTheme] = useState("light");
@@ -125,12 +130,12 @@ export default function PageLayout({
 
 
     return (
-    <div>
         <ThemeContext.Provider value={{ theme, useTheme }}>
-            <Header useTheme={useTheme} theme={theme} />
-            {children}
-            <Footer />
+            <div>
+                <Header useTheme={useTheme} theme={theme} />
+                    {children}
+                <Footer />
+            </div>
         </ThemeContext.Provider>
-    </div>
     )
 }
