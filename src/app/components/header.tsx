@@ -84,7 +84,21 @@ export default function Header(props: {
   const switchTheme = () => {
     const newTheme = props.theme === "light" ? "dark" : "light";
 
-    props.useTheme(newTheme);
+    const formData = new FormData();
+    formData.append("user_color_theme", newTheme);
+
+    fetch("https://api.generlate.com/api/update-user-color-theme", {
+      method: "PUT",
+      body: formData,
+      credentials: "include"
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        props.useTheme(newTheme);
+      })
+      .catch((error) => {
+        console.error("Error updating color theme:", error);
+      });
   };
 
   const logout = async () => {

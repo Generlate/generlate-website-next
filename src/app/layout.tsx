@@ -33,12 +33,10 @@ export default function RootLayout({
   )
 }
 
-// TODO: fix header logged in dropdown styling
 // TODO: add framer-motion transitions
 // TODO: fix nav arrows
-// TODO: fix touch input for header/footer on mobile
 // TODO: check if values are being passed to the server
-// TODO: fix color theme change button not working
+// TODO: fix header logged in dropdown styling
 // TODO: Fix tsx and props that aren't working
 // TODO: add framer-motion transitions
 // TODO: fix question mark icons' tsx
