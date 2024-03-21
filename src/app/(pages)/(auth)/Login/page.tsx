@@ -1,7 +1,7 @@
 'use client'
 
-import React, { SyntheticEvent, useState, useContext, useEffect } from "react";
-import { useRouter } from 'next/router';
+import React, { SyntheticEvent, useState, useContext, useEffect, use } from "react";
+import { useRouter } from 'next/navigation';
 import styles from "@/app/styles/login.module.css"
 import { AuthContext } from "@/app/(pages)/layout";
 
@@ -11,6 +11,11 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
   const [password, setPassword] = useState("");
   const [navigate, setNavigate] = useState(false);
   const { name, setName } = useContext(AuthContext);
+  const router = useRouter();
+
+  const Navigate = () => {
+    router.push('/');
+  }
 
   // useEffect(() => {
   //       setName('Austen');
@@ -35,14 +40,19 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
 
     const content = await response.json();
 
-    // setNavigate(true);
-    setName(content.name);
-    // setName(``);
+    if (response.ok) {
+      setName(content.name);
+
+    } else {
+      console.error("Login failed");
+      return;
+    }
+
+    Navigate();
+    setName("");
   };
 
-  // if (navigate) {
-  //   return <Navigate to="/" />;
-  //  }
+
 
   return (
     <div className={styles.relative}>

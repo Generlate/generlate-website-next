@@ -9,7 +9,6 @@ import { VscColorMode } from "react-icons/vsc";
 import { ImExit } from "react-icons/im";
 import { TiUserAdd } from "react-icons/ti";
 import { RiUserFollowFill } from "react-icons/ri";
-import {AuthContext} from "@/app/(pages)/layout";
 
 
 export default function Header(props: {
@@ -18,12 +17,6 @@ export default function Header(props: {
   name: string;
   setName: (name: string) => void;
 }) {
-
-  const { name, setName } = useContext(AuthContext);
-
-  // useEffect(() => {
-  //       setName('Austen');
-  //   });
 
   const logoImageSrc =
     props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp";
@@ -86,15 +79,52 @@ export default function Header(props: {
   };
 
 
-  let profile: React.ReactNode =  (
-    <BiUserCircle size={34} title="user options" />
-  );
+
 
   const switchTheme = () => {
     const newTheme = props.theme === "light" ? "dark" : "light";
 
     props.useTheme(newTheme);
   };
+
+  const logout = async () => {
+    await fetch("https://api.generlate.com/api/logout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include"
+    });
+
+    props.setName("");    
+  };
+  
+
+  let profile: React.ReactNode =  (
+    <BiUserCircle size={34} title="user options" />
+  );
+
+  useEffect(() => {
+  if (props.name) {
+    fetch("https://api.generlate.com/api/user-data", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const userImage = data.user_image || "";
+        const profilePictureUrl = "https://api.generlate.com" + userImage;
+        setProfilePicture(profilePictureUrl);
+      })
+      .catch((error) => {
+        console.error("Error fetching user information:", error);
+        setProfilePicture(null);
+      }); 
+    } else {
+    setProfilePicture(null); 
+  }
+  }, [props.name]);
 
 
   if (profilePicture) {
@@ -103,7 +133,7 @@ export default function Header(props: {
 
   let menu;
 
-  if (!name) {
+  if (!props.name) {
     menu = (
       <ul className={styles.ul}>
         <li className={styles.li}>
@@ -143,7 +173,7 @@ export default function Header(props: {
 
         <li className={styles.li}>
           <ImExit size={20} className={styles.svg2}/>
-          <Link href="/Login" /*onClick={logout}*/ className={styles.link2}>
+          <Link href="/Login" onClick={logout} className={styles.link2}>
             Log out
           </Link>
         </li>
@@ -168,7 +198,7 @@ export default function Header(props: {
           {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
-          <div> {name ?  "Hi " + name : ""}</div>
+          <div> {props.name ?  "Hi " + props.name : ""}</div>
           <div>{menu}</div>
         </form>
       </div>

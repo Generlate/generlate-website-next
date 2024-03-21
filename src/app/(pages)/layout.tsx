@@ -35,14 +35,14 @@ export default function PageLayout({ children }: {
 
     useEffect(() => {
         (async () => {
-        const response = await fetch("https://api.generlate.com/api/user", {
-            headers: { "Content-Type": "application/json" },
-            credentials: "include"
-        });
+            const response = await fetch("https://api.generlate.com/api/user", {
+                headers: { "Content-Type": "application/json" },
+                credentials: "include"
+            });
 
-        const content = await response.json();
+            const content = await response.json();
 
-        setName(content.name);
+            setName(content.name);
         })();
     });
 
@@ -165,14 +165,15 @@ export default function PageLayout({ children }: {
             theme = "light";
         });
     }
+
+
     
 
 
     return (
         <ThemeContext.Provider value={{ theme, useTheme }}>
             <AuthContext.Provider value={{ name, setName}}>
-                    <Header useTheme={useTheme} theme={theme} name={name}
-                            setName={setName}/>
+                    <Header useTheme={useTheme} theme={theme} name={name} setName={setName} />
                         {children}
                     <Footer />
             </AuthContext.Provider>
