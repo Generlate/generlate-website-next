@@ -79,7 +79,7 @@ export default function About() {
           <source src="/advertisement.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <a href="/about" title="about" className={styles.a}>
+        <a href="#about" title="about" className={styles.a}>
           ?
         </a>
         <div className={styles.div}>

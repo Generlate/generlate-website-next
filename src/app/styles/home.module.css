@@ -35,14 +35,7 @@
 }
 
 .p:hover::before {
-    content: "\2B8B";
-    transform: rotate(180deg);
-    font-size: 3rem;
-    vertical-align: middle;
-    position: absolute;
-    left: -0.75rem;
-    top: -1.4rem;
-    transition: transform 0.3s ease;
+    transform: translateY(-30px) rotate(180deg);
 }
 
 .section1 {

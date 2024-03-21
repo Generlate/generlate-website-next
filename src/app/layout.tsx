@@ -32,21 +32,15 @@ export default function RootLayout({
     </html>
   )
 }
-
 // TODO: add framer-motion transitions
-// TODO: fix nav arrows
 // TODO: check if values are being passed to the server
-// TODO: fix header logged in dropdown styling
 // TODO: Fix tsx and props that aren't working
-// TODO: add framer-motion transitions
-// TODO: fix question mark icons' tsx
 // TODO: add css for desktop and other media queries
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
 // TODO: consider using @media {prefers-color-scheme: dark}
 // TODO: restructure css to be more combinatorial and less redundant (use classNames that describe the properties)
 // TODO: fix models scale when manipulate on about page on mobile
-// TODO: fix footer drop downs not working on mobile
 
 
 
