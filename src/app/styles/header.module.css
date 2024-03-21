@@ -96,10 +96,11 @@
     white-space: nowrap;
 }
 
-.dropdown-menu > .p {
+.p {
     color: var(--color-five);
     text-decoration: underline;
     margin: 0px;
+    padding-left: 8px;
 }
 
 .input2 {
@@ -138,11 +139,6 @@
 
 .svg2 {
     padding-top: 4px;
-}
-
-.p2 {
-    margin: 0px;
-    padding-left: 8px;
 }
 
 .link2:hover {

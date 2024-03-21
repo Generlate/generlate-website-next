@@ -158,7 +158,7 @@ export default function Header(props: {
           title="colors"
         >
           <VscColorMode className={styles.svg2} size={22}/>
-          <p className={styles.p2}>theme</p>
+          <p className={styles.p}>theme</p>
         </button>
 
         <div className={styles.div}>
@@ -188,12 +188,13 @@ export default function Header(props: {
         <Image src={logoImageSrc} width={250} height={47} alt="picture of cubes" className={styles.img}/>
       </Link>
       <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
-        onMouseEnter={() => handleMouseEnter("profile")}
+        onMouseEnter={() => handleMouseEnter("profile")} 
       >
         <button 
           className={styles.link} 
           data-dropdown-button 
           onClick={() => toggleDropdown("profile")}
+          onTouchStart={() => toggleDropdown("profile")}
         >
           {profile}
         </button>
