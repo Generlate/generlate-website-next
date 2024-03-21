@@ -1,14 +1,18 @@
 'use client'
 
 import React, { SyntheticEvent, useState } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import styles from "@/app/styles/register.module.css"
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [navigate, setNavigate] = useState(false);
+  const router = useRouter();
+
+  const Navigate = () => {
+    router.push('/Login');
+  }
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -23,12 +27,8 @@ const Register = () => {
       })
     });
 
-    // setNavigate(true);
+    Navigate();
   };
-
-//   if (navigate) {
-//     return <Navigate to="/components/login" />;
-//   }
 
   return (
     <div className={styles.relative}>

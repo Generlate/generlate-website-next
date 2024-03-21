@@ -103,27 +103,27 @@ export default function Header(props: {
   );
 
   useEffect(() => {
-  if (props.name) {
-    fetch("https://api.generlate.com/api/user-data", {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const userImage = data.user_image || "";
-        const profilePictureUrl = "https://api.generlate.com" + userImage;
-        setProfilePicture(profilePictureUrl);
+    if (props.name) {
+      fetch("https://api.generlate.com/api/user-data", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
-      .catch((error) => {
-        console.error("Error fetching user information:", error);
-        setProfilePicture(null);
-      }); 
-    } else {
-    setProfilePicture(null); 
-  }
+        .then((response) => response.json())
+        .then((data) => {
+          const userImage = data.user_image || "";
+          const profilePictureUrl = "https://api.generlate.com" + userImage;
+          setProfilePicture(profilePictureUrl);
+        })
+        .catch((error) => {
+          console.error("Error fetching user information:", error);
+          setProfilePicture(null);
+        }); 
+      } else {
+      setProfilePicture(null); 
+    }
   }, [props.name]);
 
 

@@ -9,19 +9,12 @@ import { AuthContext } from "@/app/(pages)/layout";
 const Login = (/*props: { setName: (name: string) => void }*/) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [navigate, setNavigate] = useState(false);
   const { name, setName } = useContext(AuthContext);
   const router = useRouter();
 
   const Navigate = () => {
     router.push('/');
   }
-
-  // useEffect(() => {
-  //       setName('Austen');
-  //       console.log('name is ', name);
-
-  //   });
 
 
 
