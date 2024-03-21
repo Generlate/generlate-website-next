@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product")}>
+      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("product")}>
           <TbVector className={styles.svg}/>
           <p className={styles.p}>Product</p>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")}>
+      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("resources")}>
           <TiDocumentText className={styles.svg}/>
           <p className={styles.p}>Resources</p>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")}>
+      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")} onTouchStart={() => handleMouseEnter("company")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("company")}>
           <IoBusinessOutline className={styles.svg}/>
           <p className={styles.p}>Company</p>
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")}>
+      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")} onTouchStart={() => handleMouseEnter("social")}>
         <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("social")}>
           <BsPeople className={styles.svg}/>
           <p className={styles.p}>Social</p>
