@@ -1,7 +1,9 @@
+'use client'
+
 import styles from "@/app/styles/news.module.css"
 import transition from '@/app/components/transition'
 
-export default function News() {
+function News() {
   return (
     <main className={styles.news}>
       <section className={styles.section}>
@@ -22,3 +24,5 @@ export default function News() {
     </main> 
   );
 }
+
+export default transition(News)

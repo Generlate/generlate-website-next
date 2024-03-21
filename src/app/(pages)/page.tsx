@@ -9,7 +9,7 @@ import { TbMessage2Up } from "react-icons/tb";
 import { ThemeContext } from "@/app/(pages)/layout";
 
 
-export default function Home(){
+function Home(){
   const [showDownloadButton, setShowDownloadButton] = useState(false);
   const [model, setModel] = useState("/box_4.obj");
   const { theme } = useContext(ThemeContext);
@@ -103,3 +103,5 @@ export default function Home(){
     </main>
   )
 }
+
+export default transition(Home);

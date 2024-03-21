@@ -3,6 +3,7 @@
 import React, { SyntheticEvent, useState } from "react";
 import { useRouter } from 'next/navigation';
 import styles from "@/app/styles/register.module.css"
+import transition from '@/app/components/transition'
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -59,4 +60,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default transition(Register);

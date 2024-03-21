@@ -1,7 +1,9 @@
+'use client'
+
 import styles from "@/app/styles/docs.module.css"
 import transition from '@/app/components/transition'
 
-export default function Docs() {
+function Docs() {
   return (
     <main className={styles.docs}>
       <section className={styles.section}>research</section>
@@ -10,3 +12,5 @@ export default function Docs() {
     </main>
   );
 }
+
+export default transition(Docs)

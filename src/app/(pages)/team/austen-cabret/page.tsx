@@ -1,8 +1,10 @@
+'use client'
+
 import Image from "next/image";
 import styles from "@/app/styles/austen-cabret.module.css"
 import transition from '@/app/components/transition'
 
-export default function AustenCabret() {
+function AustenCabret() {
   return (
     <main className={styles.austencabret}>
       <section className={styles.section}>
@@ -30,3 +32,5 @@ export default function AustenCabret() {
     </main>
   );
 }
+
+export default transition(AustenCabret)

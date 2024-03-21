@@ -1,7 +1,9 @@
+'use client'
+
 import styles from "@/app/styles/legal.module.css"
 import transition from '@/app/components/transition'
 
-export default function Legal() {
+function Legal() {
   return (
     <main className={styles.legal}>
       <p>Last Updated: 01/09/2024</p>
@@ -143,3 +145,5 @@ export default function Legal() {
     </main>
   );
 }
+
+export default transition(Legal);

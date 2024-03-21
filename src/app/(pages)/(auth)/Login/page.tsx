@@ -4,6 +4,7 @@ import React, { SyntheticEvent, useState, useContext, useEffect, use } from "rea
 import { useRouter } from 'next/navigation';
 import styles from "@/app/styles/login.module.css"
 import { AuthContext } from "@/app/(pages)/layout";
+import transition from '@/app/components/transition'
 
 
 const Login = (/*props: { setName: (name: string) => void }*/) => {
@@ -71,5 +72,5 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
   );
 };
 
-export default Login;
+export default transition(Login);
 

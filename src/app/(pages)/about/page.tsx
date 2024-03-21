@@ -14,7 +14,7 @@ import transition from '@/app/components/transition'
 import { ThemeContext } from "@/app/(pages)/layout";
 
 
-export default function About() {
+function About() {
   const containerRef = useRef(null);
   const { theme } = useContext(ThemeContext);
 
@@ -207,3 +207,5 @@ export default function About() {
 
   );
 }
+
+export default transition(About);

@@ -1,9 +1,11 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from "@/app/styles/team.module.css"
 import transition from '@/app/components/transition'
 
-export default function Team() {
+function Team() {
   return (
     <main className={styles.team}>
       <section className={styles.section}>
@@ -19,3 +21,5 @@ export default function Team() {
     </main>
   );
 }
+
+export default transition(Team)

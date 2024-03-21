@@ -1,7 +1,9 @@
+'use client'
+
 import styles from "@/app/styles/pricing.module.css"
 import transition from '@/app/components/transition'
 
-export default function Pricing() {
+function Pricing() {
   return (
     <main className={styles.pricing}>
       <section className={styles.section}>pricing</section>
@@ -11,3 +13,5 @@ export default function Pricing() {
     </main>
   );
 }
+
+export default transition(Pricing)

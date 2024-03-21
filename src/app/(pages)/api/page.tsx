@@ -1,7 +1,9 @@
+'use client'
+
 import styles from "@/app/styles/api.module.css"
 import transition from '@/app/components/transition'
 
-export default function Api() {
+function Api() {
   return (
     <main className={styles.api}>
         <section className={styles.section}>how to set up the api</section>
@@ -9,3 +11,5 @@ export default function Api() {
     </main>
   );
 }
+
+export default transition(Api)
