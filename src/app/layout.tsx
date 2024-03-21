@@ -32,7 +32,7 @@ export default function RootLayout({
     </html>
   )
 }
-// TODO: add framer-motion transitions
+
 // TODO: check if values are being passed to the server
 // TODO: Fix tsx and props that aren't working
 // TODO: add css for desktop and other media queries
