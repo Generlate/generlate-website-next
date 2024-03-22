@@ -96,6 +96,10 @@ export default function PageLayout({ children }: {
         "--color-drop-down-box-shadow",
         "rgba(25, 25, 25, 0.2)"
         );
+        document.documentElement.style.setProperty(
+            "--section-drop-shadow",
+            "rgba(121, 161, 176, 0.15)"
+        );
 
         const videoElement = document.querySelector(
         ".about > video"
@@ -138,6 +142,10 @@ export default function PageLayout({ children }: {
         document.documentElement.style.setProperty(
         "--color-drop-down-box-shadow",
         "rgba(230, 230, 230, 0.2)"
+        );
+        document.documentElement.style.setProperty(
+        "--section-drop-shadow",
+        "rgba(173, 158, 131, 0.15)"
         );
     }
 
