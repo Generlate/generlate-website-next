@@ -19,6 +19,7 @@
     --font-weight-three: 500;
     --font-weight-four: 900;
     --color-drop-down-box-shadow: rgba(25, 25, 25, 0.2);
+    --color-section-box-shadow: rgba(var(--color-four) 0.15);
 }
 
 html {
