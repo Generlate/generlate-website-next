@@ -97,7 +97,7 @@ export default function PageLayout({ children }: {
         "rgba(25, 25, 25, 0.2)"
         );
         document.documentElement.style.setProperty(
-            "--section-drop-shadow",
+            "--color-section-box-shadow",
             "rgba(121, 161, 176, 0.15)"
         );
 
@@ -144,7 +144,7 @@ export default function PageLayout({ children }: {
         "rgba(230, 230, 230, 0.2)"
         );
         document.documentElement.style.setProperty(
-        "--section-drop-shadow",
+        "--color-section-drop-shadow",
         "rgba(77, 75, 67, 0.15)"
         );
     }
