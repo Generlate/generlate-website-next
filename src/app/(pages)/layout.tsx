@@ -145,7 +145,7 @@ export default function PageLayout({ children }: {
         );
         document.documentElement.style.setProperty(
         "--section-drop-shadow",
-        "rgba(173, 158, 131, 0.15)"
+        "rgba(77, 75, 67, 0.15)"
         );
     }
 

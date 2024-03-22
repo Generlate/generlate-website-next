@@ -33,8 +33,8 @@ export default function RootLayout({
   )
 }
 
-// TODO: check if values are being passed to the server
-// TODO: Fix tsx and props that aren't working
+// TODO: fix about page 'text to 3d' button color animation
+// TODO: check all tsx and props are working
 // TODO: add css for desktop and other media queries
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
