@@ -2,7 +2,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: calc(400px + 5vw);
+    width: calc(340px + 15vw);
 }
 
 .relative {

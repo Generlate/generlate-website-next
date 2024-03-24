@@ -28,11 +28,12 @@
 .link {
     color: var(--color-three);
     font-size: var(--font-size-four);
-    background-color: rgba(16, 16, 16, 0);
-    border: 0px none black;
+    background-color: transparent;
+    border: none;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
     padding: 0;
+    display: flex;
 }
 
 .svg {
@@ -67,6 +68,7 @@
 
 .ul {
     margin: 0px;
+
     padding: 0.5rem;
 }
 
@@ -138,6 +140,7 @@
 
 .svg2 {
     padding-top: 4px;
+    padding-right: 3px;
 }
 
 .link2:hover {

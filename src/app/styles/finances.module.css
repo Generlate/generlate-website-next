@@ -1,4 +1,4 @@
-.finances {
+.subPage {
     height: calc(100vh - 136px);
     margin-left: 0%;
     margin-right: 0%;
@@ -15,7 +15,7 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
-    .finances {
+    .subPage {
         height: calc(100vh - 107px);
         margin-left: 25%;
         margin-right: 25%;
