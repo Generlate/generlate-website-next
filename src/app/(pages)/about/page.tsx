@@ -74,20 +74,13 @@ function About() {
 
   return (
     <main>
-      <div className={styles.relative}>
-        <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
-          <source src="/advertisement.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <a href="#about" title="about" className={styles.a}>
-          ?
-        </a>
-
-      </div>
+      
+ 
         
       <section className={styles.section1}>
         Meet Generlate, a text to object generator.
       </section>
+          
       <section className={styles.section2}>
         <ul className={styles.ul}>
           <li className={styles.li}>
@@ -119,6 +112,7 @@ function About() {
           </li>
         </ul>
       </section>
+        
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
           <ThreeCanvas modelPath="/box_1.obj" className={styles.canvas} theme={theme} />
@@ -174,10 +168,19 @@ function About() {
         </div>
       </section>
 
-              <div className={styles.div}>
-          <Link href="/" className={styles.link}>Text -&gt; 3D!</Link>
+
+
+      <div className={styles.relative}>
+        <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
+          <source src="/advertisement.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.div}>
+          <Link href="/" className={styles.link}>Text -&gt; Object!</Link>
         </div>
-    
+      </div>
+
+
     </main>
 
   );

@@ -8,6 +8,15 @@
     top: 0;
     z-index: 1;
     gap: 1rem;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        var(--color-two),
+        var(--color-one),
+        var(--color-one),
+        var(--color-two)
+    );
+    border-image-slice: 1;
 }
 
 .logoImage {
