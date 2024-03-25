@@ -17,10 +17,11 @@
 .p {
     position: absolute;
     left: 13rem;
-    top: 3.5rem;
+    top: 5rem;
     font-size: 1.5rem;
     font-weight: 900;
     display: none;
+    z-index: 4;
 }
 
 .p::before {
@@ -41,6 +42,7 @@
 .section1 {
     flex: 4;
     color: var(--color-five);
+    padding: 0px;
 }
 
 .canvas {
@@ -56,7 +58,7 @@
     color: var(--color-three);
     font-size: 1rem;
     position: absolute;
-    top: 8%;
+    top: 12%;
     left: 8%;
 }
 

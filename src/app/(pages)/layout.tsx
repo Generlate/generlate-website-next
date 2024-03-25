@@ -183,7 +183,7 @@ export default function PageLayout({ children }: {
             <AuthContext.Provider value={{ name, setName}}>
                     <Header useTheme={useTheme} theme={theme} name={name} setName={setName} />
                         {children}
-                    <Footer />
+                    {/* <Footer /> */}
             </AuthContext.Provider>
         </ThemeContext.Provider>
     )
