@@ -82,9 +82,7 @@ function About() {
         <a href="#about" title="about" className={styles.a}>
           ?
         </a>
-        <div className={styles.div}>
-          <Link href="/" className={styles.link}>Text -&gt; 3D!</Link>
-        </div>
+
       </div>
         
       <section className={styles.section1}>
@@ -175,6 +173,10 @@ function About() {
           </ol>
         </div>
       </section>
+
+              <div className={styles.div}>
+          <Link href="/" className={styles.link}>Text -&gt; 3D!</Link>
+        </div>
     
     </main>
 
