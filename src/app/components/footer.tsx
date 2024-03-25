@@ -38,50 +38,50 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
-        <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("product")}>
+      <div className={`${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("product")}>
           <TbVector className={styles.svg}/>
           <p className={styles.p}>Product</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-one"]}`}>
-          <Link href="/news" className={styles.a}>News</Link>
-          <Link href="/pricing" className={styles.a}>Pricing</Link>
+          <Link href="/news" className={styles.link}>News</Link>
+          <Link href="/pricing" className={styles.link}>Pricing</Link>
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
-        <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("resources")}>
+      <div className={` ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("resources")}>
           <TiDocumentText className={styles.svg}/>
           <p className={styles.p}>Resources</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-two"]}`}>
-          <Link href="/docs" className={styles.a}>Docs</Link>
-          <Link href="/api" className={styles.a}>API</Link>
+          <Link href="/docs" className={styles.link}>Docs</Link>
+          <Link href="/api" className={styles.link}>API</Link>
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")} onTouchStart={() => handleMouseEnter("company")}>
-        <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("company")}>
+      <div className={` ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")} onTouchStart={() => handleMouseEnter("company")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("company")}>
           <IoBusinessOutline className={styles.svg}/>
           <p className={styles.p}>Company</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-three"]}`}>
-          <Link href="/team" className={styles.a}>Team</Link>
-          <Link href="/finances" className={styles.a}>Finances</Link>
-          <Link href="/legal" className={styles.a}>Legal</Link>
+          <Link href="/team" className={styles.link}>Team</Link>
+          <Link href="/finances" className={styles.link}>Finances</Link>
+          <Link href="/legal" className={styles.link}>Legal</Link>
         </div>
       </div>
 
-      <div className={`${styles.div} ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")} onTouchStart={() => handleMouseEnter("social")}>
-        <button className={styles.link} data-dropdown-button onClick={() => toggleDropdown("social")}>
+      <div className={` ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")} onTouchStart={() => handleMouseEnter("social")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("social")}>
           <BsPeople className={styles.svg}/>
           <p className={styles.p}>Social</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-four"]}`}>
-          <Link href="https://github.com/Generlate" className={styles.a}>Github</Link>
-          <Link href="https://www.youtube.com/@generlate" className={styles.a}>Youtube</Link>
-          <Link href="https://twitter.com/Generlate" className={styles.a}>Twitter</Link>
-          <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={styles.a}>LinkedIn</Link>
+          <Link href="https://github.com/Generlate" className={styles.link}>Github</Link>
+          <Link href="https://www.youtube.com/@generlate" className={styles.link}>Youtube</Link>
+          <Link href="https://twitter.com/Generlate" className={styles.link}>Twitter</Link>
+          <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={styles.link}>LinkedIn</Link>
         </div>
       </div>
 

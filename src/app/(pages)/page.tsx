@@ -74,7 +74,7 @@ function Home(){
         <section className={styles.section1}>
           {showDownloadButton && (
             <>
-              <button onClick={handleDownloadClick} className={styles.button}>Download</button>
+              <button onClick={handleDownloadClick} className={styles.downloadButton}>Download</button>
               {<ThreeCanvas modelPath={model} theme={theme} className={styles.canvas}/>}
             </>
           )}
@@ -84,7 +84,7 @@ function Home(){
           <div className={styles.div1}></div>
 
           <div className={styles.div2}>
-            <button title="voice input" className={styles.button1}>
+            <button title="voice input" className={styles.audioButton}>
               <BiSolidMicrophoneAlt className={styles.svg}/>
             </button>
             <input
@@ -92,9 +92,9 @@ function Home(){
               placeholder="Prompt here..."
               id="generationbar"
               onKeyDown={enterKey}
-              className={styles.input}
+              className={styles.textInput}
             />
-            <button  onClick={handleInputClick}  title="text input" className={styles.button2}>
+            <button  onClick={handleInputClick}  title="text input" className={styles.inputButton}>
               <TbMessage2Up />
             </button>
           </div>

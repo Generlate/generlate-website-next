@@ -113,7 +113,7 @@ export default function Header(props: {
   
 
   let profile: React.ReactNode =  (
-    <BiUserCircle size={34} title="user options" />
+    <BiUserCircle size={34} title="user options" className={styles.svg}/>
   );
 
   useEffect(() => {
@@ -142,7 +142,7 @@ export default function Header(props: {
 
 
   if (profilePicture) {
-    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} height={35} className={`${styles.img2}`}/>;
+    profile = <Image src={profilePicture} alt="profile" title="profile" width={35} height={35} className={`${styles.profilePic}`}/>;
   }
 
   let menu;
@@ -151,13 +151,13 @@ export default function Header(props: {
     menu = (
       <ul className={styles.ul}>
         <li className={styles.li}>
-          <Link href="/Login" className={styles.link2}>
+          <Link href="/Login" className={styles.link}>
             <RiUserFollowFill size={20} className={styles.svg2}/>
             Sign in
           </Link>
         </li>
         <li className={styles.li}>
-          <Link href="/Register" className={styles.link2}>
+          <Link href="/Register" className={styles.link}>
             <TiUserAdd size={23} className={styles.svg2}/>
             Sign up
           </Link>
@@ -168,7 +168,7 @@ export default function Header(props: {
     menu = (
       <ul className={styles.ul}>
         <button 
-          className={styles.link2} 
+          className={styles.link} 
           onClick={(e) => {
             e.preventDefault();
             switchTheme();
@@ -185,13 +185,13 @@ export default function Header(props: {
             type="file" 
             accept=".jpg, .jpeg, .png, .gif" 
             onChange={changePicture} 
-            className={styles.input2}
+            className={styles.profilePicInput}
           />
         </div>
 
         <li className={styles.li}>
-          <ImExit size={20} className={styles.svg2}/>
-          <Link href="/Login" onClick={logout} className={styles.link2}>
+          <Link href="/Login" onClick={logout} className={styles.link}>
+            <ImExit size={20} className={styles.svg2}/>
             Log out
           </Link>
         </li>
@@ -203,13 +203,13 @@ export default function Header(props: {
   return (
     <header className={styles.header}>
       <Link href="/about">
-        <Image src={logoImageSrc} width={250} height={47} alt="picture of cubes" className={styles.img}/>
+        <Image src={logoImageSrc} width={250} height={47} alt="picture of cubes" className={styles.logoImage}/>
       </Link>
       <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
         onMouseEnter={() => handleMouseEnter("profile")} 
       >
         <button 
-          className={styles.link} 
+          className={styles.button} 
           data-dropdown-button 
           onClick={() => toggleDropdown("profile")}
           onTouchStart={() => toggleDropdown("profile")}

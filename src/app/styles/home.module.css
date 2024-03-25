@@ -41,12 +41,15 @@
 .section1 {
     flex: 4;
     color: var(--color-five);
-    background-color: var(--color-one);
 }
 
-.button {
+.canvas {
+    border-radius: var(--border-radius);
+}
+
+.downloadButton {
     background-color: var(--color-six);
-    border: 1px solid var(--color-six);
+    border: none;
     border-radius: var(--border-radius);
     padding: 6px;
     font-weight: 500;
@@ -57,22 +60,13 @@
     left: 8%;
 }
 
-.canvas {
-    border-radius: var(--border-radius);
-}
-
-.button:active {
+.downloadButton:active {
     background-color: var(--color-three);
     color: var(--color-two);
 }
 
 .section2 {
     flex: 2;
-    background-color: var(--color-one);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,11 +105,15 @@
     border-top: 1px solid var(--color-six);
 }
 
-.button1 {
-    padding: 12px 12px 12px 16px;
+.audioButton {
+    padding: 11px 12px 11px 16px;
     background-color: var(--color-six);
     border: none;
     border-bottom-left-radius: var(--border-radius);
+}
+
+.audioButton:hover {
+    cursor: pointer;
 }
 
 .svg {
@@ -127,7 +125,7 @@
     color: var(--color-three);
 }
 
-.input {
+.textInput {
     margin: 0px auto;
     color: var(--color-six);
     font-size: var(--font-size-three);
@@ -140,32 +138,32 @@
     padding-left: 1rem;
 }
 
-.input::placeholder {
+.textInput::placeholder {
     margin: 0px auto;
     color: var(--color-six);
     background-color: var(--color-one);
 }
 
-.input:focus {
+.textInput:focus {
     outline: none;
 }
 
-.button2 {
+.inputButton {
     padding: 8px;
     border-bottom-right-radius: var(--border-radius);
     background-color: var(--color-six);
-    border: 1px solid var(--color-six);
+    border: none;
     font-size: var(--font-size-three);
     color: var(--color-one);
     transition: ease 0.2s;
 }
 
-.button2:active {
+.inputButton:active {
     background-color: var(--color-three);
     color: var(--color-two);
 }
 
-.button:hover {
+.inputButton:hover {
     cursor: pointer;
 }
 
@@ -189,7 +187,7 @@
         margin: 0px 16px;
     }
 
-    .button {
+    .downloadButton {
         top: 6%;
         left: 27%;
     }

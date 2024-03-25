@@ -8,21 +8,22 @@
     background-color: var(--color-one);
 }
 
-.div {
-    transition: color 0.3s ease-in-out;
-}
-
-.div:hover {
-    color: var(--color-three);
-}
-
 .dropdown {
     position: relative;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease-in-out;
 }
 
-.link {
+.dropdown:hover {
+    color: var(--color-three);
+}
+
+.svg {
+    font-size: 40px;
+}
+
+.button {
     background: none;
     border: none;
     color: var(--color-three);
@@ -33,10 +34,6 @@
     display: flex;
     align-items: center;
     transition: transform 0.15s ease-in-out, color 0.3s ease-in-out;
-}
-
-.svg {
-    font-size: 40px;
 }
 
 .p {
@@ -64,40 +61,40 @@
     pointer-events: none;
 }
 
-.a {
-    color: var(--color-five);
-    display: inline-block;
-    font-size: 1.25rem;
-}
-
-.a:hover {
-    text-decoration: underline;
-}
-
 .dropdown-menu-one {
     left: 0;
 }
 
 .dropdown-menu-two {
-    left: -20px;
+    left: -14px;
 }
 
 .dropdown-menu-three {
-    left: -55px;
+    left: -50px;
 }
 
 .dropdown-menu-four {
     right: 0;
 }
 
-.dropdown.active > .link + .dropdown-menu {
+.link {
+    color: var(--color-five);
+    display: inline-block;
+    font-size: 1.25rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.dropdown.active > .button + .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
-.dropdown.active > .link,
-.link:hover {
+.dropdown.active > .button,
+.button:hover {
     color: var(--color-four);
 }
 
