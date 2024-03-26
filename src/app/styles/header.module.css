@@ -11,10 +11,10 @@
     border-bottom: 2px solid;
     border-image: linear-gradient(
         to right,
-        var(--color-two),
+        transparent,
         var(--color-one),
         var(--color-one),
-        var(--color-two)
+        transparent
     );
     border-image-slice: 1;
     padding: 15px;
@@ -36,6 +36,8 @@
 
 .dropdown {
     position: relative;
+    transition: color 0.3s ease-in-out;
+    align-items: center;
 }
 
 .button {
@@ -47,6 +49,11 @@
     transition: all 0.3s ease-in-out;
     padding: 0;
     display: flex;
+    background: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
 }
 
 .svg {
@@ -77,6 +84,16 @@
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     pointer-events: none;
+    margin: 0px;
+    background-color: var(--color-dropdown);
+    align-items: flex-start;
+}
+
+.dropdown-menu {
+    /* display: flex;
+    flex-direction: column; */
+    /* border: 1px solid var(--color-five); */
+    /* padding: 7px; */
 }
 
 .ul {
@@ -127,6 +144,7 @@
     padding: 2px;
     display: flex;
     white-space: nowrap;
+    font-size: 1.25rem;
 }
 
 .link:hover {
@@ -136,6 +154,7 @@
 .svg2 {
     padding-top: 4px;
     padding-right: 3px;
+    color: var(--color-five);
 }
 
 .dropdown.active > .button,
@@ -149,33 +168,8 @@
     pointer-events: auto;
 }
 
-/* footer css*/
-.dropdown2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease-in-out;
-}
-
-.dropdown2:hover {
-    color: var(--color-three);
-}
-
 .svg3 {
     font-size: 40px;
-}
-
-.button2 {
-    background: none;
-    border: none;
-    color: var(--color-three);
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    transition: transform 0.15s ease-in-out, color 0.3s ease-in-out;
 }
 
 .p2 {
@@ -183,61 +177,20 @@
     margin: 0px;
 }
 
-.dropdown-menu2 {
-    position: absolute;
-    top: calc(100% + 0.25rem);
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--color-five);
-    margin: 0px;
-    padding: 7px;
-    background-color: var(--color-dropdown);
-    align-items: flex-start;
-    border-radius: 20%;
-    box-shadow: 0px 0px 10px 0px var(--color-drop-down-box-shadow);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    pointer-events: none;
+.dropdown-menu-one {
+    right: -10px;
 }
 
-.dropdown-menu2-one {
-    left: 0;
+.dropdown-menu-two {
+    right: -5px;
 }
 
-.dropdown-menu2-two {
-    left: -14px;
+.dropdown-menu-three {
+    right: -10px;
 }
 
-.dropdown-menu2-three {
-    left: -50px;
-}
-
-.dropdown-menu2-four {
-    right: 0;
-}
-
-.link2 {
-    color: var(--color-five);
-    display: inline-block;
-    font-size: 1.25rem;
-}
-
-.link2:hover {
-    text-decoration: underline;
-}
-
-.dropdown2.active > .button2 + .dropdown-menu2 {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.dropdown2.active > .button2,
-.button2:hover {
-    color: var(--color-four);
+.dropdown-menu-four {
+    right: -10px;
 }
 
 /* ipad */
@@ -246,6 +199,37 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .header {
+        padding: 10px;
+        padding-left: 25%;
+        padding-right: 25%;
+        width: 50%;
+    }
+
+    .svg3 {
+        display: none;
+    }
+
+    .p2 {
+        display: block;
+        color: var(--color-four);
+    }
+
+    .dropdown-menu-one {
+        right: -5px;
+    }
+
+    .dropdown-menu-two {
+        right: 20px;
+    }
+
+    .dropdown-menu-three {
+        right: -7px;
+    }
+
+    .dropdown-menu-four {
+        right: -20px;
+    }
 }
 
 /* big screen */

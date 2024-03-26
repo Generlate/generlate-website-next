@@ -34,6 +34,7 @@ export default function RootLayout({
 }
 
 // TODO: swap logo for one without particles
+// TODO: make header bottom border turn light when on home page.
 // TODO: add css for desktop and other media queries
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling

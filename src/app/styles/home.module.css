@@ -16,7 +16,7 @@
 
 .p {
     position: absolute;
-    left: 13rem;
+    left: 26.1%;
     top: 5rem;
     font-size: 1.5rem;
     font-weight: 900;
@@ -59,12 +59,16 @@
     font-size: 1rem;
     position: absolute;
     top: 12%;
-    left: 8%;
+    right: 8%;
 }
 
 .downloadButton:active {
     background-color: var(--color-three);
     color: var(--color-two);
+}
+
+.downloadButton:hover {
+    cursor: pointer;
 }
 
 .section2 {
@@ -190,8 +194,8 @@
     }
 
     .downloadButton {
-        top: 6%;
-        left: 27%;
+        top: 12%;
+        left: 68.5%;
     }
 }
 

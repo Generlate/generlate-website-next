@@ -216,88 +216,80 @@ export default function Header(props: {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
   return (
     <header className={styles.header}>
       <Link href="/about">
         <Image src={isMobileLayout ? (props.theme === "dark" ? "/mobile-generlate-dark.png" : "/mobile-generlate-light.png") : (props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp")} width={isMobileLayout ? 41 : 250} height={isMobileLayout ? 41 : 47} alt="picture of cubes" className={styles.logoImage}/>
       </Link>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div className={`${styles.dropdown2} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
-          <button className={styles.button2} data-dropdown-button onClick={() => toggleDropdown("product")}>
-            <TbVector className={styles.svg3}/>
-            <p className={styles.p2}>Product</p>
-          </button>
-          <div className={`${styles["dropdown-menu2"]} ${styles["dropdown-menu2-one"]}`}>
-            <Link href="/news" className={styles.link2}>News</Link>
-            <Link href="/pricing" className={styles.link2}>Pricing</Link>
-          </div>
+      <div className={`${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("product")}>
+          <TbVector className={styles.svg3}/>
+          <p className={styles.p2}>Product</p>
+        </button>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-one"]}`}>
+          <Link href="/news" className={styles.link}>News</Link>
+          <Link href="/pricing" className={styles.link}>Pricing</Link>
         </div>
+      </div>
 
-        <div className={` ${styles.dropdown2} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
-          <button className={styles.button2} data-dropdown-button onClick={() => toggleDropdown("resources")}>
-            <TiDocumentText className={styles.svg3}/>
-            <p className={styles.p2}>Resources</p>
-          </button>
-          <div className={`${styles["dropdown-menu2"]} ${styles["dropdown-menu2-two"]}`}>
-            <Link href="/docs" className={styles.link2}>Docs</Link>
-            <Link href="/api" className={styles.link2}>API</Link>
-          </div>
+      <div className={` ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("resources")}>
+          <TiDocumentText className={styles.svg3}/>
+          <p className={styles.p2}>Resources</p>
+        </button>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-two"]}`}>
+          <Link href="/docs" className={styles.link}>Docs</Link>
+          <Link href="/api" className={styles.link}>API</Link>
         </div>
+      </div>
 
-        <div className={` ${styles.dropdown2} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")} onTouchStart={() => handleMouseEnter("company")}>
-          <button className={styles.button2} data-dropdown-button onClick={() => toggleDropdown("company")}>
-            <IoBusinessOutline className={styles.svg3}/>
-            <p className={styles.p2}>Company</p>
-          </button>
-          <div className={`${styles["dropdown-menu2"]} ${styles["dropdown-menu2-three"]}`}>
-            <Link href="/team" className={styles.link2}>Team</Link>
-            <Link href="/finances" className={styles.link2}>Finances</Link>
-            <Link href="/legal" className={styles.link2}>Legal</Link>
-          </div>
+      <div className={` ${styles.dropdown} ${activeDropdown === "company" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("company")} onTouchStart={() => handleMouseEnter("company")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("company")}>
+          <IoBusinessOutline className={styles.svg3}/>
+          <p className={styles.p2}>Company</p>
+        </button>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-three"]}`}>
+          <Link href="/team" className={styles.link}>Team</Link>
+          <Link href="/finances" className={styles.link}>Finances</Link>
+          <Link href="/legal" className={styles.link}>Legal</Link>
         </div>
+      </div>
 
-        <div className={` ${styles.dropdown2} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")} onTouchStart={() => handleMouseEnter("social")}>
-          <button className={styles.button2} data-dropdown-button onClick={() => toggleDropdown("social")}>
-            <BsPeople className={styles.svg3}/>
-            <p className={styles.p2}>Social</p>
-          </button>
-          <div className={`${styles["dropdown-menu2"]} ${styles["dropdown-menu2-four"]}`}>
-            <Link href="https://github.com/Generlate" className={styles.link2}>Github</Link>
-            <Link href="https://www.youtube.com/@generlate" className={styles.link2}>Youtube</Link>
-            <Link href="https://twitter.com/Generlate" className={styles.link2}>Twitter</Link>
-            <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={styles.link2}>LinkedIn</Link>
-          </div>
+      <div className={` ${styles.dropdown} ${activeDropdown === "social" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("social")} onTouchStart={() => handleMouseEnter("social")}>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("social")}>
+          <BsPeople className={styles.svg3}/>
+          <p className={styles.p2}>Social</p>
+        </button>
+        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-four"]}`}>
+          <Link href="https://github.com/Generlate" className={styles.link}>Github</Link>
+          <Link href="https://www.youtube.com/@generlate" className={styles.link}>Youtube</Link>
+          <Link href="https://twitter.com/Generlate" className={styles.link}>Twitter</Link>
+          <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={styles.link}>LinkedIn</Link>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
 
       <div className={`${styles.dropdown} ${activeDropdown === "profile" ? `${styles.active}` : ``}`}
         onMouseEnter={() => handleMouseEnter("profile")} 
@@ -315,50 +307,7 @@ export default function Header(props: {
           <div>{menu}</div>
         </form>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   );
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
