@@ -33,7 +33,7 @@ function Home(){
     if (input instanceof HTMLInputElement) {
       const formData = new FormData();
       const inputText = input.value;
-      formData.append("user_input_text", inputText);
+      formData.append("user_input_text", input.value);
 
       fetch("https://api.generlate.com/api/upload-generated-objects", {
         method: "PUT",
