@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 import ThreeCanvas from "@/app/components/ThreeCanvas";
 import styles from "@/app/styles/home.module.css"
@@ -11,7 +11,7 @@ import { ThemeContext } from "@/app/(pages)/layout";
 
 function Home(){
   const [showDownloadButton, setShowDownloadButton] = useState(false);
-  const [model, setModel] = useState("/box_4.obj");
+  const [model, setModel] = useState("/");
   const { theme } = useContext(ThemeContext);
 
   function handleDownloadClick() {
@@ -23,9 +23,29 @@ function Home(){
   }
 
   function handleInputClick() {
+    // get user input text 
+    // post user input data to the server
+    // server will return a file path to the model file
+    // update canvas with the model file
+
     const input = document.getElementById("generationbar");
 
     if (input instanceof HTMLInputElement) {
+      const formData = new FormData();
+      const inputText = input.value;
+      formData.append("user_input_text", inputText);
+
+      fetch("https://api.generlate.com/api/upload-generated-objects", {
+        method: "PUT",
+        body: formData,
+        credentials: "include"
+      })
+        .then((response) => response.json())
+        .catch((error) => {
+          console.error("Error uploading user input text:", error);
+        });
+
+        
       fetch("https://api.generlate.com/api/user-data", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -33,11 +53,11 @@ function Home(){
       })
         .then((response) => response.json())
         .then((data) => {
-          const generatedObjectPath = "/" + data.generated_object_file_path;
+          const file_path_part = data.generated_object_file_path
+          const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + file_path_part;
           setModel(generatedObjectPath);
           setShowDownloadButton(true);
 
-          const inputText = input.value;
           const newParagraph = document.createElement("p");
           newParagraph.textContent = inputText;
 
@@ -51,12 +71,10 @@ function Home(){
 
           input.value = "";
 
-          if (data.generated_object_file_path === undefined) {
-            setModel("/box_4.obj");
-          }
         })
         .catch((error) => {
           console.error("Error:", error);
+          // setModel("/box_4.obj");
         });
     }
   }
