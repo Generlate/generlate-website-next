@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState, createContext } from "react";
-import Footer from '@/app/components/footer'
 import "@/app/styles/globals.css"
 import { AnimatePresence } from "framer-motion";
 import Header from '@/app/components/header'
