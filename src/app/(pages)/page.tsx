@@ -53,8 +53,7 @@ function Home(){
       })
         .then((response) => response.json())
         .then((data) => {
-          const file_path_part = data.generated_object_file_path
-          const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + file_path_part;
+          const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path;
           setModel(generatedObjectPath);
           setShowDownloadButton(true);
 
