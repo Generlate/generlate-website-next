@@ -53,8 +53,8 @@ function Home(){
       })
         .then((response) => response.json())
         .then((data) => {
-          const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path;
-          setModel(generatedObjectPath);
+          // const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path;
+          setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
           setShowDownloadButton(true);
 
           const newParagraph = document.createElement("p");
