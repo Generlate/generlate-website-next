@@ -41,6 +41,7 @@ export default function RootLayout({
 // TODO: consider using @media {prefers-color-scheme: dark}
 // TODO: restructure css to be more combinatorial and less redundant (use classNames that describe the properties)
 // TODO: fix models scale when manipulate on about page on mobile
+// TODO: redesign generlate.com (look at csm.ai and node.js site)
 
 
 

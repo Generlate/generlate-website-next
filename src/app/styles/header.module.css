@@ -56,6 +56,10 @@
     align-items: center;
 }
 
+.message {
+    padding-left: 1rem;
+}
+
 .svg {
     cursor: pointer;
 }

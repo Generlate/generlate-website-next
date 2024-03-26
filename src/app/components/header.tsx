@@ -215,29 +215,6 @@ export default function Header(props: {
     );
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-  
-
-
   return (
     <header className={styles.header}>
       <Link href="/about">
@@ -303,7 +280,7 @@ export default function Header(props: {
           {profile}
         </button>
         <form className={styles["dropdown-menu"]}>
-          <div> {props.name ?  "Hi " + props.name : ""}</div>
+          <div className={styles.message}> {props.name ?  "Hi " + props.name : ""}</div>
           <div>{menu}</div>
         </form>
       </div>
