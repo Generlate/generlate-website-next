@@ -107,7 +107,7 @@
     border-bottom-right-radius: var(--border-radius);
     border-top-right-radius: 0;
     align-items: center;
-    background-color: var(--color-one);
+    background-color: var(--color-two);
     border-top: 1px solid var(--color-six);
 }
 
@@ -136,7 +136,7 @@
     color: var(--color-six);
     font-size: var(--font-size-three);
     font-weight: 100;
-    background-color: var(--color-one);
+    background-color: var(--color-two);
     width: 100%;
     border: none;
     padding-top: 7px;
@@ -146,8 +146,8 @@
 
 .textInput::placeholder {
     margin: 0px auto;
-    color: var(--color-six);
-    background-color: var(--color-one);
+    color: var(--color-four);
+    background-color: var(--color-two);
 }
 
 .textInput:focus {

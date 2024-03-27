@@ -57,7 +57,7 @@
     margin-bottom: 2rem; */
     border-radius: var(--border-radius);
     transform: rotate(0deg);
-    width: 24rem;
+    width: 23.7rem;
     /* height: 2.5rem; */
     position: absolute; /* Position the button relative to the video container */
     bottom: 50%; /* Center vertically */
@@ -152,7 +152,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
 }
 
 .section2 {
@@ -209,7 +209,7 @@
     /* height: 12vh; */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
 }
 
 .div2:hover {

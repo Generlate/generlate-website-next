@@ -106,7 +106,7 @@ function Home(){
             </button>
             <input
               type="text"
-              placeholder="Prompt here..."
+              placeholder="Text here, object out ↑"
               id="generationbar"
               onKeyDown={enterKey}
               className={styles.textInput}
