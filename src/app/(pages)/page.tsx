@@ -39,10 +39,9 @@ function Home(){
           if (!response.ok) {
             throw new Error("PUT request failed");
           }
-          return response.json(); // Parse the response body as JSON
+          return response.json(); 
         })
         .then(() => {
-          // After successful PUT request, make the GET request
           return fetch("https://api.generlate.com/api/user-data", {
             method: "GET",
             headers: { "Content-Type": "application/json" },
@@ -53,7 +52,7 @@ function Home(){
           if (!response.ok) {
             throw new Error("GET request failed");
           }
-          return response.json(); // Parse the response body as JSON
+          return response.json();
         })
         .then((data) => {
           setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
@@ -62,7 +61,6 @@ function Home(){
         })
         .catch((error) => {
           console.error("Error:", error);
-          // Handle errors here
         });
     }
   }
