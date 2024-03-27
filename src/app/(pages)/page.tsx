@@ -37,6 +37,22 @@ function Home(){
       })
         .then((response) => {
           if (!response.ok) {
+
+            setModel("https://api.generlate.com/media/generated_objects/" + inputText + ".obj");
+            setShowDownloadButton(true);
+
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = inputText;
+
+            const targetSection = document.querySelector(
+              "section:nth-of-type(2) div:first-of-type"
+            );
+
+            if (targetSection instanceof HTMLElement) {
+              targetSection.appendChild(newParagraph);
+            }
+
+
             throw new Error("PUT request failed");
           }
           return response.json(); 
