@@ -57,6 +57,14 @@ function Home(){
         .then((data) => {
           setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
           setShowDownloadButton(true);
+
+          const newParagraph = document.createElement("p");
+          newParagraph.textContent = inputText;
+
+          const targetSection = document.querySelector(
+            "section:nth-of-type(2) div:first-of-type"
+          );
+
           input.value = "";
         })
         .catch((error) => {
@@ -64,59 +72,6 @@ function Home(){
         });
     }
   }
-
-  //   function handleInputClick() {
-
-  //   const input = document.getElementById("generationbar");
-
-  //   if (input instanceof HTMLInputElement) {
-  //     const formData = new FormData();
-  //     const inputText = input.value;
-  //     formData.append("user_input_text", inputText);
-
-  //     fetch("https://api.generlate.com/api/upload-generated-objects", {
-  //       method: "PUT",
-  //       body: formData,
-  //       credentials: "include"
-  //     })
-  //       .then((response) => response.json())
-  //       .catch((error) => {
-  //         console.error("Error uploading user input text:", error);
-  //       });
-
-        
-  //     fetch("https://api.generlate.com/api/user-data", {
-  //       method: "GET",
-  //       headers: { "Content-Type": "application/json" },
-  //       credentials: "include"
-  //     })
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         const file_path_part = data.generated_object_file_path
-  //         const generatedObjectPath = "https://api.generlate.com/media/generated_objects/" + file_path_part;
-  //         setModel(generatedObjectPath);
-  //         setShowDownloadButton(true);
-
-  //         const newParagraph = document.createElement("p");
-  //         newParagraph.textContent = inputText;
-
-  //         const targetSection = document.querySelector(
-  //           "section:nth-of-type(2) div:first-of-type"
-  //         );
-
-  //         if (targetSection instanceof HTMLElement) {
-  //           targetSection.appendChild(newParagraph);
-  //         }
-
-  //         input.value = "";
-
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error:", error);
-  //         // setModel("/box_4.obj");
-  //       });
-  //   }
-  // }
 
   function enterKey(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
