@@ -65,6 +65,10 @@ function Home(){
             "section:nth-of-type(2) div:first-of-type"
           );
 
+          if (targetSection instanceof HTMLElement) {
+            targetSection.appendChild(newParagraph);
+          }
+
           input.value = "";
         })
         .catch((error) => {
