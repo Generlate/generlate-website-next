@@ -60,6 +60,7 @@
     position: absolute;
     top: 12%;
     right: 8%;
+    width: 6rem;
 }
 
 .downloadButton:active {
