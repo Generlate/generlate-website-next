@@ -112,17 +112,17 @@ function About() {
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
           <ThreeCanvas modelPath="/shiba.glb" className={styles.canvas} theme={theme} />
-          <p className={styles.p2}>&quot;coffee&quot;</p>
+          <p className={styles.p2}>&quot;shiba&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
           <ThreeCanvas modelPath="/lantern.glb" className={styles.canvas} theme={theme} />
-          <p className={styles.p2}>&quot;ball&quot;</p>
+          <p className={styles.p2}>&quot;lantern&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
           <ThreeCanvas modelPath="/fish.glb" className={styles.canvas} theme={theme} />
-          <p className={styles.p2}>&quot;tree&quot;</p>
+          <p className={styles.p2}>&quot;fish&quot;</p>
         </div>
       </section>
       <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
