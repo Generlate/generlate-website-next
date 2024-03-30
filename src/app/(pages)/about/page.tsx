@@ -116,7 +116,7 @@ function About() {
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/Lantern.glb" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/lantern.glb" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;ball&quot;</p>
         </div>
 
