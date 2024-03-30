@@ -121,7 +121,7 @@ function About() {
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/Avocado.glb" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/fish.glb" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;tree&quot;</p>
         </div>
       </section>
