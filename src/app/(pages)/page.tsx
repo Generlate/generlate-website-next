@@ -38,7 +38,7 @@ function Home(){
         .then((response) => {
           if (!response.ok) {
 
-            setModel("https://api.generlate.com/media/generated_objects/" + inputText + "/scene.gltf");
+            setModel("https://api.generlate.com/media/generated_objects/" + inputText + ".glb");
             setShowDownloadButton(true);
 
             const newParagraph = document.createElement("p");
