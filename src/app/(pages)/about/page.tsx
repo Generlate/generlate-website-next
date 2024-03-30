@@ -111,17 +111,17 @@ function About() {
         
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba.glb" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;coffee&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba.glb" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;ball&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba.glb" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;tree&quot;</p>
         </div>
       </section>
