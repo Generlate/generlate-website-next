@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 interface ThreeCanvasProps {
   modelPath: string;
@@ -13,7 +13,7 @@ interface ThreeCanvasProps {
 
 const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null!);
-  const objRef = useRef<THREE.Mesh | null>(null);
+  const objRef = useRef<THREE.Group | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -25,15 +25,11 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
     camera.position.z = 10;
     camera.position.y = 6;
 
-    const loader = new OBJLoader();
-    loader.load(modelPath, (object: any) => {
-      object.position.set(0, 0, 0);
-      const material = new THREE.MeshStandardMaterial({ color: 0xd5d5d5 });
-      material.side = THREE.DoubleSide;
-
-      const mesh = new THREE.Mesh(object.children[0].geometry, material);
-      scene.add(mesh);
-      objRef.current = mesh;
+    const loader = new GLTFLoader();
+    loader.load(modelPath, (gltf) => {
+      gltf.scene.position.set(0, 0, 0);
+      scene.add(gltf.scene);
+      objRef.current = gltf.scene;
     });
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });

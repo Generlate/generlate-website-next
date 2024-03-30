@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { BsClockHistory } from "react-icons/bs";
 import { TbStretching } from "react-icons/tb";
 import { BiDollar } from "react-icons/bi";
-import { SlTrophy } from "react-icons/sl";
 import { FiMessageSquare } from "react-icons/fi";
 import styles from "@/app/styles/about.module.css"
 import ThreeCanvas from '@/app/components/ThreeCanvas'
@@ -73,10 +72,7 @@ function About() {
   
 
   return (
-    <main>
-      
- 
-        
+    <main>       
       <section className={styles.section1}>
         Meet Generlate, a text to object generator.
       </section>
@@ -115,17 +111,17 @@ function About() {
         
       <section className={styles.section3}>
         <div className={`${styles.hiddenbottom} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/coffee.obj" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;coffee&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom2} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/ball.obj" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;ball&quot;</p>
         </div>
 
         <div className={`${styles.hiddenbottom} ${styles.hiddenbottom3} ${styles.div2}`}>
-          <ThreeCanvas modelPath="/tree.obj" className={styles.canvas} theme={theme} />
+          <ThreeCanvas modelPath="/shiba/scene.gltf" className={styles.canvas} theme={theme} />
           <p className={styles.p2}>&quot;tree&quot;</p>
         </div>
       </section>
