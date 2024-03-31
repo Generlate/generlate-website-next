@@ -3,7 +3,8 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { USDZLoader } from "three/examples/jsm/loaders/USDZLoader.js";
 
 interface ThreeCanvasProps {
   modelPath: string;
@@ -13,7 +14,7 @@ interface ThreeCanvasProps {
 
 const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null!);
-  const objRef = useRef<THREE.Group | null>(null);
+  const objRef = useRef<THREE.Mesh | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -25,11 +26,11 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
     camera.position.z = 10;
     camera.position.y = 6;
 
-    const loader = new GLTFLoader();
-    loader.load(modelPath, (gltf) => {
-      gltf.scene.position.set(0, 0, 0);
-      scene.add(gltf.scene);
-      objRef.current = gltf.scene;
+    const loader = new USDZLoader();
+    loader.load(modelPath, (usdz) => {
+      usdz.position.set(0, 0, 0);
+      scene.add(usdz);
+      objRef.current = usdz;
     });
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
