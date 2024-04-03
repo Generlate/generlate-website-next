@@ -37,20 +37,77 @@ function Home(){
       })
         .then((response) => {
           if (!response.ok) {
+            const library = ["shiba",
+              "lantern",
+              "chair",
+              "house",
+              "cat",
+              "backpack",
+              "bird",
+              "bricks",
+              "blackhole",
+              "bookshelf",
+              "cathedral",
+              "chair",
+              "chest",
+              "crocodile",
+              "dragon",
+              "fantasy_town",
+              "game boy",
+              "girl",
+              "heart",
+              "jordans",
+              "leather shoes",
+              "mushrooms",
+              "new balance",
+              "portal",
+              "restaurant",
+              "rhino",
+              "room",
+              "sign",
+              "skull",
+              "plant",
+              "plants",
+              "police",
+              "porsche",
+              "sofa",
+              "sushi",
+              "sword",
+              "table",
+              "tree",
+              "t-rex",
+              "truck",
+              "turtle",
+              "tv",
+              "whale"];
+            if (library.includes(inputText)) {
+              setModel("https://api.generlate.com/media/generated_objects/" + inputText + ".glb");
+              setShowDownloadButton(true);
 
-            setModel("https://api.generlate.com/media/generated_objects/" + inputText + ".glb");
-            setShowDownloadButton(true);
+              const newParagraph = document.createElement("p");
+              newParagraph.textContent = inputText;
 
-            const newParagraph = document.createElement("p");
-            newParagraph.textContent = inputText;
+              const targetSection = document.querySelector(
+                "section:nth-of-type(2) div:first-of-type"
+              );
 
-            const targetSection = document.querySelector(
-              "section:nth-of-type(2) div:first-of-type"
-            );
+              if (targetSection instanceof HTMLElement) {
+                targetSection.appendChild(newParagraph);
+              }
+            } else {
+              const newParagraph = document.createElement("p");
+              newParagraph.textContent = "text not found in library.";
 
-            if (targetSection instanceof HTMLElement) {
-              targetSection.appendChild(newParagraph);
+              const targetSection = document.querySelector(
+                "section:nth-of-type(2) div:first-of-type"
+              );
+
+              if (targetSection instanceof HTMLElement) {
+                targetSection.appendChild(newParagraph);
+              }
             }
+
+   
 
 
             throw new Error("PUT request failed");
@@ -65,24 +122,39 @@ function Home(){
           });
         })
         .then((response) => {
-          if (!response.ok) {
+          if (!response.ok) {    
             throw new Error("GET request failed");
           }
+        
           return response.json();
         })
         .then((data) => {
-          setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
-          setShowDownloadButton(true);
+          if (data.generated_object_file_path ==  "text not found in library.") {
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = data.generated_object_file_path;
 
-          const newParagraph = document.createElement("p");
-          newParagraph.textContent = inputText;
+            const targetSection = document.querySelector(
+              "section:nth-of-type(2) div:first-of-type"
+            );
 
-          const targetSection = document.querySelector(
-            "section:nth-of-type(2) div:first-of-type"
-          );
+            if (targetSection instanceof HTMLElement) {
+              targetSection.appendChild(newParagraph);
+            }    
+          } else {
+            setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
+          
+            setShowDownloadButton(true);
 
-          if (targetSection instanceof HTMLElement) {
-            targetSection.appendChild(newParagraph);
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = inputText;
+
+            const targetSection = document.querySelector(
+              "section:nth-of-type(2) div:first-of-type"
+            );
+
+            if (targetSection instanceof HTMLElement) {
+              targetSection.appendChild(newParagraph);
+            }     
           }
 
           input.value = "";
