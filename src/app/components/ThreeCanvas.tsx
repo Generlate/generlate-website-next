@@ -39,7 +39,7 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
       if (parent) {
         camera.aspect = parent.offsetWidth / parent.offsetHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize(parent.offsetWidth, parent.offsetHeight - 22);
+        renderer.setSize(parent.offsetWidth, parent.offsetHeight);
       }
     };
 
