@@ -2,6 +2,7 @@
 
 :root {
     --color-one: rgb(250, 250, 250);
+    --color-one-transparent: rgba(250, 250, 250, 0.7);
     --color-two: rgb(237, 246, 252);
     --color-three: rgb(168, 210, 216);
     --color-four: rgb(121, 161, 176);

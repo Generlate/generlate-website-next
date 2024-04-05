@@ -64,6 +64,10 @@ export default function PageLayout({ children }: {
         "rgb(250, 250, 250)"
         );
         document.documentElement.style.setProperty(
+        "--color-one-transparent",
+        "rgba(250, 250, 250, 0.7)"
+        );
+        document.documentElement.style.setProperty(
         "--color-two",
         "rgb(237, 246, 252)"
         );
@@ -110,6 +114,10 @@ export default function PageLayout({ children }: {
 
     function changeColorsToDark() {
         document.documentElement.style.setProperty("--color-one", "rgb(5, 5, 4)");
+        document.documentElement.style.setProperty(
+        "--color-one-transparent",
+        "rgba(5, 5, 4, 0.7)"
+        );
         document.documentElement.style.setProperty(
         "--color-two",
         "rgb(16, 16, 16)"
