@@ -33,7 +33,7 @@ const ThreeCanvas: React.FC<ThreeCanvasProps> = ({ modelPath, theme }) => {
     });
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    renderer.setClearColor(theme === "light" ?  0xfafafa :  0x050504);
+    renderer.setClearColor(theme === "light" ?  0xEDF7FC :  0x050504);
 
     const onResize = () => {
       if (parent) {
