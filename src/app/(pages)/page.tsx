@@ -28,7 +28,7 @@ function Home(){
     if (input instanceof HTMLInputElement) {
       const formData = new FormData();
       const inputText = input.value;
-      formData.append("user_input_text", inputText);
+      formData.append("user_input_text", inputText.toLowerCase());
 
       fetch("https://api.generlate.com/api/upload-generated-objects", {
         method: "PUT",
@@ -136,8 +136,8 @@ function Home(){
             "violin",
             "wolf",];
               
-            if (library.includes(inputText)) {
-              setModel("https://api.generlate.com/media/generated_objects/" + inputText + ".glb");
+            if (library.includes(inputText.toLocaleLowerCase())) {
+              setModel("https://api.generlate.com/media/generated_objects/" + inputText.toLowerCase() + ".glb");
               setShowDownloadButton(true);
 
               const newParagraph = document.createElement("p");
@@ -163,10 +163,6 @@ function Home(){
                 targetSection.appendChild(newParagraph);
               }
             }
-
-
-   
-
 
             throw new Error("PUT request failed");
           }
