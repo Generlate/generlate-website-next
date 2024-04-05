@@ -218,7 +218,7 @@
         justify-content: space-between;
         margin-left: 26%;
         margin-right: 26%;
-        border: 1px solid var(--color-six);
+        /* border: 1px solid var(--color-six); */
         padding: 0px;
         height: 40vh;
         width: 48vw;
