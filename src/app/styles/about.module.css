@@ -219,9 +219,9 @@
 
 .div2 {
     width: 100%;
-    height: calc(100% - 16px);
+    height: calc(100% - 41px);
     min-width: 0;
-    box-shadow: 0px 0px 10px 0px var(--color-section-box-shadow);
+    /* box-shadow: 0px 0px 10px 0px var(--color-section-box-shadow); */
     border-radius: var(--border-radius);
 }
 
@@ -236,17 +236,17 @@
     text-align: center;
     width: 100%;
     background-color: var(--color-one);
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: var(--border-radius);
     padding-bottom: 8px;
     padding-top: 8px;
-    margin-top: -4px;
+    margin-top: 0px;
     box-shadow: 0px 0px 10px 0px var(--color-section-box-shadow);
-    border-top: 2px solid;
+    border-top: 1px solid;
     border-image: linear-gradient(
         to right,
         transparent,
-        var(--color-two),
-        var(--color-two),
+        var(--color-three),
+        var(--color-three),
         transparent
     );
     border-image-slice: 1;
