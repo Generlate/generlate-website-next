@@ -16,7 +16,7 @@
 
 .p {
     position: absolute;
-    left: 26.1%;
+    left: 27.1%;
     top: 5rem;
     font-size: 1.5rem;
     font-weight: 900;
@@ -208,8 +208,8 @@
     }
 
     .downloadButton {
-        top: 12%;
-        left: 68.5%;
+        /* top: 12%; */
+        left: 69.5%;
     }
 
     .section2 {

@@ -79,8 +79,8 @@ function About() {
           Your browser does not support the video tag.
         </video>
         <section className={styles.section1}>
-          <p className={styles.p4}>Meet Generlate!</p> 
-          <p className={styles.p5}>(text -&gt; object)</p>
+          <p className={styles.p4}>A Text -&gt; Object Generator.</p> 
+          {/* <p className={styles.p5}>(text -&gt; object)</p> */}
         </section>
 
       </div>
@@ -173,7 +173,7 @@ function About() {
         </div>
       </section>
       <div className={styles.div}>
-        <Link href="/" className={styles.link}>Text -&gt; Object</Link>
+        <Link href="/" className={styles.link}>Try It Out!</Link>
       </div>
 
     </main>
