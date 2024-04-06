@@ -214,6 +214,10 @@
         display: none;
     }
 
+    .svg {
+        color: var(--color-four);
+    }
+
     .p2 {
         display: block;
         color: var(--color-four);
