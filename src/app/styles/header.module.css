@@ -4,24 +4,21 @@
     background-color: var(--color-one-transparent);
     align-items: center;
     position: absolute;
-    width: calc(100% - 30px);
+    width: calc(100% - 52px);
     top: 0;
     z-index: 1;
-    gap: 1rem;
-    border-bottom: 1px solid;
-    border-image: linear-gradient(
-        to right,
-        transparent,
-        var(--color-three),
-        var(--color-three),
-        transparent
-    );
-    border-image-slice: 1;
-    padding: 15px;
+    justify-content: space-between;
+    border: 1px solid var(--color-three);
+    /* margin: 16px; */
+    padding: 5px 10px;
     font-weight: 300;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(4px);
     box-shadow: 0px 0px 10px 0px var(--color-drop-down-box-shadow);
+    border-radius: var(--border-radius);
+    top: 4.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logoImage {
@@ -205,10 +202,12 @@
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
     .header {
-        padding: 10px;
-        padding-left: 25%;
-        padding-right: 25%;
-        width: 50%;
+        padding: px 0px;
+        /* margin-left: 28vw;
+        margin-right: 28vw; */
+        width: 48vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .svg3 {

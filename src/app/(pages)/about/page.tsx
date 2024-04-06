@@ -72,10 +72,19 @@ function About() {
   
 
   return (
-    <main>       
-      <section className={styles.section1}>
-        Meet Generlate, a text to object generator.
-      </section>
+    <main>
+      <div className={styles.relative}>
+        <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
+          <source src="/advertisement.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <section className={styles.section1}>
+          <p className={styles.p4}>Meet Generlate!</p> 
+          <p className={styles.p5}>(text -&gt; object)</p>
+        </section>
+
+      </div>
+
           
       <section className={styles.section2}>
         <ul className={styles.ul}>
@@ -163,19 +172,9 @@ function About() {
           </ol>
         </div>
       </section>
-
-
-
-      <div className={styles.relative}>
-        <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
-          <source src="/advertisement.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className={styles.div}>
-          <Link href="/" className={styles.link}>Text -&gt; Object!</Link>
-        </div>
+      <div className={styles.div}>
+        <Link href="/" className={styles.link}>Text -&gt; Object</Link>
       </div>
-
 
     </main>
 
