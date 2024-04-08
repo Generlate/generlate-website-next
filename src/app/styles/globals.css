@@ -13,15 +13,18 @@
     --font-family: "Inter", "Roboto", sans-serif;
     --dropdown-border-radius: 25px;
     --border-radius: 33px;
-    --font-size-one: 2.125rem;
+    --font-size-one: 3rem;
     --font-size-two: 1.875rem;
     --font-size-three: 1.5rem;
     --font-size-four: 1.25rem;
     --font-size-five: 1.125rem;
     --font-size-six: 1rem;
+    --font-weight-one: 100;
     --font-weight-two: 300;
-    --font-weight-three: 500;
-    --font-weight-four: 900;
+    --font-weight-three: 400;
+    --font-weight-four: 500;
+    --font-weight-five: 700;
+    --font-weight-six: 900;
     --color-drop-down-box-shadow: rgba(25, 25, 25, 0.2);
     --color-section-box-shadow: rgba(121, 161, 176, 0.15);
 }

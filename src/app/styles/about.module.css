@@ -78,7 +78,7 @@
     color: var(--color-six);
     text-decoration: none;
     font-size: var(--font-size-two);
-    font-weight: var(--font-weight-four);
+    font-weight: var(--font-weight-six);
     text-align: center;
     cursor: pointer;
     -webkit-user-select: none;
@@ -168,14 +168,15 @@
     font-size: var(--font-size-four);
 }
 
-.p4 {
+.h1 {
     margin-bottom: 0px;
     font-size: var(--font-size-one);
+    font-weight: var(--font-weight-five);
 }
 
 .p5 {
     margin-top: 0px;
-    font-size: var(--font-size-two);
+    font-size: var(--font-size-one);
 }
 
 .section2 {
@@ -211,7 +212,7 @@
 
 .h3 {
     color: var(--color-five);
-    font-weight: var(--font-weight-three);
+    font-weight: var(--font-weight-four);
     font-size: var(--font-size-three);
     text-align: left;
     margin-right: auto;
@@ -294,7 +295,7 @@
 
 .h32 {
     color: var(--color-five);
-    font-weight: var(--font-weight-three);
+    font-weight: var(--font-weight-four);
     font-size: var(--font-size-three);
     display: inline-block;
     margin: 0px;
