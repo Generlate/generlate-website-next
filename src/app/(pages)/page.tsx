@@ -153,7 +153,7 @@ function Home(){
               
             } else {
               const newParagraph = document.createElement("p");
-              newParagraph.textContent = "text not found in library.";
+              newParagraph.textContent = `"${inputText}" not found in library.`;
 
               const targetSection = document.querySelector(
                 "section:nth-of-type(2) div:first-of-type"
@@ -183,7 +183,7 @@ function Home(){
           return response.json();
         })
         .then((data) => {
-          if (data.generated_object_file_path ==  "text not found in library.") {
+          if (data.generated_object_file_path ==  `"${inputText}" not found in library.`) {
             const newParagraph = document.createElement("p");
             newParagraph.textContent = data.generated_object_file_path;
 
@@ -222,6 +222,8 @@ function Home(){
   function enterKey(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
       handleInputClick();
+      const input = event.target as HTMLInputElement;
+      input.value = "";
     }
   }
 
