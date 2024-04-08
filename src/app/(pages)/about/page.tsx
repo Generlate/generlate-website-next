@@ -79,7 +79,7 @@ function About() {
           Your browser does not support the video tag.
         </video>
         <section className={styles.section1}>
-          <p className={styles.p4}>A Text -&gt; Object Generator.</p> 
+          <h1 className={styles.p4}>A Text -&gt; Object Generator.</h1> 
           {/* <p className={styles.p5}>(text -&gt; object)</p> */}
         </section>
 

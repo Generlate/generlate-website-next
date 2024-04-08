@@ -77,7 +77,7 @@
 .link {
     color: var(--color-six);
     text-decoration: none;
-    font-size: var(--font-size-four);
+    font-size: var(--font-size-two);
     font-weight: var(--font-weight-four);
     text-align: center;
     cursor: pointer;
@@ -170,6 +170,7 @@
 
 .p4 {
     margin-bottom: 0px;
+    font-size: var(--font-size-one);
 }
 
 .p5 {
@@ -211,7 +212,7 @@
 .h3 {
     color: var(--color-five);
     font-weight: var(--font-weight-three);
-    font-size: var(--font-size-two);
+    font-size: var(--font-size-three);
     text-align: left;
     margin-right: auto;
     margin-left: 0px;
@@ -294,7 +295,7 @@
 .h32 {
     color: var(--color-five);
     font-weight: var(--font-weight-three);
-    font-size: var(--font-size-two);
+    font-size: var(--font-size-three);
     display: inline-block;
     margin: 0px;
 }
@@ -349,7 +350,7 @@
     }
 
     .link {
-        font-size: 3rem;
+        font-size: var(--font-size-two);
     }
 
     .link:before {

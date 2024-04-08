@@ -11,10 +11,14 @@
     --color-dropdown: rgba(128, 128, 128, 0.1);
     --color-header-dropdown: rgba(250, 250, 250, 0.1);
     --font-family: "Inter", "Roboto", sans-serif;
-    --border-radius: 25px;
-    --font-size-two: 1.2rem;
-    --font-size-three: 1.6rem;
-    --font-size-four: 2rem;
+    --dropdown-border-radius: 25px;
+    --border-radius: 33px;
+    --font-size-one: 2.125rem;
+    --font-size-two: 1.875rem;
+    --font-size-three: 1.5rem;
+    --font-size-four: 1.25rem;
+    --font-size-five: 1.125rem;
+    --font-size-six: 1rem;
     --font-weight-two: 300;
     --font-weight-three: 500;
     --font-weight-four: 900;
