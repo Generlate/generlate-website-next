@@ -13,31 +13,7 @@ function Home(){
   const [showDownloadButton, setShowDownloadButton] = useState(false);
   const [model, setModel] = useState("/");
   const { theme } = useContext(ThemeContext);
-
-  function handleDownloadClick() {
-    const a = document.createElement("a");
-    a.href = model;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
-
-  function handleInputClick() {
-    const input = document.getElementById("generationbar");
-
-    if (input instanceof HTMLInputElement) {
-      const formData = new FormData();
-      const inputText = input.value;
-      formData.append("user_input_text", inputText.toLowerCase());
-
-      fetch("https://api.generlate.com/api/upload-generated-objects", {
-        method: "PUT",
-        body: formData,
-        credentials: "include"
-      })
-        .then((response) => {
-          if (!response.ok) {
-            const library = ["shiba",
+  const library = ["shiba",
             "lantern",
             "chair",
             "house",
@@ -135,6 +111,31 @@ function Home(){
             "viking_boat",
             "violin",
             "wolf",];
+
+  function handleDownloadClick() {
+    const a = document.createElement("a");
+    a.href = model;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  function handleInputClick() {
+    const input = document.getElementById("generationbar");
+
+    if (input instanceof HTMLInputElement) {
+      const formData = new FormData();
+      const inputText = input.value;
+      formData.append("user_input_text", inputText.toLowerCase());
+
+      fetch("https://api.generlate.com/api/upload-generated-objects", {
+        method: "PUT",
+        body: formData,
+        credentials: "include"
+      })
+        .then((response) => {
+          if (!response.ok) {
+
               
             if (library.includes(inputText.toLocaleLowerCase())) {
               setModel("https://api.generlate.com/media/generated_objects/" + inputText.toLowerCase() + ".glb");
@@ -185,7 +186,7 @@ function Home(){
         .then((data) => {
           if (data.generated_object_file_path ==  `"${inputText}" not found in library.`) {
             const newParagraph = document.createElement("p");
-            newParagraph.textContent = data.generated_object_file_path;
+            newParagraph.textContent = `"${data.generated_object_file_path}" not found in library.`;
 
             const targetSection = document.querySelector(
               "section:nth-of-type(2) div:first-of-type"
