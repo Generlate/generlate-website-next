@@ -11,10 +11,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const Navigate = () => {
-    router.push('/Login');
-  }
-
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
@@ -28,7 +24,7 @@ const Register = () => {
       })
     });
 
-    Navigate();
+    router.push('/Login');
   };
 
   return (
