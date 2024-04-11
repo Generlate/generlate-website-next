@@ -5,7 +5,7 @@ import transition from '@/app/components/transition'
 
 function Api() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
         <section className={styles.section}>how to set up the api</section>
         <section className={styles.section}>what does it let you do?</section>
     </main>

@@ -5,7 +5,7 @@ import transition from '@/app/components/transition'
 
 function Docs() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
       <section className={styles.section}>research</section>
       <section className={styles.section}>debugging</section>
       <section className={styles.section}>how text to 3d works (tips for better generations) </section>

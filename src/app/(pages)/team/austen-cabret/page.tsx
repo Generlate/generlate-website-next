@@ -6,7 +6,7 @@ import transition from '@/app/components/transition'
 
 function AustenCabret() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
       <section className={styles.section}>
         <Image src="/austen-cabret-profile.webp" alt="Austen Cabret" width="800" height="800" className={styles.img}></Image>
         <h2>Austen Cabret</h2>

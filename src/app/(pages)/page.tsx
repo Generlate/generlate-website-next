@@ -229,7 +229,7 @@ function Home(){
   }
 
   return (
-    <main className={styles.home}>
+    <main className={styles.main}>
       <div className={styles.div}>
         <p className={styles.p}>?</p>
         <section className={styles.section1}>

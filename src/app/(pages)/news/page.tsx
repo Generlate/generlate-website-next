@@ -6,7 +6,7 @@ import transition from '@/app/components/transition'
 
 function News() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
       <section className={styles.section}>
         <h2>The back end is up!</h2>
         <p>02/04/2024</p>

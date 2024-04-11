@@ -73,15 +73,6 @@ a {
     color: var(--color-four);
 }
 
-.subPage {
-    margin-left: 0%;
-    margin-right: 0%;
-    padding-top: 50px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-}
-
 Link {
     text-decoration: none;
 }
@@ -94,7 +85,6 @@ section {
 }
 
 canvas {
-    /* border-radius: var(--border-radius) var(--border-radius) 0 0; */
     cursor: pointer;
     /* width: 100%;
     height: 100%; */

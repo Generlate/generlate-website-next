@@ -5,7 +5,7 @@ import transition from '@/app/components/transition'
 
 function Legal() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
       <p>Last Updated: 01/09/2024</p>
 
       <section>

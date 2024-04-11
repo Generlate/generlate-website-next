@@ -33,8 +33,7 @@ export default function RootLayout({
   )
 }
 
-// TODO: add down arrows on header buttons on desktop
-// TODO: consider using @media {prefers-color-scheme: dark}
+// TODO: fix header having width cause its children to overlap it
 // TODO: restructure css to be more combinatorial and less redundant (use classNames that describe the properties)
 // TODO: maybe make threecanvas background transparent
 // TODO: refine sub pages
@@ -47,6 +46,7 @@ export default function RootLayout({
 // TODO: include a Benefits section and a Use Cases section on About.tsx
 // TODO: make the 'text to 3d' button have that glossy blurred look
 // TODO: fix arrow icons not working on meta quest browser
+// TODO: consider using @media {prefers-color-scheme: dark}
 // TODO: add styleX
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling

@@ -7,7 +7,7 @@ import transition from '@/app/components/transition'
 
 function Team() {
   return (
-    <main className={styles.subPage}>
+    <main className={styles.main}>
       <section className={styles.section}>
         <u>Team Profiles</u>
       </section>
