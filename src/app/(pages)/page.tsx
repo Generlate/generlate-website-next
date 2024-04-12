@@ -230,37 +230,37 @@ function Home(){
 
   return (
     <main className={styles.main}>
-      <div className={styles.div}>
-        <p className={styles.questionArrow}>?</p>
-        <section className={styles.modelWindow}>
-          {showDownloadButton && (
-            <>
-              <button onClick={handleDownloadClick} className={styles.downloadButton}>Download</button>
-              {<ThreeCanvas modelPath={model} theme={theme} className={styles.canvas}/>}
-            </>
-          )}
-        </section>
+      <p className={styles.questionArrow}>?</p>
+      
+      <section className={styles.modelWindow}>
+        {showDownloadButton && (
+          <>
+            <button onClick={handleDownloadClick} className={styles.downloadButton}>Download</button>
+            {<ThreeCanvas modelPath={model} theme={theme} className={styles.canvas}/>}
+          </>
+        )}
+      </section>
 
-        <section className={styles.textInterface}>
-          <div className={styles.textInterfaceTop}></div>
+      <section className={styles.textInterface}>
+        <div className={styles.textInterfaceTop}></div>
 
-          <div className={styles.textInterfaceBottom}>
-            <button title="voice input" className={styles.audioButton}>
-              <BiSolidMicrophoneAlt className={styles.audioIcon}/>
-            </button>
-            <input
-              type="text"
-              placeholder="Text here, object out ↑"
-              id="generationbar"
-              onKeyDown={enterKey}
-              className={styles.textInputBar}
-            />
-            <button  onClick={handleInputClick}  title="text input" className={styles.inputButton}>
-              <TbMessage2Up />
-            </button>
-          </div>
-        </section>
-      </div>
+        <div className={styles.textInterfaceBottom}>
+          <button title="voice input" className={styles.audioButton}>
+            <BiSolidMicrophoneAlt className={styles.audioIcon}/>
+          </button>
+          <input
+            type="text"
+            placeholder="Text here, object out ↑"
+            id="generationbar"
+            onKeyDown={enterKey}
+            className={styles.textInputBar}
+          />
+          <button  onClick={handleInputClick}  title="text input" className={styles.inputButton}>
+            <TbMessage2Up />
+          </button>
+        </div>
+      </section>
+    
     </main>
   )
 }

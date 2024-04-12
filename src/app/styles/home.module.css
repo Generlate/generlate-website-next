@@ -3,15 +3,6 @@
     background-color: var(--color-one);
 }
 
-.div {
-    padding-top: 0px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 16px;
-}
-
 .questionArrow {
     position: absolute;
     left: 27.1%;
