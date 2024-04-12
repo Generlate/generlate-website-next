@@ -33,6 +33,7 @@ export default function RootLayout({
   )
 }
 
+// TODO: better css names
 // TODO: fix header having width cause its children to overlap it
 // TODO: restructure css to be more combinatorial and less redundant (use classNames that describe the properties)
 // TODO: maybe make threecanvas background transparent
