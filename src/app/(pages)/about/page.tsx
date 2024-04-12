@@ -73,22 +73,22 @@ function About() {
 
   return (
     <main>
-      <div className={styles.relative}>
+      <section className={styles.section1}>
         <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
           <source src="/advertisement.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <section className={styles.section1}>
+        <div className={styles.h1Container}>
           <h1 className={styles.h1}>A Text -&gt; Object Generator.</h1> 
           {/* <p className={styles.p5}>(text -&gt; object)</p> */}
-        </section>
+        </div>
 
-      </div>
+      </section>
 
           
       <section className={styles.section2}>
         <ul className={styles.ul}>
-          <li className={styles.li}>
+          <article className={styles.article}>
             <p className={styles.p1}>
               Say goodbye to the grind. Type, don&apos;t model. Effortlessly
               create objects from your text.
@@ -97,8 +97,8 @@ function About() {
               Faster
             </h3>
             <BsClockHistory className={styles.icon}/>
-          </li>
-          <li className={styles.li}>
+          </article>
+          <article className={styles.article}>
             <p className={styles.p1}>
               Perfect for games, architecture, marketing - flexibility like
               never before.
@@ -107,14 +107,14 @@ function About() {
               Versatile
             </h3>
             <TbStretching className={styles.icon}/>
-          </li>
-          <li className={styles.li}>
+          </article>
+          <article className={styles.article}>
             <p className={styles.p1}>Turbocharge your productivity. Slash costs.</p>
             <h3 className={styles.h3}>
               Cheaper
             </h3>
             <BiDollar className={styles.icon}/>
-          </li>
+          </article>
         </ul>
       </section>
         
@@ -135,25 +135,25 @@ function About() {
         </div>
       </section>
       <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
-        <div className={styles.div3}>
+        <article className={styles.article2}>
           <div className={styles.div4}>
-            <h3 className={styles.h32}>Editable:</h3>
+            <h3 className={styles.section4h3}>Editable:</h3>
             <p className={styles.p3}>reduce polygons, change texture or increase resolution</p>
           </div>
           <Image src="/cubes.webp" alt="cubes" width={1920} height={540} className={styles.image}></Image>
-        </div>
+        </article>
 
-        <div className={styles.div3}>
+        <article className={styles.article2}>
           <div className={styles.div4}>
-            <h3 className={styles.h32}>Multimodal:</h3>
+            <h3 className={styles.section4h3}>Multimodal:</h3>
             <p className={styles.p3}>generate models or textures</p>
           </div>
           <Image src="/textures.webp" alt="textures" width={1920} height={540} className={styles.image}></Image>
-        </div>
+        </article>
 
-        <div className={styles.div3}>
+        <article className={styles.article2}>
           <div className={styles.div4}>
-            <h3 className={styles.h32}>History:</h3>
+            <h3 className={styles.section4h3}>History:</h3>
             <p className={styles.p3}>models and prompts are recorded</p>
           </div>
           <ol className={styles.ol}>
@@ -170,9 +170,9 @@ function About() {
               <FiMessageSquare /> &nbsp;&nbsp;&nbsp;A thin cube
             </li>
           </ol>
-        </div>
+        </article>
       </section>
-      <div className={styles.div}>
+      <div className={styles.navButton}>
         <Link href="/" className={styles.link}>Try It Out!</Link>
       </div>
 

@@ -35,10 +35,6 @@
     transform: translateY(0);
 }
 
-.a {
-    display: none;
-}
-
 @keyframes glowing-button {
     0% {
         background-position: 0 0;
@@ -48,14 +44,16 @@
     }
 }
 
-.relative {
+.section1 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px;
+    margin: 0px;
 }
 
-.section1 {
+.h1Container {
     margin-top: 0px;
     display: flex;
     flex-direction: column;
@@ -98,7 +96,7 @@
     flex-direction: column;
 }
 
-.li {
+.article {
     display: flex;
 }
 
@@ -179,7 +177,7 @@
     height: auto;
 }
 
-.h32 {
+.section4h3 {
     color: var(--color-five);
     font-weight: var(--font-weight-four);
     font-size: var(--font-size-three);
@@ -187,7 +185,7 @@
     margin: 0px;
 }
 
-.div3 {
+.article2 {
     margin: 0;
     padding: 0px 10px;
 }
@@ -211,7 +209,7 @@
     padding-left: 40px;
 }
 
-.div {
+.navButton {
     text-align: center;
     margin-left: 16px;
     margin-right: 16px;
@@ -307,7 +305,7 @@
         border-radius: var(--border-radius);
     }
 
-    .section1 {
+    .h1Container {
         margin-left: 25vw;
         margin-right: 25vw;
         padding-bottom: 20px;
@@ -348,11 +346,11 @@
         scroll-snap-align: center;
     }
 
-    .h32 {
+    .section4h3 {
         display: block;
     }
 
-    .div3 {
+    .article2 {
         padding: 0px;
         width: 100%;
         display: inline-block;
@@ -373,7 +371,7 @@
         margin-top: 10px;
     }
 
-    .div {
+    .navButton {
         margin-left: 25%;
         margin-right: 25%;
     }

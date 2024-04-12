@@ -231,7 +231,7 @@ function Home(){
   return (
     <main className={styles.main}>
       <div className={styles.div}>
-        <p className={styles.p}>?</p>
+        <p className={styles.questionArrow}>?</p>
         <section className={styles.section1}>
           {showDownloadButton && (
             <>
@@ -242,18 +242,18 @@ function Home(){
         </section>
 
         <section className={styles.section2}>
-          <div className={styles.div1}></div>
+          <div className={styles.textInterfaceTop}></div>
 
-          <div className={styles.div2}>
+          <div className={styles.textInterfaceBottom}>
             <button title="voice input" className={styles.audioButton}>
-              <BiSolidMicrophoneAlt className={styles.svg}/>
+              <BiSolidMicrophoneAlt className={styles.audioIcon}/>
             </button>
             <input
               type="text"
               placeholder="Text here, object out ↑"
               id="generationbar"
               onKeyDown={enterKey}
-              className={styles.textInput}
+              className={styles.textInputBar}
             />
             <button  onClick={handleInputClick}  title="text input" className={styles.inputButton}>
               <TbMessage2Up />

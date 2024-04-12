@@ -12,7 +12,7 @@
     gap: 16px;
 }
 
-.p {
+.questionArrow {
     position: absolute;
     left: 27.1%;
     top: 5rem;
@@ -22,7 +22,7 @@
     z-index: 4;
 }
 
-.p::before {
+.questionArrow::before {
     content: "\2B8B";
     transform: rotate(180deg);
     font-size: 3rem;
@@ -33,7 +33,7 @@
     transition: transform 0.3s ease;
 }
 
-.p:hover::before {
+.questionArrow:hover::before {
     transform: translateY(-30px) rotate(180deg);
 }
 
@@ -86,7 +86,7 @@
     box-shadow: 0px 0px 10px 0px var(--color-drop-down-box-shadow);
 }
 
-.div1 {
+.textInterfaceTop {
     flex-grow: 1;
     flex-basis: 0;
     padding: 16px;
@@ -97,7 +97,7 @@
     flex-direction: column;
 }
 
-.div2 {
+.textInterfaceBottom {
     display: flex;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     align-items: center;
@@ -120,16 +120,16 @@
     cursor: pointer;
 }
 
-.svg {
+.audioIcon {
     font-size: var(--font-size-three);
     color: var(--color-three);
 }
 
-.svg:active {
+.audioIcon:active {
     color: var(--color-two);
 }
 
-.textInput {
+.textInputBar {
     margin: 0px auto;
     color: var(--color-six);
     font-size: var(--font-size-three);
@@ -142,13 +142,13 @@
     padding-left: 1rem;
 }
 
-.textInput::placeholder {
+.textInputBar::placeholder {
     margin: 0px auto;
     color: var(--color-four);
     background-color: transparent;
 }
 
-.textInput:focus {
+.textInputBar:focus {
     outline: none;
 }
 
@@ -178,7 +178,7 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
-    .p {
+    .questionArrow {
         display: inline-block;
     }
 
