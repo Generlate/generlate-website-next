@@ -80,7 +80,6 @@ function About() {
         </video>
         <div className={styles.h1Container}>
           <h1 className={styles.h1}>A Text -&gt; Object Generator.</h1> 
-          {/* <p className={styles.p5}>(text -&gt; object)</p> */}
         </div>
 
       </section>
@@ -88,7 +87,7 @@ function About() {
           
       <section className={styles.section2}>
         <ul className={styles.ul}>
-          <article className={styles.article}>
+          <article className={styles.article1}>
             <p className={styles.p1}>
               Say goodbye to the grind. Type, don&apos;t model. Effortlessly
               create objects from your text.
@@ -98,7 +97,7 @@ function About() {
             </h3>
             <BsClockHistory className={styles.icon}/>
           </article>
-          <article className={styles.article}>
+          <article className={styles.article1}>
             <p className={styles.p1}>
               Perfect for games, architecture, marketing - flexibility like
               never before.
@@ -108,7 +107,7 @@ function About() {
             </h3>
             <TbStretching className={styles.icon}/>
           </article>
-          <article className={styles.article}>
+          <article className={styles.article1}>
             <p className={styles.p1}>Turbocharge your productivity. Slash costs.</p>
             <h3 className={styles.h3}>
               Cheaper
