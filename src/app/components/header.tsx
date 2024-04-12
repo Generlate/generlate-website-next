@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useContext, use } from "react";
+import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "@/app/styles/header.module.css";
@@ -27,11 +27,11 @@ export default function Header(props: {
 
   const determineLayout = () => {
     const mediaQuery = window.matchMedia('(min-width: 1024px) and (max-width: 2499px) and (orientation: landscape)');
-    setIsMobileLayout(!mediaQuery.matches); // Invert to match mobile layout condition
+    setIsMobileLayout(!mediaQuery.matches);
   };
 
   useEffect(() => {
-    determineLayout(); // Call on initial render
+    determineLayout(); 
     window.addEventListener('resize', determineLayout);
 
     return () => window.removeEventListener('resize', determineLayout);
@@ -287,4 +287,3 @@ export default function Header(props: {
   </header>
   );
 }
-

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { BiSolidMicrophoneAlt } from "react-icons/bi";
 import ThreeCanvas from "@/app/components/ThreeCanvas";
 import styles from "@/app/styles/home.module.css"
@@ -231,7 +231,7 @@ function Home(){
   return (
     <main className={styles.main}>
       <p className={styles.questionArrow}>?</p>
-      
+
       <section className={styles.modelWindow}>
         {showDownloadButton && (
           <>

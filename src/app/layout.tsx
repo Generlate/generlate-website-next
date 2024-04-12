@@ -33,15 +33,12 @@ export default function RootLayout({
   )
 }
 
-// TODO: better css names
+// TODO: remove unnecessary parts
 // TODO: fix header having width cause its children to overlap it
-// TODO: restructure css to be more combinatorial and less redundant (use classNames that describe the properties)
-// TODO: maybe make threecanvas background transparent
 // TODO: refine sub pages
 // TODO: make all pages work on ipad and mobile (normal browser, not app view)
 // TODO: add css for desktop and other media queries
 // TODO: move change color functions to a separate file
-// TODO: remove unnecessary parts
 // TODO: add Auth0 and/or SSO and/or face-id
 // TODO: improve about page's design
 // TODO: include a Benefits section and a Use Cases section on About.tsx
