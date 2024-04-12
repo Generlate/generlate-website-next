@@ -136,7 +136,7 @@ function About() {
       </section>
       <section ref={containerRef} id="about" className={`${styles.section4} ${styles.hiddenbottom}`}>
         <article className={styles.article2}>
-          <div className={styles.div4}>
+          <div className={styles.div3}>
             <h3 className={styles.section4h3}>Editable:</h3>
             <p className={styles.p3}>reduce polygons, change texture or increase resolution</p>
           </div>
@@ -144,7 +144,7 @@ function About() {
         </article>
 
         <article className={styles.article2}>
-          <div className={styles.div4}>
+          <div className={styles.div3}>
             <h3 className={styles.section4h3}>Multimodal:</h3>
             <p className={styles.p3}>generate models or textures</p>
           </div>
@@ -152,7 +152,7 @@ function About() {
         </article>
 
         <article className={styles.article2}>
-          <div className={styles.div4}>
+          <div className={styles.div3}>
             <h3 className={styles.section4h3}>History:</h3>
             <p className={styles.p3}>models and prompts are recorded</p>
           </div>
