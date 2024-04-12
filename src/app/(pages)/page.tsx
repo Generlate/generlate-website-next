@@ -232,7 +232,7 @@ function Home(){
     <main className={styles.main}>
       <div className={styles.div}>
         <p className={styles.questionArrow}>?</p>
-        <section className={styles.section1}>
+        <section className={styles.modelWindow}>
           {showDownloadButton && (
             <>
               <button onClick={handleDownloadClick} className={styles.downloadButton}>Download</button>
@@ -241,7 +241,7 @@ function Home(){
           )}
         </section>
 
-        <section className={styles.section2}>
+        <section className={styles.textInterface}>
           <div className={styles.textInterfaceTop}></div>
 
           <div className={styles.textInterfaceBottom}>

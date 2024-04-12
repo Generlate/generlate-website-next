@@ -37,7 +37,7 @@
     transform: translateY(-30px) rotate(180deg);
 }
 
-.section1 {
+.modelWindow {
     padding: 0px;
     height: 100vh;
     z-index: 0;
@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 
-.section2 {
+.textInterface {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -187,7 +187,7 @@
         left: 67.75%;
     }
 
-    .section2 {
+    .textInterface {
         left: 26%;
         right: 26%;
         height: 40vh;
