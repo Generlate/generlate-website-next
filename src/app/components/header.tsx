@@ -167,13 +167,13 @@ export default function Header(props: {
     menu = (
       <ul className={styles.ul}>
         <li className={styles.li}>
-          <Link href="/Login" className={styles.link}>
+          <Link href="/login" className={styles.link}>
             <RiUserFollowFill size={20} className={styles.svg2}/>
             Sign in
           </Link>
         </li>
         <li className={styles.li}>
-          <Link href="/Register" className={styles.link}>
+          <Link href="/register" className={styles.link}>
             <TiUserAdd size={23} className={styles.svg2}/>
             Sign up
           </Link>
@@ -206,7 +206,7 @@ export default function Header(props: {
         </div>
 
         <li className={styles.li}>
-          <Link href="/Login" onClick={logout} className={styles.link}>
+          <Link href="/login" onClick={logout} className={styles.link}>
             <ImExit size={20} className={styles.svg2}/>
             Log out
           </Link>

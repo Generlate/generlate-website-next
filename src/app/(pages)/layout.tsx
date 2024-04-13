@@ -3,7 +3,7 @@
 import React, { useEffect, useState, createContext } from "react";
 import "@/app/styles/globals.css"
 import Header from '@/app/components/header'
-import { changeColorsToDark, changeColorsToLight } from '@/app/components/colorChange'
+import { changeColorsToDark, changeColorsToLight } from '@/app/components/color-change'
 
 
 interface ThemeContextType {

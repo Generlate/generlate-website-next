@@ -8,7 +8,7 @@ import { TbStretching } from "react-icons/tb";
 import { BiDollar } from "react-icons/bi";
 import { FiMessageSquare } from "react-icons/fi";
 import styles from "@/app/styles/about.module.css"
-import ThreeCanvas from '@/app/components/ThreeCanvas'
+import ThreeCanvas from '@/app/components/three-canvas'
 import transition from '@/app/components/transition'
 import { ThemeContext } from "@/app/(pages)/layout";
 
