@@ -1,12 +1,9 @@
-// import React, { useEffect, useState, createContext } from "react";
-import Header from '@/app/components/header'
 import "@/app/styles/globals.css"
-import { AnimatePresence } from "framer-motion";
 import { inter } from '@/app/components/fonts';
 
 export const metadata = {
   title: 'Generlate',
-  description: 'Generates 3d models',
+  description: 'Generates objects',
 }
 
 
@@ -33,18 +30,16 @@ export default function RootLayout({
   )
 }
 
-// TODO: remove unnecessary parts
+// TODO: reconsider if two layouts are necessary
+// TODO: move change color functions to a separate file
 // TODO: fix header having width cause its children to overlap it
 // TODO: refine sub pages
 // TODO: make all pages work on ipad and mobile (normal browser, not app view)
 // TODO: add css for desktop and other media queries
-// TODO: move change color functions to a separate file
 // TODO: add Auth0 and/or SSO and/or face-id
 // TODO: improve about page's design
 // TODO: include a Benefits section and a Use Cases section on About.tsx
-// TODO: make the 'text to 3d' button have that glossy blurred look
 // TODO: fix arrow icons not working on meta quest browser
-// TODO: consider using @media {prefers-color-scheme: dark}
 // TODO: add styleX
 // TODO: maybe add a loading.tsx for a loading spinner
 // TODO: maybe add error.tsx for error handling
@@ -54,3 +49,4 @@ export default function RootLayout({
 // TODO: make voice input button work (npm install react-speech-recognition)
 // TODO: add search bar, add search bar functionality (probably not worthwhile. should just be a part of the text input, which can answer questions or provide links)
 // TODO: better icons? (maybe not worth the time. try 'https://feathericons.com/', 'https://heroicons.dev/')
+// TODO: consider using @media {prefers-color-scheme: dark}
