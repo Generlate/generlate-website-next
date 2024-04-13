@@ -1,6 +1,8 @@
 .main {
     height: 100vh;
     background-color: var(--color-one);
+
+    padding: 0px;
 }
 
 .questionArrow {
@@ -187,8 +189,8 @@
     }
 
     .textInterface {
-        left: 26%;
-        right: 26%;
+        left: 25%;
+        right: 25%;
         height: 40vh;
     }
 }

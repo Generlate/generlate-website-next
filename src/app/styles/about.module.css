@@ -1,3 +1,8 @@
+.main {
+    /* padding: 0px; */
+    padding-top: 56.25%;
+}
+
 .hidden {
     opacity: 0;
     transition: opacity 4.35s;
@@ -24,6 +29,18 @@
     transform: translateY(0);
 }
 
+.section1 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+}
+
 .video {
     width: 100%;
     height: auto;
@@ -33,16 +50,6 @@
 
 .video::-webkit-media-controls {
     display: none;
-}
-
-.section1 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    background-color: transparent;
 }
 
 .h1Container {
@@ -68,8 +75,6 @@
     background-color: var(--color-one);
     margin-top: 20px;
     margin-bottom: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
     padding: 15px;
     box-shadow: 0px 0px 10px 0px var(--color-section-box-shadow);
 }
@@ -113,7 +118,7 @@
 
 .section3 {
     display: grid;
-    padding: 0px 16px;
+    padding: 0px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     background-color: transparent;
@@ -144,7 +149,7 @@
 }
 
 .section4 {
-    margin: 16px;
+    margin: 16px 0px;
     padding: 15px;
     background-color: var(--color-one);
     gap: 36px;
@@ -192,9 +197,7 @@
 
 .navButton {
     text-align: center;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     border-radius: var(--border-radius);
     transform: rotate(0deg);
 }
@@ -286,12 +289,19 @@
 
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
+    .main {
+        padding-top: 36%;
+    }
+
+    .section1 {
+        top: 92px;
+        left: 0;
+    }
+
     .video {
         object-fit: cover;
         margin-left: 25%;
         margin-right: 25%;
-        margin-top: 10px;
-        margin-bottom: 20px;
         border-radius: var(--border-radius);
     }
 
@@ -302,7 +312,7 @@
     }
 
     .section2 {
-        margin: 0px 25vw;
+        margin: 0px;
     }
 
     .ul {
@@ -310,13 +320,13 @@
     }
 
     .section3 {
-        margin: 0px 25vw;
+        margin: 0px;
         padding: 20px 0px;
         height: 27vh;
     }
 
     .section4 {
-        margin: 0px 25vw 16px 25vw;
+        margin: 0px 0px 16px 0px;
         display: flex;
         overflow: hidden;
         overflow-x: auto;
@@ -359,11 +369,6 @@
         scroll-snap-align: center;
         gap: 34px;
         margin-top: 10px;
-    }
-
-    .navButton {
-        margin-left: 25%;
-        margin-right: 25%;
     }
 
     .link {

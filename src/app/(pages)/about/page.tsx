@@ -72,7 +72,7 @@ function About() {
   
 
   return (
-    <main>
+    <main className={styles.main}>
       <section className={styles.section1}>
         <video width="1920" height="1080" autoPlay playsInline muted loop className={styles.video}>
           <source src="/advertisement.mp4" type="video/mp4" />
