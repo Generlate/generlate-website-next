@@ -290,7 +290,7 @@
 /* laptop */
 @media (min-width: 1024px) and (max-width: 2499px) and (orientation: landscape) {
     .main {
-        padding-top: 36%;
+        padding-top: calc(28% + 110px);
     }
 
     .section1 {
