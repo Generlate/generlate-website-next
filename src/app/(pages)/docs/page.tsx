@@ -8,7 +8,7 @@ function Docs() {
     <main className={styles.main}>
       <section className={styles.section}>research</section>
       <section className={styles.section}>debugging</section>
-      <section className={styles.section}>how text to 3d works (tips for better generations) </section>
+      <section className={styles.section}>how text to 3d works (tips for better generations)</section>
     </main>
   );
 }

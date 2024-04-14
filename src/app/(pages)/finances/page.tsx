@@ -6,7 +6,7 @@ import transition from '@/app/components/transition'
 function Finances() {
   return (
     <main className={styles.main}>
-      <section className={styles.section}>Earnings reports</section>
+      <section className={styles.section}>Earnings reports will be found here.</section>
     </main>
   );
 }

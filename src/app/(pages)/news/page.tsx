@@ -8,6 +8,11 @@ function News() {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
+        <h2>Model generation now uses .glb files (replacing .off)</h2>
+        <p>04/13/2024</p>
+        <p>description</p>
+      </section>
+      <section className={styles.section}>
         <h2>The back end is up!</h2>
         <p>02/04/2024</p>
         <p>description</p>
