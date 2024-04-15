@@ -30,7 +30,7 @@ export default function RootLayout({
   )
 }
 
-// TODO: add Auth0 and/or SSO and/or face-id
+// TODO: add NextAuth
 // TODO: fix arrow icons not working on meta quest browser
 // TODO: add styleX
 // TODO: maybe add a loading.tsx for a loading spinner

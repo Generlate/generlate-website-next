@@ -5,31 +5,6 @@
     padding: 0px;
 }
 
-.questionArrow {
-    position: absolute;
-    left: 27.1%;
-    top: 5rem;
-    font-size: 1.5rem;
-    font-weight: 900;
-    display: none;
-    z-index: 4;
-}
-
-.questionArrow::before {
-    content: "\2B8B";
-    transform: rotate(180deg);
-    font-size: 3rem;
-    vertical-align: middle;
-    position: absolute;
-    left: -0.75rem;
-    top: -1.4rem;
-    transition: transform 0.3s ease;
-}
-
-.questionArrow:hover::before {
-    transform: translateY(-30px) rotate(180deg);
-}
-
 .modelWindow {
     padding: 0px;
     height: 100vh;
@@ -179,13 +154,9 @@
         background-color: transparent;
     }
 
-    .questionArrow {
-        display: inline-block;
-    }
-
     .downloadButton {
         /* top: 12%; */
-        left: 67.75%;
+        right: 25%;
     }
 
     .textInterface {
