@@ -1,14 +1,14 @@
 'use client'
 
-import Link from 'next/link';
+import transition from '@/app/components/transition';
+import styles from "@/app/styles/team.module.css";
 import Image from 'next/image';
-import styles from "@/app/styles/team.module.css"
-import transition from '@/app/components/transition'
+import Link from 'next/link';
 
 function Team() {
   return (
     <main className={styles.main}>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.firstSection}`}>
         <u>Team Profiles</u>
       </section>
       <section className={styles.section}>

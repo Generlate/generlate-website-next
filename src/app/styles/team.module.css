@@ -11,6 +11,10 @@
     height: auto;
 }
 
+.firstSection {
+    background-color: transparent;
+}
+
 /* ipad */
 @media (min-width: 600px) and (max-width: 1024px) {
 }
