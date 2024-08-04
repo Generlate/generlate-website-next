@@ -1,18 +1,17 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import styles from "@/app/styles/header.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from "@/app/styles/header.module.css";
+import React, { useEffect, useState } from "react";
 import { BiUserCircle } from "react-icons/bi";
-import { VscColorMode } from "react-icons/vsc";
+import { BsPeople } from "react-icons/bs";
 import { ImExit } from "react-icons/im";
-import { TiUserAdd } from "react-icons/ti";
+import { IoBusinessOutline } from "react-icons/io5";
 import { RiUserFollowFill } from "react-icons/ri";
 import { TbVector } from "react-icons/tb";
-import { TiDocumentText } from "react-icons/ti";
-import { IoBusinessOutline } from "react-icons/io5";
-import { BsPeople } from "react-icons/bs";
+import { TiDocumentText, TiUserAdd } from "react-icons/ti";
+import { VscColorMode } from "react-icons/vsc";
 
 
 
@@ -261,8 +260,9 @@ export default function Header(props: {
           <p className={styles.p2}>Social</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-four"]}`}>
-          <Link href="https://github.com/Generlate" className={styles.link}>Github</Link>
+          <Link href="https://discord.gg/6zn3Xefz2y" className={styles.link}>Discord</Link>
           <Link href="https://www.youtube.com/@generlate" className={styles.link}>Youtube</Link>
+          <Link href="https://github.com/Generlate" className={styles.link}>Github</Link>
           <Link href="https://twitter.com/Generlate" className={styles.link}>Twitter</Link>
           <Link href="https://www.linkedin.com/company/78367423/admin/feed/posts/" className={styles.link}>LinkedIn</Link>
         </div>
