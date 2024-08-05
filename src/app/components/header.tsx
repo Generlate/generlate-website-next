@@ -220,7 +220,7 @@ export default function Header(props: {
 
       <div className={`${styles.dropdown} ${activeDropdown === "donate" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("donate") } onTouchStart={() => handleMouseEnter("donate") }>
         <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("donate")}>
-          <RiHeart3Line className={styles.svg3}/>
+          <Link href="/donate"><RiHeart3Line className={styles.svg3}/></Link>
           <Link href="/donate" className={styles.p2}>Donate &lt;3</Link>
         </button>
       </div>
