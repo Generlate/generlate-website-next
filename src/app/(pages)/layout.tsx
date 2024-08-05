@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useEffect, useState, createContext } from "react";
-import "@/app/styles/globals.css"
-import Header from '@/app/components/header'
-import { changeColorsToDark, changeColorsToLight } from '@/app/components/color-change'
+import { changeColorsToDark, changeColorsToLight } from '@/app/components/color-change';
+import Header from '@/app/components/header';
+import "@/app/styles/globals.css";
+import React, { createContext, useEffect, useState } from "react";
 
 
 interface ThemeContextType {

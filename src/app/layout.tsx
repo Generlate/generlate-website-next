@@ -1,5 +1,5 @@
-import "@/app/styles/globals.css"
 import { inter } from '@/app/components/fonts';
+import "@/app/styles/globals.css";
 
 export const metadata = {
   title: 'Generlate',

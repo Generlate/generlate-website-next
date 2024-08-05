@@ -215,6 +215,11 @@
         display: none;
     }
 
+    .dropdown:hover .svg3,
+    .dropdown:focus-within .svg3 {
+        color: red;
+    }
+
     .svg {
         color: var(--color-four);
     }
@@ -222,6 +227,11 @@
     .p2 {
         display: block;
         color: var(--color-four);
+    }
+
+    .dropdown:hover .p2,
+    .dropdown:focus-within .p2 {
+        color: var(--color-three);
     }
 
     .dropdown-menu-one {

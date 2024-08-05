@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useContext } from "react";
-import { BiSolidMicrophoneAlt } from "react-icons/bi";
-import ThreeCanvas from "@/app/components/three-canvas";
-import styles from "@/app/styles/home.module.css"
-import transition from '@/app/components/transition'
-import { TbMessage2Up } from "react-icons/tb";
 import { ThemeContext } from "@/app/(pages)/layout";
+import ThreeCanvas from "@/app/components/three-canvas";
+import transition from '@/app/components/transition';
+import styles from "@/app/styles/home.module.css";
+import React, { useContext, useState } from "react";
+import { BiSolidMicrophoneAlt } from "react-icons/bi";
+import { TbMessage2Up } from "react-icons/tb";
 
 
 function Home(){

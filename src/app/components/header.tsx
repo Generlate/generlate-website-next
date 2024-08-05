@@ -8,11 +8,9 @@ import { BiUserCircle } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
 import { ImExit } from "react-icons/im";
 import { IoBusinessOutline } from "react-icons/io5";
-import { RiUserFollowFill } from "react-icons/ri";
-import { TbVector } from "react-icons/tb";
+import { RiHeart3Line, RiUserFollowFill } from "react-icons/ri";
 import { TiDocumentText, TiUserAdd } from "react-icons/ti";
 import { VscColorMode } from "react-icons/vsc";
-
 
 
 export default function Header(props: {
@@ -220,15 +218,11 @@ export default function Header(props: {
         <Image src={isMobileLayout ? (props.theme === "dark" ? "/mobile-generlate-dark.png" : "/mobile-generlate-light.png") : (props.theme === "dark" ? "/generlate-dark.webp" : "/generlate-light.webp")} width={isMobileLayout ? 41 : 250} height={isMobileLayout ? 41 : 47} alt="picture of cubes" className={styles.logoImage}/>
       </Link>
 
-      <div className={`${styles.dropdown} ${activeDropdown === "product" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("product") } onTouchStart={() => handleMouseEnter("product") }>
-        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("product")}>
-          <TbVector className={styles.svg3}/>
-          <p className={styles.p2}>Product</p>
+      <div className={`${styles.dropdown} ${activeDropdown === "donate" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("donate") } onTouchStart={() => handleMouseEnter("donate") }>
+        <button className={styles.button} data-dropdown-button onClick={() => toggleDropdown("donate")}>
+          <RiHeart3Line className={styles.svg3}/>
+          <Link href="/donate" className={styles.p2}>Donate &lt;3</Link>
         </button>
-        <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-one"]}`}>
-          <Link href="/news" className={styles.link}>News</Link>
-          <Link href="/pricing" className={styles.link}>Pricing</Link>
-        </div>
       </div>
 
       <div className={` ${styles.dropdown} ${activeDropdown === "resources" ? `${styles.active}` : ``}`} onMouseEnter={() => handleMouseEnter("resources")} onTouchStart={() => handleMouseEnter("resources")}>
@@ -237,6 +231,8 @@ export default function Header(props: {
           <p className={styles.p2}>Resources</p>
         </button>
         <div className={`${styles["dropdown-menu"]} ${styles["dropdown-menu-two"]}`}>
+          <Link href="/news" className={styles.link}>News</Link>
+          <Link href="/pricing" className={styles.link}>Pricing</Link>
           <Link href="/docs" className={styles.link}>Docs</Link>
           <Link href="/api" className={styles.link}>API</Link>
         </div>
