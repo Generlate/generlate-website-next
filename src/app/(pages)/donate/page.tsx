@@ -4,6 +4,14 @@ import transition from '@/app/components/transition';
 import styles from "@/app/styles/donate.module.css";
 import Image from "next/image";
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'stripe-buy-button': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+    }
+  }
+}
+
 function Donate() {
   return (
     <main className={styles.main}>
