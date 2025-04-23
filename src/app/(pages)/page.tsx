@@ -248,7 +248,7 @@ function Home(){
           </button>
           <input
             type="text"
-            placeholder="Text here, object out ↑"
+            placeholder="Type 'plant' ↑"
             id="generationbar"
             onKeyDown={enterKey}
             className={styles.textInputBar}
