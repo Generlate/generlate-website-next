@@ -1,16 +1,16 @@
 'use client'
 
-import React, { useEffect, useRef, useContext } from "react";
-import Link from 'next/link';
-import Image from 'next/image';
-import { BsClockHistory } from "react-icons/bs";
-import { TbStretching } from "react-icons/tb";
-import { BiDollar } from "react-icons/bi";
-import { FiMessageSquare } from "react-icons/fi";
-import styles from "@/app/styles/about.module.css"
-import ThreeCanvas from '@/app/components/three-canvas'
-import transition from '@/app/components/transition'
 import { ThemeContext } from "@/app/(pages)/layout";
+import ThreeCanvas from '@/app/components/three-canvas';
+import transition from '@/app/components/transition';
+import styles from "@/app/styles/about.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useContext, useEffect, useRef } from "react";
+import { BiDollar } from "react-icons/bi";
+import { BsClockHistory } from "react-icons/bs";
+import { FiMessageSquare } from "react-icons/fi";
+import { TbStretching } from "react-icons/tb";
 
 
 function About() {
@@ -90,7 +90,7 @@ function About() {
           <article className={styles.article1}>
             <p className={styles.p1}>
               Say goodbye to the grind. Type, don&apos;t model. Effortlessly
-              create objects from your text.
+              create objects from your text. test test test
             </p>
             <h3 className={styles.h3}>
               Faster
