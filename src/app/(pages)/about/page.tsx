@@ -90,7 +90,7 @@ function About() {
           <article className={styles.article1}>
             <p className={styles.p1}>
               Say goodbye to the grind. Type, don&apos;t model. Effortlessly
-              create objects from your text. test test test
+              create objects from your text. 
             </p>
             <h3 className={styles.h3}>
               Faster
