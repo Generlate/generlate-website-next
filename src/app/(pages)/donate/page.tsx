@@ -7,7 +7,7 @@ import Image from "next/image";
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'stripe-buy-button': any;
+      'stripe-buy-button': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
     }
   }
 }
