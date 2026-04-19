@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 const transition = (OriginalComponent: any) => {
   return function WithTransition(props: any) {
