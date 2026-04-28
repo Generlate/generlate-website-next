@@ -1,10 +1,10 @@
 'use client'
 
-import React, { SyntheticEvent, useState, useContext, useEffect } from "react";
-import { useRouter } from 'next/navigation';
-import styles from "@/app/styles/login.module.css"
 import { AuthContext } from "@/app/(pages)/layout";
-import transition from '@/app/components/transition'
+import transition from '@/app/components/transition';
+import styles from "@/app/styles/login.module.css";
+import { useRouter } from 'next/navigation';
+import { SyntheticEvent, useContext, useState } from "react";
 
 
 const Login = (/*props: { setName: (name: string) => void }*/) => {
@@ -18,7 +18,7 @@ const Login = (/*props: { setName: (name: string) => void }*/) => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    const response = await fetch("https://api.generlate.com/api/login", {
+    const response = await fetch("https://api.generlate.com/v1/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

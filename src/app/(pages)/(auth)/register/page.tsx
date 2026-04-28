@@ -1,9 +1,9 @@
 'use client'
 
-import React, { SyntheticEvent, useState } from "react";
+import transition from '@/app/components/transition';
+import styles from "@/app/styles/register.module.css";
 import { useRouter } from 'next/navigation';
-import styles from "@/app/styles/register.module.css"
-import transition from '@/app/components/transition'
+import { SyntheticEvent, useState } from "react";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -14,7 +14,7 @@ const Register = () => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await fetch("https://api.generlate.com/api/register", {
+    await fetch("https://api.generlate.com/v1/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
