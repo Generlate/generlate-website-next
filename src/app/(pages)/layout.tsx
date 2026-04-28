@@ -33,7 +33,7 @@ export default function PageLayout({ children }: {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch("https://api.generlate.com/v1/user", {
+            const response = await fetch("https://api.generlate.com/v1/user/", {
                 headers: { "Content-Type": "application/json" },
                 credentials: "include"
             });
@@ -58,7 +58,7 @@ export default function PageLayout({ children }: {
     };
 
     if (theme) {
-        fetch("https://api.generlate.com/v1/user-data", {
+        fetch("https://api.generlate.com/v1/user-data/", {
         method: "GET",
         credentials: "include",
         headers: {

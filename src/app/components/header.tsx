@@ -70,7 +70,7 @@ export default function Header(props: {
       const formData = new FormData();
       formData.append("user_image", profilePictureFile);
 
-      fetch("https://api.generlate.com/v1/upload-user-images", {
+      fetch("https://api.generlate.com/v1/upload-user-images/", {
         method: "PUT",
         body: formData,
         credentials: "include"
@@ -100,7 +100,7 @@ export default function Header(props: {
     const formData = new FormData();
     formData.append("user_color_theme", newTheme);
 
-    fetch("https://api.generlate.com/v1/update-user-color-theme", {
+    fetch("https://api.generlate.com/v1/update-user-color-theme/", {
       method: "PUT",
       body: formData,
       credentials: "include"
@@ -115,7 +115,7 @@ export default function Header(props: {
   };
 
   const logout = async () => {
-    await fetch("https://api.generlate.com/v1/logout", {
+    await fetch("https://api.generlate.com/v1/logout/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include"
@@ -131,7 +131,7 @@ export default function Header(props: {
 
   useEffect(() => {
     if (props.name) {
-      fetch("https://api.generlate.com/v1/user-data", {
+      fetch("https://api.generlate.com/v1/user-data/", {
         method: "GET",
         credentials: "include",
         headers: {

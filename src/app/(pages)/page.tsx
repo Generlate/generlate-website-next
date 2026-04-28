@@ -128,7 +128,7 @@ function Home(){
       const inputText = input.value;
       formData.append("user_input_text", inputText.toLowerCase());
 
-      fetch("https://api.generlate.com/v1/upload-generated-objects", {
+      fetch("https://api.generlate.com/v1/upload-generated-objects/", {
         method: "PUT",
         body: formData,
         credentials: "include"
@@ -170,7 +170,7 @@ function Home(){
           return response.json(); 
         })
         .then(() => {
-          return fetch("https://api.generlate.com/v1/user-data", {
+          return fetch("https://api.generlate.com/v1/user-data/", {
             method: "GET",
             headers: { "Content-Type": "application/json" },
             credentials: "include"
