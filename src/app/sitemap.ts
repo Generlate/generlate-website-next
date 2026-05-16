@@ -5,7 +5,6 @@ const BASE_URL = "https://generlate.com";
 const routes = [
     "",
     "/about",
-    "/api",
     "/docs",
     "/donate",
     "/finances",
@@ -14,8 +13,6 @@ const routes = [
     "/pricing",
     "/team",
     "/team/austen-cabret",
-    "/(auth)/login",
-    "/(auth)/register",
 ];
 
 const changeFrequencies: Record<
