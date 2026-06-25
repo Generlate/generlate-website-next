@@ -120,13 +120,6 @@ function Home(){
     document.body.removeChild(a);
   }
 
-  function getCookie(name: string) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop()?.split(';').shift() || '';
-  return '';
-}
-
   function handleInputClick() {
     const input = document.getElementById("generationbar");
 
@@ -135,15 +128,10 @@ function Home(){
       const inputText = input.value;
       formData.append("user_input_text", inputText.toLowerCase());
 
-      const csrfToken = getCookie("csrftoken");
-
       fetch("https://api.generlate.com/v1/upload-generated-objects/", {
         method: "PUT",
         body: formData,
-        credentials: "include",
-        headers: {
-        "X-CSRFToken": csrfToken,
-      },
+        credentials: "include"
       })
         .then((response) => {
           if (!response.ok) {
