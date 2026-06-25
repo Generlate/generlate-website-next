@@ -120,11 +120,6 @@ function Home(){
     document.body.removeChild(a);
   }
 
-  function getCookie(name: string): string | null {
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-  return match ? decodeURIComponent(match[2]) : null;
-}
-
   function handleInputClick() {
     const input = document.getElementById("generationbar");
 
@@ -136,10 +131,7 @@ function Home(){
       fetch("https://api.generlate.com/v1/upload-generated-objects/", {
         method: "PUT",
         body: formData,
-        credentials: "include",
-        headers: {
-        "X-CSRFToken": getCookie("csrftoken") ?? "",
-        },
+        credentials: "include"
       })
         .then((response) => {
           if (!response.ok) {
