@@ -138,7 +138,7 @@ function Home(){
 
               
             if (library.includes(inputText.toLocaleLowerCase())) {
-              setModel("https://api.generlate.com/media/generated_objects/" + inputText.toLowerCase() + ".glb");
+              setModel("https://api.generlate.com/v1/media/generated_objects/" + inputText.toLowerCase() + ".glb");
               setShowDownloadButton(true);
 
               const newParagraph = document.createElement("p");
@@ -196,7 +196,7 @@ function Home(){
               targetSection.appendChild(newParagraph);
             }    
           } else {
-            setModel("https://api.generlate.com/media/generated_objects/" + data.generated_object_file_path);
+            setModel("https://api.generlate.com/v1/media/generated_objects/" + data.generated_object_file_path);
           
             setShowDownloadButton(true);
 
